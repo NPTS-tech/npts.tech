@@ -4,7 +4,6 @@ div.pb-48
     img.w-16.h-( src="/img/tmp_logo.jpg")
     UHorizontalNavigation(:links)
   NuxtPage
-
 </template>
 <script setup lang="ts">
 

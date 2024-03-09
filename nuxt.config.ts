@@ -4,6 +4,9 @@ export default defineNuxtConfig({
   app: {
     baseURL:'/npes.tech/',
   },
+  colorMode: {
+    preference: 'dark'
+  },
   css: ['~/assets/main.css'],
   modules: ['@nuxt/content', "@nuxt/ui"],
   postcss: {
