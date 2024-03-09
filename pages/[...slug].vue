@@ -1,4 +1,4 @@
 <template lang="pug">
-main
+main.pt-4
   ContentDoc
 </template>

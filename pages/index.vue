@@ -5,7 +5,7 @@ main.flex.flex-col.gap-5
     .absolute.-bottom-4.bg-gradient-to-b.from-transparent.to-black.text-lg.w-full(class="h-full sm:h-3/4")
       .text-center.text-strong.text-lg.mt-20(class="sm:mt-24 sm:text-4xl") Non-Profit Engineering Support
       .text-center.text-strong.text-4xs(class="sm:mt-4") Technology for community service
-  .flex.gap-5
+  .flex.gap-5.mt-4.px-4
     UCard(class="basis-1/3")
       template(#header)
         p.text-center.text-strong.text-lg Experiential Learning
