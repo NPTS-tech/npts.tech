@@ -2,9 +2,6 @@
 
 export default defineNuxtConfig({
   devtools: { enabled: true },
-  app: {
-    baseURL:'/npes.tech/',
-  },
   colorMode: {
     preference: 'dark'
   },
