@@ -13,7 +13,7 @@ main.flex.flex-col.gap-5
     UCard(class="basis-1/3")
       template(#header)
         p.text-center.text-strong.text-lg Technical Consulting
-      p.text-center NPES works with non profits to provide engineering solutions support for partners and learning opportunities for students
+      p.text-center NPES works with non profits to provide technical solutions support for partners
     UCard(class="basis-1/3")
       template(#header)
         p.text-center.text-strong.text-lg Community Workshops
