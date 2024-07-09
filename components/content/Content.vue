@@ -5,6 +5,6 @@ UCard(class="w-3/4 mx-auto ")
       slot(name="title")
     .text-center.text-xl
       slot(name="subtitle")
-  .text-center
+  .text-left
     slot(name="content")
 </template>
