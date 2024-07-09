@@ -1,8 +1,12 @@
 <template lang="pug">
 div.pb-48
-  .flex.gap-4
+  .flex.gap-4.justify-between
     img.w-16.h-(src="/img/logo.png")
-    UHorizontalNavigation(:links)
+    UHorizontalNavigation.hidden(:links class="sm:block")
+    UPopover.self-center.mr-4(class="sm:hidden")
+      UButton(color='white' trailing-icon="i-heroicons-bars-3")
+      template(#panel)
+        UVerticalNavigation(:links)
   NuxtPage
 </template>
 <script setup lang="ts">
