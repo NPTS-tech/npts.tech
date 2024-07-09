@@ -1,4 +1,4 @@
 <template lang="pug">
 main.pt-4
-  ContentDoc
+  ContentDoc(v-if="$route.params.slug")
 </template>
