@@ -14,23 +14,27 @@ const links = ref([
     to:'/'
   },
   {
-    label: 'About',
-    to:'/about'
+    label: 'Our Story',
+    icon: 'i-heroicons-book-open',
+    to:'/story'
   },
   {
     label: 'Programs',
+    icon: 'i-heroicons-building-library',
     to:'/programs'
   },
   {
     label: 'Partners',
+    icon: 'i-heroicons-globe-europe-africa',
     to:'/partners'
   },
-  {
-    label: 'Donors',
-    to:'/donors'
-  },
+  // {
+  //   label: 'Donors',
+  //   to:'/donors'
+  // },
   {
     label: 'Contact',
+    icon: 'i-heroicons-phone',
     to:'/contact'
   },
 ])
