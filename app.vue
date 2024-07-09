@@ -1,8 +1,12 @@
 <template lang="pug">
 div.pb-48
-  .flex.gap-4
-    img.w-16.h-( src="/img/tmp_logo.webp")
-    UHorizontalNavigation(:links)
+  .flex.gap-4.justify-between
+    img.w-16.h-(src="/img/logo.webp")
+    UHorizontalNavigation.hidden(:links class="sm:block")
+    UPopover.self-center.mr-4(class="sm:hidden")
+      UButton(color='white' trailing-icon="i-heroicons-bars-3")
+      template(#panel)
+        UVerticalNavigation(:links)
   NuxtPage
 </template>
 <script setup lang="ts">
@@ -14,23 +18,27 @@ const links = ref([
     to:'/'
   },
   {
-    label: 'About',
-    to:'/about'
+    label: 'Our Story',
+    icon: 'i-heroicons-book-open',
+    to:'/story'
   },
   {
     label: 'Programs',
+    icon: 'i-heroicons-academic-cap',
     to:'/programs'
   },
   {
     label: 'Partners',
+    icon: 'i-heroicons-globe-europe-africa',
     to:'/partners'
   },
-  {
-    label: 'Donors',
-    to:'/donors'
-  },
+  // {
+  //   label: 'Donors',
+  //   to:'/donors'
+  // },
   {
     label: 'Contact',
+    icon: 'i-heroicons-phone',
     to:'/contact'
   },
 ])
