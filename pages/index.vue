@@ -1,7 +1,7 @@
 <template lang="pug">
 main.flex.flex-col.gap-5
   .relative
-    img.filter.blur-sm.mx-auto(src="/img/stock_hero.webp" fit="fill")
+    img.filter.blur-sm.mx-auto.w-full(src="/img/stock_hero.webp" fit="cover" style="max-height:600px;")
     .absolute.-bottom-4.bg-gradient-to-b.from-transparent.to-black.text-lg.w-full(class="h-full sm:h-3/4")
       .text-center.text-strong.text-lg.mt-20(class="sm:mt-24 sm:text-4xl") Non-Profit Technical Support
       .text-center.text-strong.text-4xs(class="sm:mt-4") Technology for community service
@@ -9,14 +9,14 @@ main.flex.flex-col.gap-5
     UCard(class="basis-1/3")
       template(#header)
         p.text-center.text-strong.text-lg Experiential Learning
-      p.text-center NPES works with experiential learning programs to provide project management and technical guidance
+      p.text-center NPTS works with experiential learning programs to provide project management and technical guidance
     UCard(class="basis-1/3")
       template(#header)
         p.text-center.text-strong.text-lg Technical Consulting
-      p.text-center NPES works with non profits to provide technical solutions support for partners
+      p.text-center NPTS works with non profits to provide technical solutions support for partners
     UCard(class="basis-1/3")
       template(#header)
         p.text-center.text-strong.text-lg Community Workshops
-      p.text-center NPES works with makerspaces and hobbyist organizations to provide support for prototyping and project ideation
+      p.text-center NPTS works with makerspaces and hobbyist organizations to provide support for prototyping and project ideation
 
 </template>
