@@ -5,6 +5,6 @@ UCard(class="w-3/4 mx-auto ")
       ContentSlot(unwrap="p" :use="$slots.title")
     .text-center.text-xl
       ContentSlot(unwrap="p" :use="$slots.subtitle")
-  div(class="prose lg:prose-xl prose-invert ")
+  .flex.flex-col.mx-auto(class="prose lg:prose-xl prose-invert ")
     ContentSlot(unwrap="p" :use="$slots.content")
 </template>
