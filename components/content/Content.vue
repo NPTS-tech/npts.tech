@@ -2,9 +2,9 @@
 UCard(class="w-3/4 mx-auto ")
   template(#header)
     .text-center.text-4xl
-      ContentSlot(unwrap="p" :use="$slots.title")
+      ContentSlot(:use="$slots.title")
     .text-center.text-xl
-      ContentSlot(unwrap="p" :use="$slots.subtitle")
+      ContentSlot(:use="$slots.subtitle")
   .mx-auto(class="prose lg:prose-xl prose-invert ")
-    ContentSlot(unwrap="p" :use="$slots.content")
+    ContentSlot(:use="$slots.content")
 </template>
