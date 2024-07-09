@@ -1,4 +1,4 @@
-::programContent
+::content
 
 #title
 
@@ -18,7 +18,7 @@ Currently, NPTS supports other non-profit organizations in the form of hosting a
 
 Future programs will include:
 
-* Internships
-* Support of physical engineering projects
+- Internships
+- Support of physical engineering projects
 
 ::
