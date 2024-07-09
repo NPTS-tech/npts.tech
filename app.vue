@@ -1,7 +1,7 @@
 <template lang="pug">
 div.pb-48
   .flex.gap-4
-    img.w-16.h-( src="/img/tmp_logo.webp")
+    img.w-16.h-( src="/img/logo.png")
     UHorizontalNavigation(:links)
   NuxtPage
 </template>
