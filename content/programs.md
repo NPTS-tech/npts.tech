@@ -8,7 +8,7 @@
 
 <!-- ## Internships
 
-NPES provides the following internship opportunities -->
+NPTS provides the following internship opportunities -->
 
 <!-- ## Solutions Development -->
 
