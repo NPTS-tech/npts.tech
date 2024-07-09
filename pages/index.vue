@@ -13,10 +13,10 @@ main.flex.flex-col.gap-5
     UCard(class="basis-1/3")
       template(#header)
         p.text-center.text-strong.text-lg Technical Consulting
-      p.text-center NPTS works with non profits to provide technical solutions support for partners
+      p.text-center NPTS works with nonprofits to provide technical solutions support for partners
     UCard(class="basis-1/3")
       template(#header)
-        p.text-center.text-strong.text-lg Community Workshops
-      p.text-center NPTS works with makerspaces and hobbyist organizations to provide support for prototyping and project ideation
+        p.text-center.text-strong.text-lg Community Focused
+      p.text-center NPTS works with local organizations who provide aid in the Dallas-Forth Worth area
 
 </template>
