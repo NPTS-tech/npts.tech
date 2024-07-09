@@ -10,6 +10,8 @@ main.pt-4
         .self-center.grow {{partner.name}}
 </template>
 <script setup lang="ts">
+definePageMeta({ documentDriven: { page: false,  } }) 
+
 const partners = [
   {
     name: "UTD EPICS",
