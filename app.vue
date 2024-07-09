@@ -1,7 +1,7 @@
 <template lang="pug">
 div.pb-48
   .flex.gap-4.justify-between
-    img.w-16.h-(src="/img/logo.png")
+    img.w-16.h-(src="/img/logo.webp")
     UHorizontalNavigation.hidden(:links class="sm:block")
     UPopover.self-center.mr-4(class="sm:hidden")
       UButton(color='white' trailing-icon="i-heroicons-bars-3")
@@ -24,7 +24,7 @@ const links = ref([
   },
   {
     label: 'Programs',
-    icon: 'i-heroicons-building-library',
+    icon: 'i-heroicons-academic-cap',
     to:'/programs'
   },
   {
