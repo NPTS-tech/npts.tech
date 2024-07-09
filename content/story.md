@@ -1,3 +1,7 @@
+---
+title: "Our Story"
+---
+
 ::content
 
 #title

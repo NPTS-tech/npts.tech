@@ -6,6 +6,6 @@
 
 #content
 
-- For inquires about NPES pleas contact us at [info@npes.tech](mailto:info@npes.tech)
+- For inquires about NPTS pleas contact us at [taz@npts.tech](mailto:taz@npts.tech)
 
 ::
