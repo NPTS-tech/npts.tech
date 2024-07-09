@@ -1,7 +1,7 @@
 <template lang="pug">
 div.pb-48
   .flex.gap-4
-    img.w-16.h-(src="/img/logo.png")
+    img.w-16.h-(src="/img/logo.webp")
     UHorizontalNavigation(:links)
   NuxtPage
 </template>
@@ -20,7 +20,7 @@ const links = ref([
   },
   {
     label: 'Programs',
-    icon: 'i-heroicons-building-library',
+    icon: 'i-heroicons-academic-cap',
     to:'/programs'
   },
   {

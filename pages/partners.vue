@@ -13,7 +13,7 @@ main.pt-4
 const partners = [
   {
     name: "UTD EPICS",
-    logo: "/img/epics.png"
+    logo: "/img/epics-logo.webp"
   },
   {
     name: "",
