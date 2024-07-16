@@ -4,13 +4,13 @@ main.pt-4
     template(#header)
       .text-center.text-4xl Partners
     //.grid.grid-cols-1.gap-5(class="sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4")
-    .grid.grid-cols-1.gap-5
+    .grid.grid-cols-2.gap-5
       .flex.flex-col.gap-5(v-for="partner, i in partners" :key="i" :partner)
         img.h-36.self-center.object-contain(:src="partner.logo")
         .self-center.grow {{partner.name}}
 </template>
 <script setup lang="ts">
-definePageMeta({ documentDriven: { page: false,  } }) 
+definePageMeta({ documentDriven: { page: false, } });
 
 const partners = [
   {
@@ -18,8 +18,8 @@ const partners = [
     logo: "/img/epics-logo.webp"
   },
   {
-    name: "",
-    logo: ""
+    name: "Warren Center",
+    logo: "/img/warren_center.png"
   }
-]
+];
 </script>
