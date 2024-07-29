@@ -15,12 +15,12 @@ definePageMeta({ documentDriven: { page: false, } });
 
 const partners = [
   {
-    name: "UTD EPICS",
+    name: "UTDesign® EPICS",
     logo: "/img/partner-logos/epics-logo.webp",
     website: "https://epics.utdallas.edu"
   },
   {
-    name: "Warren Center",
+    name: "The Warren Center",
     logo: "/img/partner-logos/warren_center.png",
     website: "https://thewarrencenter.org"
   }
