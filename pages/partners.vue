@@ -8,7 +8,7 @@ main.pt-4
       .flex.flex-col.gap-5(v-for="partner, i in partners" :key="i" :partner)
         a.self-center(:href="partner.website", target="_blank")
           img.h-36.self-center.object-contain(:src="partner.logo")
-          .self-center.grow.text-center {{ partner.name }}
+          .self-center.grow.text-center.pt-2 {{ partner.name }}
 </template>
 <script setup lang="ts">
 definePageMeta({ documentDriven: { page: false, } });
