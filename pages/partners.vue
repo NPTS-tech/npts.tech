@@ -21,7 +21,7 @@ const partners = [
   },
   {
     name: "The Warren Center",
-    logo: "/img/partner-logos/warren_center.png",
+    logo: "/img/partner-logos/warren_center.webp",
     website: "https://thewarrencenter.org"
   }
 ];
