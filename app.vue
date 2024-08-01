@@ -3,7 +3,7 @@ div.pb-48
   .flex.gap-4.justify-between
     img.w-16.h-(src="/img/logo.webp")
     UHorizontalNavigation.hidden(:links class="sm:block")
-    UPopover.self-center.mr-4(class="sm:hidden")
+    UPopover.self-center.mr-4(class="sm:hidden" :popper="{ placement: 'bottom-start' }")
       UButton(color='white' trailing-icon="i-heroicons-bars-3")
       template(#panel)
         UVerticalNavigation(:links)
@@ -15,22 +15,22 @@ const links = ref([
   {
     label: 'Home',
     icon: 'i-heroicons-home',
-    to:'/'
+    to: '/'
   },
   {
     label: 'Our Story',
     icon: 'i-heroicons-book-open',
-    to:'/story'
+    to: '/story'
   },
   {
     label: 'Programs',
     icon: 'i-heroicons-academic-cap',
-    to:'/programs'
+    to: '/programs'
   },
   {
     label: 'Partners',
     icon: 'i-heroicons-globe-europe-africa',
-    to:'/partners'
+    to: '/partners'
   },
   // {
   //   label: 'Donors',
@@ -39,9 +39,9 @@ const links = ref([
   {
     label: 'Contact',
     icon: 'i-heroicons-phone',
-    to:'/contact'
+    to: '/contact'
   },
-])
+]);
 
 useSeoMeta({
   title: 'Non-Profit Technical Support',
@@ -50,5 +50,5 @@ useSeoMeta({
   ogDescription: 'Providing technical support for non-profit organizations.',
   ogImage: '/img/logo_large.png',
   ogUrl: 'https://npts.tech',
-})
+});
 </script>
