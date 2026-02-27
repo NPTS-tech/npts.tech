@@ -6,19 +6,21 @@
 
 #content
 
-<!-- ## Internships
+## Experiential Learning Partnerships
 
-NPTS provides the following internship opportunities -->
+NPTS partners with experiential learning organizations to bridge the gap between academic theory and real-world application. We provide mentorship and technical guidance to student teams, ensuring their projects are not only educational successes but also viable, long-term solutions for non-profit partners.
 
-<!-- ## Solutions Development -->
+Currently, we support projects from [UTDesign EPICS](https://epics.utdallas.edu) at The University of Texas at Dallas, offering hosting, maintenance, and ongoing technical support for web and mobile applications developed by students.
 
-<!-- ## Workshops -->
+## Internships & Volunteer Opportunities
 
-Currently, NPTS supports other nonprofit organizations in the form of hosting and maintenance of web and mobile apps once completed by students of [UTDesign EPICS](https://epics.utdallas.edu), a program offered by The University of Texas at Dallas. We also offer support in the form of technological needs assessment, be that engineering solutions, software, or a combination of the two.
+We invest in the next generation of engineers by offering internships and volunteer positions to students who have demonstrated excellence within experiential learning programs.
 
-Future programs will include:
+Participants in our programs:
+- **Gain Real-World Experience**: Work directly on supported partner projects and internal NPTS initiatives.
+- **Develop Leadership Skills**: Mentor current students in experiential learning programs.
+- **Build Professional Networks**: Connect with industry partners for future employment opportunities.
 
-- Internships
-- Support of physical engineering projects
+Our goal is to launch careers while serving the community, creating a cycle of growth and support.
 
 ::
