@@ -1,26 +1,35 @@
-<template lang="pug">
-main.pt-4.space-y-8
-  // Experiential Learning Partners Section
-  UCard(class="w-3/4 mx-auto")
-    template(#header)
-      .text-center.text-3xl.font-semibold Experiential Learning Partners
-    .grid.grid-cols-1.gap-8(class="sm:grid-cols-2 lg:grid-cols-3")
-      .flex.flex-col.gap-4(v-for="(partner, i) in learningPartners" :key="i")
-        a.flex.flex-col.items-center.h-full.group(:href="partner.website" target="_blank")
-          .h-36.flex.items-center.justify-center.w-full.p-4.rounded-lg.bg-white.transition-transform.duration-300(class="group-hover:scale-105")
-            img.max-h-full.max-w-full.object-contain(:src="partner.logo" :alt="partner.name")
-          .text-center.mt-4.font-medium.text-lg {{ partner.name }}
+<template>
+  <main class="pt-4 space-y-12">
+    <!-- Experiential Learning Partners Section -->
+    <section class="border-2 border-terminal-dark p-6 max-w-4xl mx-auto">
+      <h2 class="text-2xl font-bold text-terminal-accent mb-6">[ Experiential Learning Partners ]</h2>
+      <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
+        <div class="flex flex-col gap-4" v-for="(partner, i) in learningPartners" :key="i">
+          <a class="flex flex-col items-center h-full group" :href="partner.website" target="_blank">
+            <div class="h-36 flex items-center justify-center w-full p-4 border border-terminal-dark bg-white transition-colors duration-300 hover:border-terminal-accent">
+              <img class="max-h-full max-w-full object-contain" :src="partner.logo" :alt="partner.name" />
+            </div>
+            <div class="text-center mt-4 font-medium text-lg text-terminal-light">> {{ partner.name }}</div>
+          </a>
+        </div>
+      </div>
+    </section>
 
-  // Non-Profit Partners Section
-  UCard(class="w-3/4 mx-auto")
-    template(#header)
-      .text-center.text-3xl.font-semibold Non-Profit Partners
-    .grid.grid-cols-1.gap-8(class="sm:grid-cols-2 lg:grid-cols-3")
-      .flex.flex-col.gap-4(v-for="(partner, i) in nonProfitPartners" :key="i")
-        a.flex.flex-col.items-center.h-full.group(:href="partner.website" target="_blank")
-          .h-36.flex.items-center.justify-center.w-full.p-4.rounded-lg.bg-white.transition-transform.duration-300(class="group-hover:scale-105")
-            img.max-h-full.max-w-full.object-contain(:src="partner.logo" :alt="partner.name")
-          .text-center.mt-4.font-medium.text-lg {{ partner.name }}
+    <!-- Non-Profit Partners Section -->
+    <section class="border-2 border-terminal-dark p-6 max-w-4xl mx-auto">
+      <h2 class="text-2xl font-bold text-terminal-accent mb-6">[ Non-Profit Partners ]</h2>
+      <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
+        <div class="flex flex-col gap-4" v-for="(partner, i) in nonProfitPartners" :key="i">
+          <a class="flex flex-col items-center h-full group" :href="partner.website" target="_blank">
+            <div class="h-36 flex items-center justify-center w-full p-4 border border-terminal-dark bg-white transition-colors duration-300 hover:border-terminal-accent">
+              <img class="max-h-full max-w-full object-contain" :src="partner.logo" :alt="partner.name" />
+            </div>
+            <div class="text-center mt-4 font-medium text-lg text-terminal-light">> {{ partner.name }}</div>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
 </template>
 
 <script setup lang="ts">

@@ -1,3 +1,34 @@
 @tailwind components;
 @tailwind base;
 @tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-terminal-bg text-terminal-text font-mono;
+  }
+}
+
+.prose {
+  @apply text-terminal-text font-mono max-w-none;
+}
+.prose h1, .prose h2, .prose h3, .prose h4, .prose h5, .prose h6 {
+  @apply text-terminal-accent font-bold mt-8 mb-4;
+}
+.prose a {
+  @apply text-terminal-light underline hover:text-terminal-accent;
+}
+.prose strong {
+  @apply text-terminal-light font-bold;
+}
+.prose blockquote {
+  @apply border-l-2 border-terminal-dark pl-4 italic text-terminal-light;
+}
+.prose code {
+  @apply bg-terminal-dark px-1 py-0.5 rounded text-terminal-light;
+}
+.prose ul {
+  @apply list-disc list-inside my-4;
+}
+.prose p {
+  @apply my-4 leading-relaxed;
+}

@@ -7,7 +7,7 @@ This document outlines the essential conventions, commands, and patterns to help
 - **Framework**: [Nuxt 3](https://nuxt.com/)
 - **Package Manager**: `pnpm`
 - **Language**: TypeScript (`<script setup lang="ts">`)
-- **Templates**: Pug (`<template lang="pug">`)
+- **Templates**: HTML (`<template>`)
 - **Styling**: Tailwind CSS
 - **UI Library**: Nuxt UI (`@nuxt/ui`)
 - **Content Management**: Nuxt Content v2 (`@nuxt/content`)
@@ -30,11 +30,10 @@ This document outlines the essential conventions, commands, and patterns to help
 
 ## ✍️ Code Patterns & Conventions
 
-### 1. Vue Templates (Pug)
-All Vue components utilize **Pug** for their templates (`<template lang="pug">`).
-- Use Pug shorthand for basic classes and IDs (e.g., `.text-center.mb-6.font-bold`).
-- For complex Tailwind utility classes with variants (like `sm:`, `md:`, `hover:`), apply them using the standard HTML `class=""` attribute inside the Pug template.
-  - Example: `.text-center.text-strong.text-lg.mt-20(class="sm:mt-24 sm:text-4xl")`
+### 1. Vue Templates (HTML)
+All Vue components utilize standard HTML for their templates (`<template>`).
+- Use standard HTML classes and IDs.
+- Apply Tailwind utility classes using the standard HTML `class=""` attribute.
 
 ### 2. Styling & Theming
 - **Tailwind CSS** is fully integrated.

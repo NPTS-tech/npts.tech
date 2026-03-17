@@ -1,21 +1,26 @@
-<template lang="pug">
-main.flex.flex-col.gap-10.pb-10.px-4.mx-auto.max-w-4xl.mt-10
-  h1.text-4xl.text-center.font-bold Support NPTS
-  .text-center.max-w-3xl.mx-auto.text-lg.leading-relaxed
-    p Your donation helps us provide reliable technical infrastructure to non-profits and cultivate the next generation of engineering talent. 
-  
-  .flex.justify-center.mt-8
-    UButton(
-      :to="config.public.stripeDonationLink"
-      target="_blank"
-      size="xl"
-      color="primary"
-      icon="i-heroicons-heart"
-      class="px-8 py-4 text-lg"
-    ) Donate via Stripe
+<template>
+  <main class="flex flex-col gap-10 pb-10 px-4 mx-auto max-w-4xl mt-10">
+    <h1 class="text-3xl font-bold text-terminal-accent">[ Support NPTS ]</h1>
+    <div class="max-w-3xl text-lg leading-relaxed space-y-4">
+      <p>> Your donation helps us provide reliable technical infrastructure to non-profits and cultivate the next generation of engineering talent. </p>
+    </div>
+    
+    <div class="flex mt-8">
+      <a
+        :href="config.public.stripeDonationLink"
+        target="_blank"
+        class="border-2 border-terminal-accent text-terminal-accent px-8 py-4 text-lg hover:bg-terminal-accent hover:text-terminal-bg font-bold uppercase tracking-widest transition-colors inline-flex items-center gap-2"
+      >
+        <span>> EXECUTE_DONATION</span>
+        <span class="animate-pulse">_</span>
+      </a>
+    </div>
 
-  .mt-16.text-center.max-w-2xl.mx-auto
-    p.text-sm.text-gray-400 NPTS is a 501(c)(3) non-profit organization. All donations are securely processed through Stripe.
+    <div class="mt-16 max-w-2xl border-t border-terminal-dark pt-4">
+      <p class="text-sm text-terminal-dark">// NPTS is a 501(c)(3) non-profit organization.</p>
+      <p class="text-sm text-terminal-dark">// All donations are securely processed through Stripe.</p>
+    </div>
+  </main>
 </template>
 
 <script setup lang="ts">

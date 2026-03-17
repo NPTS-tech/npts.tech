@@ -1,4 +1,5 @@
-<template lang="pug">
-main.pt-4
-  ContentDoc
+<template>
+  <main class="pt-4 prose prose-terminal">
+    <ContentDoc />
+  </main>
 </template>
