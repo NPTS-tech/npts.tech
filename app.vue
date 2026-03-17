@@ -32,10 +32,11 @@ const links = ref([
     icon: 'i-heroicons-globe-europe-africa',
     to: '/partners'
   },
-  // {
-  //   label: 'Donors',
-  //   to:'/donors'
-  // },
+  {
+    label: 'Donors',
+    icon: 'i-heroicons-heart',
+    to: '/donors'
+  },
   {
     label: 'Contact',
     icon: 'i-heroicons-phone',

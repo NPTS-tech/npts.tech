@@ -42,6 +42,8 @@ jobs:
         run: pnpm i --no-frozen-lockfile
       - name: Static HTML export with Nuxt
         run: pnpm run generate
+        env:
+          STRIPE_DONATION_LINK: ${{ vars.STRIPE_DONATION_LINK }}
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
