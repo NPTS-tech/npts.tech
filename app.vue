@@ -1,5 +1,5 @@
 <template>
-  <div class="min-h-screen p-4 sm:p-8">
+  <div class="min-h-screen p-4 sm:p-8 relative z-10">
     <div class="max-w-4xl mx-auto">
       <header class="mb-12 border-b-2 border-terminal-dark pb-6 flex flex-col gap-6">
         <div class="flex items-center gap-6">

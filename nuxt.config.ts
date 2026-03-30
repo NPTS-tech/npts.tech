@@ -19,7 +19,11 @@ export default defineNuxtConfig({
   },
   components: [
     { path: '~/components', pathPrefix: false },
-  ],nitro: {
+  ],
+  app: {
+    pageTransition: { name: 'page', mode: 'out-in' }
+  },
+  nitro: {
     prerender: {
       routes: ['/'],
     },

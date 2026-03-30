@@ -1,6 +1,10 @@
 <template>
   <main class="flex flex-col gap-10 pb-10 px-4 mx-auto max-w-4xl mt-10">
-    <h1 class="text-3xl font-bold text-terminal-accent">[ Support NPTS ]</h1>
+    <div>
+      <h1 class="text-3xl font-bold text-terminal-accent">
+        [ Support NPTS ]
+      </h1>
+    </div>
     <div class="max-w-3xl text-lg leading-relaxed space-y-4">
       <p>> Your donation helps us provide reliable technical infrastructure to non-profits and cultivate the next generation of engineering talent. </p>
     </div>
@@ -9,10 +13,10 @@
       <a
         :href="config.public.stripeDonationLink"
         target="_blank"
-        class="border-2 border-terminal-accent text-terminal-accent px-8 py-4 text-lg hover:bg-terminal-accent hover:text-terminal-bg font-bold uppercase tracking-widest transition-colors inline-flex items-center gap-2"
+        class="border-2 border-terminal-accent text-terminal-accent px-8 py-4 text-lg hover:bg-terminal-accent hover:text-terminal-bg font-bold uppercase tracking-widest transition-all inline-flex items-center gap-2 shadow-[0_0_10px_#A77B4E] hover:shadow-[0_0_20px_#A77B4E] hover:scale-105"
       >
         <span>> EXECUTE_DONATION</span>
-        <span class="animate-pulse">_</span>
+        <span class="animate-blink">_</span>
       </a>
     </div>
 

@@ -1,9 +1,21 @@
 <template>
   <main class="flex flex-col gap-12 pb-10">
     <!-- Hero Section -->
-    <div class="relative border-2 border-terminal-dark p-8 bg-terminal-bg">
-      <div class="text-center text-terminal-light text-2xl mt-4 sm:text-4xl">> NON_PROFIT_TECHNICAL_SUPPORT</div>
-      <div class="text-center text-terminal-accent text-sm mt-4 sm:text-base">$ Powering your mission.</div>
+    <div class="relative border-2 border-terminal-dark p-8 bg-terminal-bg animate-glow shadow-[0_0_15px_#084D65]">
+      <div class="flex flex-col items-center w-full max-w-full overflow-hidden">
+        <div class="text-terminal-light text-2xl mt-4 sm:text-4xl inline-flex items-center">
+          <span class="mr-2">></span>
+          <div class="overflow-hidden whitespace-nowrap animate-typewriter inline-block border-r-4 border-terminal-light animate-blink pr-2">
+            NON_PROFIT_TECHNICAL_SUPPORT
+          </div>
+        </div>
+        <div class="text-terminal-accent text-sm mt-4 sm:text-base inline-flex items-center">
+          <span class="mr-2">$</span>
+          <div class="overflow-hidden whitespace-nowrap animate-typewriter-delayed inline-block">
+            Powering your mission.
+          </div>
+        </div>
+      </div>
     </div>
 
     <!-- Mission Statement -->
