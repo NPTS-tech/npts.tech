@@ -9,7 +9,7 @@
         </div>
         <div class="text-xs text-terminal-light opacity-80 font-bold tracking-wider">/var/log/npts.txt</div>
       </div>
-      <div class="p-8 md:p-12 prose prose-terminal max-w-none">
+      <div class="prose prose-terminal max-w-none">
         <ContentDoc />
       </div>
     </div>

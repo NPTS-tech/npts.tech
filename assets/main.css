@@ -27,8 +27,11 @@
 .prose h1, .prose h2, .prose h3, .prose h4, .prose h5, .prose h6 {
   @apply text-terminal-accent font-bold mt-8 mb-4;
 }
-.prose h1::before, .prose h2::before, .prose h3::before {
-  @apply text-terminal-dark font-normal mr-2 text-sm md:text-base;
+.prose h1::before, .prose h2::before, .prose h3::before, .prose h4::before, .prose h5::before, .prose h6::before {
+  content: "[ ";
+}
+.prose h1::after, .prose h2::after, .prose h3::after, .prose h4::after, .prose h5::after, .prose h6::after {
+  content: " ]";
 }
 .prose a {
   @apply text-terminal-light border-b border-terminal-light hover:text-terminal-bg hover:bg-terminal-light transition-colors no-underline;
@@ -53,6 +56,11 @@
   @apply text-terminal-dark mr-3 mt-0.5 text-sm;
 }
 .prose p {
-  @apply my-4 leading-relaxed items-start;
+  @apply my-4 leading-relaxed;
 }
-
+.prose p::before {
+  content: "> ";
+}
+.prose > div > div {
+  @apply w-full mx-0 bg-terminal-bg dark:bg-terminal-bg;
+}
