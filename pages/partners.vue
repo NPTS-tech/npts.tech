@@ -1,61 +1,110 @@
 <template>
-  <main class="pt-4 space-y-12">
-    <!-- Experiential Learning Partners Section -->
-    <section class="border-2 border-terminal-dark p-6 max-w-4xl mx-auto shadow-[0_0_10px_#084D65] hover:shadow-[0_0_15px_#A77B4E] transition-shadow duration-500">
-      <div class="mb-6">
-        <h2 class="text-2xl font-bold text-terminal-accent">
-          [ Experiential Learning Partners ]
-        </h2>
+  <div class="bg-term-bg text-term-fg font-mono">
+    <div class="px-10 pt-[76px] pb-14 border-b border-term-line">
+      <div class="text-[13px] text-term-acc tracking-[0.1em] mb-6">[ PARTNERS ]</div>
+      <h1 class="text-[52px] leading-[1.08] font-medium m-0 mb-6 -tracking-[0.02em] max-w-[24ch] text-pretty">The organizations we keep online.</h1>
+      <p class="font-sans text-[19px] leading-[1.6] text-term-mid m-0 max-w-[62ch] text-pretty">Fourteen applications, run for free, most of them inherited from student teams. Here's who they serve and what state each one is in.</p>
+    </div>
+    <div class="flex items-center gap-10 px-10 py-8 border-b border-term-line">
+      <div class="text-[11px] tracking-[0.14em] uppercase text-term-dim shrink-0">Partner organizations</div>
+      <div class="grid grid-cols-6 gap-4 flex-1">
+        <div class="h-11 border border-dashed border-term-rule flex items-center justify-center text-[11px] text-term-mid">UTDesign EPICS</div>
+        <div class="h-11 border border-dashed border-term-rule flex items-center justify-center text-[11px] text-term-dim">[ logo ]</div>
+        <div class="h-11 border border-dashed border-term-rule flex items-center justify-center text-[11px] text-term-dim">[ logo ]</div>
+        <div class="h-11 border border-dashed border-term-rule flex items-center justify-center text-[11px] text-term-dim">[ logo ]</div>
+        <div class="h-11 border border-dashed border-term-rule flex items-center justify-center text-[11px] text-term-dim">[ logo ]</div>
+        <div class="h-11 border border-dashed border-term-rule flex items-center justify-center text-[11px] text-term-dim">[ logo ]</div>
       </div>
-      <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
-        <div class="flex flex-col gap-4" v-for="(partner, i) in learningPartners" :key="i">
-          <a class="flex flex-col items-center h-full group" :href="partner.website" target="_blank">
-            <div class="h-36 flex items-center justify-center w-full p-4 border border-terminal-dark bg-white transition-all duration-300 group-hover:border-terminal-accent group-hover:shadow-[0_0_20px_#ADDCD4] group-hover:-translate-y-2">
-              <img class="max-h-full max-w-full object-contain" :src="partner.logo" :alt="partner.name" />
-            </div>
-            <div class="text-center mt-4 font-medium text-lg text-terminal-light">> {{ partner.name }}</div>
-          </a>
+    </div>
+    <div class="px-10 py-[68px] border-b border-term-line">
+      <div class="flex items-baseline justify-between mb-8">
+        <div class="text-[13px] text-term-acc tracking-[0.1em]">[ SUPPORTED APPLICATIONS ]</div>
+        <div class="text-[13px] text-term-dim">14 total · 12 in production · 2 in build</div>
+      </div>
+      <div class="grid grid-cols-3 gap-5">
+        <div class="border border-term-line bg-term-card px-7 py-6 hover:border-term-acc">
+          <div class="flex justify-between items-baseline mb-3">
+            <div class="text-xs text-term-dim">./intake-system</div>
+            <div class="text-xs text-term-acc">production · 2y</div>
+          </div>
+          <h3 class="text-[19px] font-medium m-0 mb-3 leading-[1.3]">Client intake &amp; case notes</h3>
+          <p class="font-sans text-sm leading-[1.65] text-term-mid m-0 mb-4">Replaced a shared spreadsheet for a caseworker team of nine. Built by an EPICS team, adopted at handoff.</p>
+          <div class="text-xs text-term-dim">Partner name goes here</div>
+        </div>
+        <div class="border border-term-line bg-term-card px-7 py-6 hover:border-term-acc">
+          <div class="flex justify-between items-baseline mb-3">
+            <div class="text-xs text-term-dim">./volunteer-portal</div>
+            <div class="text-xs text-term-acc">production · 1y</div>
+          </div>
+          <h3 class="text-[19px] font-medium m-0 mb-3 leading-[1.3]">Volunteer sign-up portal</h3>
+          <p class="font-sans text-sm leading-[1.65] text-term-mid m-0 mb-4">Shift scheduling and reminders for a weekly meal service. Cut no-shows by handling confirmations automatically.</p>
+          <div class="text-xs text-term-dim">Partner name goes here</div>
+        </div>
+        <div class="border border-term-line bg-term-card px-7 py-6 hover:border-term-acc">
+          <div class="flex justify-between items-baseline mb-3">
+            <div class="text-xs text-term-dim">./inventory</div>
+            <div class="text-xs text-term-acc">production · 8mo</div>
+          </div>
+          <h3 class="text-[19px] font-medium m-0 mb-3 leading-[1.3]">Donation inventory tracker</h3>
+          <p class="font-sans text-sm leading-[1.65] text-term-mid m-0 mb-4">Barcode intake and stock levels for a donation warehouse, on hardware they already owned.</p>
+          <div class="text-xs text-term-dim">Partner name goes here</div>
+        </div>
+        <div class="border border-term-line bg-term-card px-7 py-6 hover:border-term-acc">
+          <div class="flex justify-between items-baseline mb-3">
+            <div class="text-xs text-term-dim">./program-reporting</div>
+            <div class="text-xs text-term-acc">production · 6mo</div>
+          </div>
+          <h3 class="text-[19px] font-medium m-0 mb-3 leading-[1.3]">Grant reporting dashboard</h3>
+          <p class="font-sans text-sm leading-[1.65] text-term-mid m-0 mb-4">Turns program data into the numbers funders ask for, so quarterly reports take an hour instead of a week.</p>
+          <div class="text-xs text-term-dim">Partner name goes here</div>
+        </div>
+        <div class="border border-term-line bg-term-card px-7 py-6 hover:border-term-acc">
+          <div class="flex justify-between items-baseline mb-3">
+            <div class="text-xs text-term-dim">./site-rebuild</div>
+            <div class="text-xs text-term-warn">in build</div>
+          </div>
+          <h3 class="text-[19px] font-medium m-0 mb-3 leading-[1.3]">Public site &amp; donation flow</h3>
+          <p class="font-sans text-sm leading-[1.65] text-term-mid m-0 mb-4">Migrating off a page builder with an expiring license. Current EPICS team, ships this spring.</p>
+          <div class="text-xs text-term-dim">Partner name goes here</div>
+        </div>
+        <div class="border border-dashed border-term-rule px-7 py-6 flex flex-col justify-center items-start">
+          <div class="text-xs text-term-dim mb-3">./your-project</div>
+          <h3 class="text-[19px] font-medium m-0 mb-3 leading-[1.3] text-term-mid">This could be your organization</h3>
+          <NuxtLink to="/support" class="text-[13px] text-term-acc border-b border-term-acc/40">Request support →</NuxtLink>
         </div>
       </div>
-    </section>
-
-    <!-- Non-Profit Partners Section -->
-    <section class="border-2 border-terminal-dark p-6 max-w-4xl mx-auto shadow-[0_0_10px_#084D65] hover:shadow-[0_0_15px_#A77B4E] transition-shadow duration-500">
-      <div class="mb-6">
-        <h2 class="text-2xl font-bold text-terminal-accent">
-          [ Non-Profit Partners ]
-        </h2>
+    </div>
+    <div class="px-10 py-[68px] border-b border-term-line grid grid-cols-[1fr_1.1fr] gap-16">
+      <div>
+        <div class="text-[13px] text-term-acc tracking-[0.1em] mb-7">[ BECOMING A PARTNER ]</div>
+        <h2 class="text-[30px] font-medium leading-[1.2] m-0 mb-5">Four conversations, then we're running it.</h2>
+        <p class="font-sans text-base leading-[1.65] text-term-mid m-0 max-w-[44ch]">There's no application window and no committee. We take on what we can support well, and we'll tell you within a week if that's not you.</p>
       </div>
-      <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
-        <div class="flex flex-col gap-4" v-for="(partner, i) in nonProfitPartners" :key="i">
-          <a class="flex flex-col items-center h-full group" :href="partner.website" target="_blank">
-            <div class="h-36 flex items-center justify-center w-full p-4 border border-terminal-dark bg-white transition-all duration-300 group-hover:border-terminal-accent group-hover:shadow-[0_0_20px_#ADDCD4] group-hover:-translate-y-2">
-              <img class="max-h-full max-w-full object-contain" :src="partner.logo" :alt="partner.name" />
-            </div>
-            <div class="text-center mt-4 font-medium text-lg text-terminal-light">> {{ partner.name }}</div>
-          </a>
+      <div class="border border-term-line">
+        <div class="px-7 py-5 border-b border-term-line flex gap-5">
+          <span class="text-term-acc">01</span>
+          <div class="flex-1"><h4 class="m-0 mb-1 text-[15px] font-semibold">Intro call</h4><p class="font-sans m-0 text-sm leading-[1.6] text-term-mid">Thirty minutes. What you have, what's failing, who touches it.</p></div>
+        </div>
+        <div class="px-7 py-5 border-b border-term-line flex gap-5">
+          <span class="text-term-acc">02</span>
+          <div class="flex-1"><h4 class="m-0 mb-1 text-[15px] font-semibold">Technical review</h4><p class="font-sans m-0 text-sm leading-[1.6] text-term-mid">We look at the code, the data, and the hosting bill you're trying to escape.</p></div>
+        </div>
+        <div class="px-7 py-5 border-b border-term-line flex gap-5">
+          <span class="text-term-acc">03</span>
+          <div class="flex-1"><h4 class="m-0 mb-1 text-[15px] font-semibold">Written agreement</h4><p class="font-sans m-0 text-sm leading-[1.6] text-term-mid">Plain-language scope: what we cover, what we don't, how data is handled, how either side exits.</p></div>
+        </div>
+        <div class="px-7 py-5 flex gap-5">
+          <span class="text-term-acc">04</span>
+          <div class="flex-1"><h4 class="m-0 mb-1 text-[15px] font-semibold">Migration</h4><p class="font-sans m-0 text-sm leading-[1.6] text-term-mid">We move it, verify a restore, and hand you documentation. Usually under two weeks.</p></div>
         </div>
       </div>
-    </section>
-  </main>
+    </div>
+    <div class="bg-term-acc text-term-bg px-10 py-14 grid grid-cols-[1fr_auto] gap-10 items-center">
+      <div>
+        <h3 class="text-[30px] font-semibold m-0 mb-3 -tracking-[0.01em]">Want to be number fifteen?</h3>
+        <p class="font-sans text-base leading-[1.6] m-0 max-w-[54ch] opacity-80">We have capacity for a handful of new partners each semester. Earlier is better.</p>
+      </div>
+      <NuxtLink to="/support" class="text-sm font-semibold bg-term-bg text-term-acc px-[22px] py-[14px]">Start the conversation →</NuxtLink>
+    </div>
+  </div>
 </template>
-
-<script setup lang="ts">
-definePageMeta({ documentDriven: { page: false, } });
-
-const learningPartners = [
-  {
-    name: "UTDesign® EPICS",
-    logo: "/img/partner-logos/epics-logo.webp",
-    website: "https://epics.utdallas.edu"
-  }
-];
-
-const nonProfitPartners = [
-  {
-    name: "The Warren Center",
-    logo: "/img/partner-logos/warren_center.webp",
-    website: "https://thewarrencenter.org"
-  }
-];
-</script>

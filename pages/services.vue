@@ -1,0 +1,128 @@
+<template>
+  <div class="bg-term-bg text-term-fg font-mono">
+    <div class="px-10 pt-[76px] pb-14 border-b border-term-line">
+      <div class="text-[13px] text-term-acc tracking-[0.1em] mb-6">[ SERVICES ]</div>
+      <h1 class="text-[52px] leading-[1.08] font-medium m-0 mb-6 -tracking-[0.02em] max-w-[24ch] text-pretty">Everything your software needs, at no cost to you.</h1>
+      <p class="font-sans text-[19px] leading-[1.6] text-term-mid m-0 max-w-[62ch] text-pretty">No consulting engagement, no discovery phase, no invoice. Below is exactly what we take on, what we commit to, and what we need from you.</p>
+    </div>
+    <div class="grid grid-cols-3 border-b border-term-line">
+      <div class="px-10 py-7 border-r border-term-line">
+        <div class="text-[13px] text-term-dim mb-2">Response to outages</div>
+        <div class="text-[26px] text-term-acc font-medium">&lt; 24 hours</div>
+      </div>
+      <div class="px-10 py-7 border-r border-term-line">
+        <div class="text-[13px] text-term-dim mb-2">Uptime target</div>
+        <div class="text-[26px] text-term-acc font-medium">99.9%</div>
+      </div>
+      <div class="px-10 py-7">
+        <div class="text-[13px] text-term-dim mb-2">Cost to partner orgs</div>
+        <div class="text-[26px] text-term-acc font-medium">$0</div>
+      </div>
+    </div>
+    <div class="px-10 py-[68px] border-b border-term-line">
+      <div class="text-[13px] text-term-acc tracking-[0.1em] mb-8">[ 01 — APPLICATION HOSTING ]</div>
+      <div class="grid grid-cols-[1fr_1.1fr] gap-16">
+        <div>
+          <h2 class="text-[30px] font-medium leading-[1.2] m-0 mb-5">We run it, so nobody on your staff has to.</h2>
+          <p class="font-sans text-base leading-[1.65] text-term-mid m-0 mb-6 max-w-[46ch]">Your web app, database, and background jobs live on our infrastructure. You get a domain, TLS, and a place to send bug reports.</p>
+          <NuxtLink to="/support" class="text-sm font-semibold text-term-bg bg-term-acc px-5 py-3 inline-block hover:bg-term-accHi">Request hosting →</NuxtLink>
+        </div>
+        <div class="grid grid-cols-2 gap-px bg-term-line border border-term-line">
+          <div class="bg-term-bg px-6 py-5">
+            <h4 class="m-0 mb-2 text-[15px] font-semibold">Included</h4>
+            <div class="font-sans text-sm leading-[1.9] text-term-mid">Managed deploys<br>TLS certificates<br>Custom domain<br>Nightly encrypted backups<br>Log retention (30 days)</div>
+          </div>
+          <div class="bg-term-bg px-6 py-5">
+            <h4 class="m-0 mb-2 text-[15px] font-semibold">We need from you</h4>
+            <div class="font-sans text-sm leading-[1.9] text-term-mid">Source code access<br>One staff point of contact<br>DNS delegation<br>A written owner for the data</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="px-10 py-[68px] border-b border-term-line">
+      <div class="text-[13px] text-term-acc tracking-[0.1em] mb-8">[ 02 — MAINTENANCE &amp; ON-CALL ]</div>
+      <div class="grid grid-cols-[1fr_1.1fr] gap-16">
+        <div>
+          <h2 class="text-[30px] font-medium leading-[1.2] m-0 mb-5">Someone answers when it breaks.</h2>
+          <p class="font-sans text-base leading-[1.65] text-term-mid m-0 mb-6 max-w-[46ch]">Software rots without attention. We patch it, watch it, and pick up the phone — no ticket queue that ends in silence.</p>
+          <NuxtLink to="/support" class="text-sm text-term-fg border border-term-rule px-5 py-3 inline-block hover:border-term-acc">Talk to us →</NuxtLink>
+        </div>
+        <div class="grid grid-cols-2 gap-px bg-term-line border border-term-line">
+          <div class="bg-term-bg px-6 py-5">
+            <h4 class="m-0 mb-2 text-[15px] font-semibold">Included</h4>
+            <div class="font-sans text-sm leading-[1.9] text-term-mid">Dependency &amp; security patching<br>Uptime monitoring + alerts<br>Quarterly restore drills<br>Small fixes and copy changes<br>Annual health report</div>
+          </div>
+          <div class="bg-term-bg px-6 py-5">
+            <h4 class="m-0 mb-2 text-[15px] font-semibold">Not included</h4>
+            <div class="font-sans text-sm leading-[1.9] text-term-mid">New feature development<br>Staff IT / device support<br>24/7 phone on-call<br>Anything requiring a paid license we don't hold</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="px-10 py-[68px] border-b border-term-line">
+      <div class="text-[13px] text-term-acc tracking-[0.1em] mb-8">[ 03 — STUDENT-BUILT SOFTWARE ]</div>
+      <div class="grid grid-cols-[1fr_1.1fr] gap-16 items-start">
+        <div>
+          <h2 class="text-[30px] font-medium leading-[1.2] m-0 mb-5">Need something built? We scope it with a student team.</h2>
+          <p class="font-sans text-base leading-[1.65] text-term-mid m-0 mb-6 max-w-[46ch]">We help you write a scope a capstone team can actually finish, then we adopt the result so it doesn't die when the semester does.</p>
+          <NuxtLink to="/programs" class="text-sm text-term-acc border-b border-term-acc/40">How the program works →</NuxtLink>
+        </div>
+        <div class="border border-term-line">
+          <div class="px-6 py-4 border-b border-term-line flex gap-4"><span class="text-term-acc">01</span><span class="font-sans text-sm leading-[1.6] text-term-mid flex-1">You describe the problem — we translate it into a technical scope.</span></div>
+          <div class="px-6 py-4 border-b border-term-line flex gap-4"><span class="text-term-acc">02</span><span class="font-sans text-sm leading-[1.6] text-term-mid flex-1">A student team builds it over one or two semesters, with our mentors reviewing code.</span></div>
+          <div class="px-6 py-4 border-b border-term-line flex gap-4"><span class="text-term-acc">03</span><span class="font-sans text-sm leading-[1.6] text-term-mid flex-1">We take ownership of hosting, backups, and monitoring at handoff.</span></div>
+          <div class="px-6 py-4 flex gap-4"><span class="text-term-acc">04</span><span class="font-sans text-sm leading-[1.6] text-term-mid flex-1">Your staff gets trained, and we stay on call indefinitely.</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="px-10 py-[68px] border-b border-term-line">
+      <div class="flex items-baseline gap-4 mb-8">
+        <div class="text-[13px] text-term-acc tracking-[0.1em]">[ 04 — NONPROFIT SAAS SUITE ]</div>
+        <div class="text-[13px] text-term-warn">in development</div>
+      </div>
+      <div class="grid grid-cols-[1fr_1.1fr] gap-16 items-start">
+        <div>
+          <h2 class="text-[30px] font-medium leading-[1.2] m-0 mb-5">The tools every nonprofit needs, without the per-seat bill.</h2>
+          <p class="font-sans text-base leading-[1.65] text-term-mid m-0 mb-6 max-w-[46ch]">We're building affordable replacements for the commercial platforms quietly eating your operating budget. Tell us which one hurts most and we'll prioritise it.</p>
+          <NuxtLink to="/support" class="text-sm font-semibold text-term-bg bg-term-acc px-5 py-3 inline-block hover:bg-term-accHi">Join the waitlist →</NuxtLink>
+        </div>
+        <div class="grid grid-cols-2 gap-px bg-term-line border border-term-line font-sans">
+          <div class="bg-term-bg px-6 py-5"><h4 class="font-mono m-0 mb-1 text-[15px] font-semibold">Volunteer scheduling</h4><p class="m-0 text-sm text-term-dim">Design partners wanted</p></div>
+          <div class="bg-term-bg px-6 py-5"><h4 class="font-mono m-0 mb-1 text-[15px] font-semibold">Intake &amp; case notes</h4><p class="m-0 text-sm text-term-dim">In prototype</p></div>
+          <div class="bg-term-bg px-6 py-5"><h4 class="font-mono m-0 mb-1 text-[15px] font-semibold">Donor records</h4><p class="m-0 text-sm text-term-dim">Scoping</p></div>
+          <div class="bg-term-bg px-6 py-5"><h4 class="font-mono m-0 mb-1 text-[15px] font-semibold">Form &amp; survey builder</h4><p class="m-0 text-sm text-term-dim">Scoping</p></div>
+        </div>
+      </div>
+    </div>
+    <div class="px-10 py-[68px] border-b border-term-line">
+      <div class="text-[13px] text-term-acc tracking-[0.1em] mb-7">[ WHO WE CAN SUPPORT ]</div>
+      <div class="grid grid-cols-2 gap-16">
+        <div>
+          <h3 class="text-[21px] font-medium m-0 mb-4">We're a good fit if</h3>
+          <div class="font-sans text-[15px] leading-[2] text-term-mid">
+            <div>You're a registered nonprofit or a fiscally sponsored project.</div>
+            <div>You have no in-house engineer, or one who is stretched thin.</div>
+            <div>Your application serves your mission, not your marketing.</div>
+            <div>You can name one staff member as our point of contact.</div>
+          </div>
+        </div>
+        <div>
+          <h3 class="text-[21px] font-medium m-0 mb-4">We're probably not if</h3>
+          <div class="font-sans text-[15px] leading-[2] text-term-mid">
+            <div>You need a 24/7 guaranteed-response contract.</div>
+            <div>The system handles payments or regulated health records.</div>
+            <div>You need it live in under a month.</div>
+            <div>You're looking for staff IT and helpdesk support.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="bg-term-acc text-term-bg px-10 py-14 grid grid-cols-[1fr_auto] gap-10 items-center">
+      <div>
+        <h3 class="text-[30px] font-semibold m-0 mb-3 -tracking-[0.01em]">Tell us what's breaking.</h3>
+        <p class="font-sans text-base leading-[1.6] m-0 max-w-[54ch] opacity-80">One short form. We reply within two business days, and we'll tell you honestly if we're not the right fit.</p>
+      </div>
+      <NuxtLink to="/support" class="text-sm font-semibold bg-term-bg text-term-acc px-[22px] py-[14px]">Request support →</NuxtLink>
+    </div>
+  </div>
+</template>

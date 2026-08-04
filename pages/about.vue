@@ -1,0 +1,101 @@
+<template>
+  <div class="bg-term-bg text-term-fg font-mono">
+    <div class="px-10 pt-[76px] pb-14 border-b border-term-line">
+      <div class="text-[13px] text-term-acc tracking-[0.1em] mb-6">[ ABOUT ]</div>
+      <h1 class="text-[52px] leading-[1.08] font-medium m-0 mb-6 -tracking-[0.02em] max-w-[26ch] text-pretty">Two problems that happen to be each other's solution.</h1>
+      <p class="font-sans text-[19px] leading-[1.6] text-term-mid m-0 max-w-[64ch] text-pretty">Nonprofits can't afford engineers. Young engineers can't get experience without a job. We put them in the same room and cover the infrastructure bill.</p>
+    </div>
+    <div class="px-10 py-[68px] border-b border-term-line grid grid-cols-2 gap-16">
+      <div>
+        <div class="text-[13px] text-term-acc tracking-[0.1em] mb-6">[ OUR STORY ]</div>
+        <p class="font-sans text-base leading-[1.7] text-term-mid m-0 mb-4">NPTS started because we kept watching the same thing happen: a student team would build something genuinely useful for a community organization, present it, get an A — and six months later the site was down, the domain had lapsed, and the nonprofit was back to a spreadsheet.</p>
+        <p class="font-sans text-base leading-[1.7] text-term-mid m-0 mb-4">The software wasn't the problem. Nobody owned it. Hosting a small web application costs almost nothing in dollars and a great deal in attention, and attention is the one thing a five-person nonprofit doesn't have.</p>
+        <p class="font-sans text-base leading-[1.7] text-term-mid m-0">So we became the owner. We adopt the projects, pay the server bills out of donations, and staff the work with the students who want more of it than one semester allows. Everything we run for a partner is free, and it stays free.</p>
+      </div>
+      <div>
+        <div class="text-[13px] text-term-acc tracking-[0.1em] mb-6">[ WHAT WE BELIEVE ]</div>
+        <div class="border border-term-line">
+          <div class="px-7 py-5 border-b border-term-line">
+            <h4 class="m-0 mb-2 text-[15px] font-semibold">Infrastructure is a form of charity</h4>
+            <p class="font-sans m-0 text-sm leading-[1.65] text-term-mid">A working database is as real a donation as a cheque, and it keeps giving for years.</p>
+          </div>
+          <div class="px-7 py-5 border-b border-term-line">
+            <h4 class="m-0 mb-2 text-[15px] font-semibold">Free should mean free</h4>
+            <p class="font-sans m-0 text-sm leading-[1.65] text-term-mid">No trial period, no seat limits, no upsell to a paid tier once you depend on us.</p>
+          </div>
+          <div class="px-7 py-5 border-b border-term-line">
+            <h4 class="m-0 mb-2 text-[15px] font-semibold">Students do real work or none at all</h4>
+            <p class="font-sans m-0 text-sm leading-[1.65] text-term-mid">Practice projects teach nothing about consequences. Ours have users.</p>
+          </div>
+          <div class="px-7 py-5">
+            <h4 class="m-0 mb-2 text-[15px] font-semibold">Say what we can't do</h4>
+            <p class="font-sans m-0 text-sm leading-[1.65] text-term-mid">We turn work down when we can't support it well. Overcommitting is how small orgs get hurt.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="px-10 py-[68px] border-b border-term-line">
+      <div class="text-[13px] text-term-acc tracking-[0.1em] mb-8">[ TEAM &amp; BOARD ]</div>
+      <div class="grid grid-cols-4 gap-5">
+        <div class="border border-term-line bg-term-card px-6 py-6">
+          <h4 class="m-0 mb-1 text-[16px] font-semibold">Name</h4>
+          <div class="text-[13px] text-term-acc mb-3">Executive Director</div>
+          <p class="font-sans m-0 text-sm leading-[1.6] text-term-mid">One line on background and day job.</p>
+        </div>
+        <div class="border border-term-line bg-term-card px-6 py-6">
+          <h4 class="m-0 mb-1 text-[16px] font-semibold">Name</h4>
+          <div class="text-[13px] text-term-acc mb-3">Technical Lead</div>
+          <p class="font-sans m-0 text-sm leading-[1.6] text-term-mid">One line on background and day job.</p>
+        </div>
+        <div class="border border-term-line bg-term-card px-6 py-6">
+          <h4 class="m-0 mb-1 text-[16px] font-semibold">Name</h4>
+          <div class="text-[13px] text-term-acc mb-3">Board Member</div>
+          <p class="font-sans m-0 text-sm leading-[1.6] text-term-mid">One line on background and day job.</p>
+        </div>
+        <div class="border border-term-line bg-term-card px-6 py-6">
+          <h4 class="m-0 mb-1 text-[16px] font-semibold">Name</h4>
+          <div class="text-[13px] text-term-acc mb-3">Board Member</div>
+          <p class="font-sans m-0 text-sm leading-[1.6] text-term-mid">One line on background and day job.</p>
+        </div>
+      </div>
+      <p class="font-sans text-sm text-term-dim mt-6 m-0">Everyone here is a volunteer. Nobody draws a salary from NPTS.</p>
+    </div>
+    <div class="px-10 py-[68px] border-b border-term-line">
+      <div class="text-[13px] text-term-acc tracking-[0.1em] mb-8">[ GOVERNANCE &amp; FINANCIALS ]</div>
+      <div class="grid grid-cols-3 gap-px bg-term-line border border-term-line">
+        <div class="bg-term-bg px-7 py-6">
+          <h4 class="m-0 mb-2 text-[15px] font-semibold">501(c)(3) status</h4>
+          <p class="font-sans m-0 mb-4 text-sm leading-[1.65] text-term-mid">Registered nonprofit. Donations are tax-deductible in the US.</p>
+          <a href="#" class="text-[13px] text-term-acc border-b border-term-acc/40">IRS determination letter →</a>
+        </div>
+        <div class="bg-term-bg px-7 py-6">
+          <h4 class="m-0 mb-2 text-[15px] font-semibold">Where the money goes</h4>
+          <p class="font-sans m-0 mb-4 text-sm leading-[1.65] text-term-mid">Servers, domains, and student stipends. No salaries, no office.</p>
+          <a href="#" class="text-[13px] text-term-acc border-b border-term-acc/40">Form 990 →</a>
+        </div>
+        <div class="bg-term-bg px-7 py-6">
+          <h4 class="m-0 mb-2 text-[15px] font-semibold">How we handle data</h4>
+          <p class="font-sans m-0 mb-4 text-sm leading-[1.65] text-term-mid">Encrypted backups, scoped access, never sold, exportable on request.</p>
+          <NuxtLink to="/about" class="text-[13px] text-term-acc border-b border-term-acc/40">Security overview →</NuxtLink>
+        </div>
+      </div>
+    </div>
+    <div class="grid grid-cols-3 border-b border-term-line">
+      <div class="px-10 py-12 border-r border-term-line">
+        <h3 class="text-[21px] font-medium m-0 mb-3">Need help</h3>
+        <p class="font-sans text-sm leading-[1.65] text-term-mid m-0 mb-5">We host and maintain software for nonprofits, free.</p>
+        <NuxtLink to="/support" class="text-[13px] text-term-acc border-b border-term-acc/40">Request support →</NuxtLink>
+      </div>
+      <div class="px-10 py-12 border-r border-term-line">
+        <h3 class="text-[21px] font-medium m-0 mb-3">Want to build</h3>
+        <p class="font-sans text-sm leading-[1.65] text-term-mid m-0 mb-5">Internships and volunteer roles for engineers early in their careers.</p>
+        <NuxtLink to="/careers" class="text-[13px] text-term-acc border-b border-term-acc/40">Open positions →</NuxtLink>
+      </div>
+      <div class="px-10 py-12">
+        <h3 class="text-[21px] font-medium m-0 mb-3">Want to fund</h3>
+        <p class="font-sans text-sm leading-[1.65] text-term-mid m-0 mb-5">$50 a month keeps one partner organization online for a year.</p>
+        <NuxtLink to="/donate" class="text-[13px] text-term-acc border-b border-term-acc/40">Donate →</NuxtLink>
+      </div>
+    </div>
+  </div>
+</template>
