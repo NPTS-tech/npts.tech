@@ -1,85 +1,219 @@
 <template>
-  <div class="bg-term-bg text-term-fg font-mono">
-    <div class="px-10 pt-[76px] pb-14 border-b border-term-line">
-      <div class="text-[13px] text-term-acc tracking-[0.1em] mb-6">[ REQUEST SUPPORT ]</div>
-      <h1 class="text-[52px] leading-[1.08] font-medium m-0 mb-6 -tracking-[0.02em] max-w-[24ch] text-pretty">Tell us what's breaking.</h1>
-      <p class="font-sans text-[19px] leading-[1.6] text-term-mid m-0 max-w-[62ch] text-pretty">Five fields. A human reads it — usually the person who'd end up doing the work. We reply within two business days, including when the answer is no.</p>
-    </div>
-    <div class="grid grid-cols-[1.3fr_1fr] border-b border-term-line">
-      <div class="px-10 py-14 border-r border-term-line">
-        <form class="grid gap-6 max-w-[560px]">
-          <div class="grid gap-2">
-            <label class="text-[13px] text-term-mid">Organization name</label>
-            <input type="text" placeholder="Acme Community Services" class="bg-term-deep border border-term-rule text-term-fg text-[15px] px-4 py-3">
-          </div>
-          <div class="grid grid-cols-2 gap-5">
-            <div class="grid gap-2">
-              <label class="text-[13px] text-term-mid">Your name</label>
-              <input type="text" placeholder="Jane Okafor" class="bg-term-deep border border-term-rule text-term-fg text-[15px] px-4 py-3">
-            </div>
-            <div class="grid gap-2">
-              <label class="text-[13px] text-term-mid">Email</label>
-              <input type="email" placeholder="jane@acme.org" class="bg-term-deep border border-term-rule text-term-fg text-[15px] px-4 py-3">
-            </div>
-          </div>
-          <div class="grid gap-2">
-            <label class="text-[13px] text-term-mid">What do you need?</label>
-            <select class="bg-term-deep border border-term-rule text-term-fg text-[15px] px-4 py-3">
-              <option>Host an application we already have</option>
-              <option>Take over maintenance of something unsupported</option>
-              <option>Migrate off a platform that's failing us</option>
-              <option>Scope something new with a student team</option>
-              <option>Join the SaaS suite waitlist</option>
-              <option>Something else</option>
-            </select>
-          </div>
-          <div class="grid gap-2">
-            <label class="text-[13px] text-term-mid">Describe the situation</label>
-            <textarea rows="6" placeholder="What the system does, who uses it, what's going wrong, and any deadline you're working against." class="bg-term-deep border border-term-rule text-term-fg text-[15px] px-4 py-3 leading-[1.6] resize-y"></textarea>
-          </div>
-          <div class="grid gap-2">
-            <label class="text-[13px] text-term-mid">Anything we can look at? <span class="text-term-dim">(optional)</span></label>
-            <input type="text" placeholder="Repository, live URL, or hosting provider" class="bg-term-deep border border-term-rule text-term-fg text-[15px] px-4 py-3">
-          </div>
-          <div class="flex items-center gap-5 mt-2">
-            <button type="button" class="text-[15px] font-semibold text-term-bg bg-term-acc px-6 py-4 hover:bg-term-accHi">Send request →</button>
-            <span class="text-[13px] text-term-dim">Or email <span class="text-term-mid">hello@npts.tech</span></span>
-          </div>
-        </form>
+  <div class="bg-term-bg text-term-fg">
+    <!-- Header -->
+    <section class="max-w-7xl mx-auto px-6 sm:px-10 pt-16 pb-12 border-b border-term-line">
+      <div class="flex items-center gap-3 mb-4 font-mono text-xs text-term-acc uppercase tracking-widest">
+        <span class="h-px w-6 bg-term-acc"></span>
+        Intake &amp; Technical Support
       </div>
-      <div>
-        <div class="px-10 py-12 border-b border-term-line">
-          <div class="text-[13px] text-term-acc tracking-[0.1em] mb-6">[ WHAT HAPPENS NEXT ]</div>
-          <div class="grid gap-5">
-            <div class="flex gap-5">
-              <span class="text-term-acc text-[13px] pt-[2px]">01</span>
-              <div class="flex-1"><h4 class="m-0 mb-1 text-[15px] font-semibold">We read it and reply</h4><p class="font-sans m-0 text-sm leading-[1.6] text-term-mid">Within two business days, with a straight answer about fit.</p></div>
+      <h1 class="text-4xl sm:text-5xl lg:text-6xl font-sans font-semibold tracking-tight text-term-fg max-w-3xl leading-[1.1] mb-6">
+        Tell us what's breaking — or what you need built.
+      </h1>
+      <p class="text-lg text-term-mid font-sans leading-relaxed max-w-3xl">
+        Five quick fields. A senior engineer will review your request and reply within two business days with a straightforward answer on how we can help.
+      </p>
+    </section>
+
+    <!-- Intake Form & SLA Grid -->
+    <section class="border-b border-term-line">
+      <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 divide-y lg:divide-y-0 lg:divide-x divide-term-line">
+        <!-- Left: Intake Form -->
+        <div class="lg:col-span-7 p-6 sm:p-12">
+          <form @submit.prevent="handleSubmit" class="space-y-6 max-w-xl font-sans">
+            <div>
+              <label class="block text-xs font-mono uppercase tracking-wider text-term-mid mb-2">
+                Organization Name &amp; Website <span class="text-term-acc">*</span>
+              </label>
+              <input 
+                v-model="form.orgName" 
+                type="text" 
+                required
+                placeholder="e.g. Acme Community Services (acme.org)" 
+                class="w-full bg-term-deep border border-term-rule text-term-fg text-sm rounded px-4 py-3 focus:border-term-acc transition-colors"
+              >
             </div>
-            <div class="flex gap-5">
-              <span class="text-term-acc text-[13px] pt-[2px]">02</span>
-              <div class="flex-1"><h4 class="m-0 mb-1 text-[15px] font-semibold">Thirty-minute call</h4><p class="font-sans m-0 text-sm leading-[1.6] text-term-mid">What you have, what's failing, and who on your staff touches it.</p></div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label class="block text-xs font-mono uppercase tracking-wider text-term-mid mb-2">
+                  Your Name <span class="text-term-acc">*</span>
+                </label>
+                <input 
+                  v-model="form.name" 
+                  type="text" 
+                  required
+                  placeholder="Jane Okafor" 
+                  class="w-full bg-term-deep border border-term-rule text-term-fg text-sm rounded px-4 py-3 focus:border-term-acc transition-colors"
+                >
+              </div>
+              <div>
+                <label class="block text-xs font-mono uppercase tracking-wider text-term-mid mb-2">
+                  Email Address <span class="text-term-acc">*</span>
+                </label>
+                <input 
+                  v-model="form.email" 
+                  type="email" 
+                  required
+                  placeholder="jane@acme.org" 
+                  class="w-full bg-term-deep border border-term-rule text-term-fg text-sm rounded px-4 py-3 focus:border-term-acc transition-colors"
+                >
+              </div>
             </div>
-            <div class="flex gap-5">
-              <span class="text-term-acc text-[13px] pt-[2px]">03</span>
-              <div class="flex-1"><h4 class="m-0 mb-1 text-[15px] font-semibold">Technical review</h4><p class="font-sans m-0 text-sm leading-[1.6] text-term-mid">We look at the code and data before promising anything.</p></div>
+
+            <div>
+              <label class="block text-xs font-mono uppercase tracking-wider text-term-mid mb-2">
+                Primary Need <span class="text-term-acc">*</span>
+              </label>
+              <select 
+                v-model="form.need" 
+                required
+                class="w-full bg-term-deep border border-term-rule text-term-fg text-sm rounded px-4 py-3 focus:border-term-acc transition-colors"
+              >
+                <option value="host">Host an existing application on managed infrastructure</option>
+                <option value="rescue">Take over maintenance / rescue an unsupported project</option>
+                <option value="fractional-cto">Fractional CTO / Systems &amp; Tool Audit</option>
+                <option value="capstone">Scope a new project with a student capstone team</option>
+                <option value="careers">Student Internship / Volunteer application</option>
+                <option value="other">General technical inquiry</option>
+              </select>
             </div>
-            <div class="flex gap-5">
-              <span class="text-term-acc text-[13px] pt-[2px]">04</span>
-              <div class="flex-1"><h4 class="m-0 mb-1 text-[15px] font-semibold">Written agreement, then migration</h4><p class="font-sans m-0 text-sm leading-[1.6] text-term-mid">Plain-language scope. Most moves take under two weeks.</p></div>
+
+            <div>
+              <label class="block text-xs font-mono uppercase tracking-wider text-term-mid mb-2">
+                Situation Overview <span class="text-term-acc">*</span>
+              </label>
+              <textarea 
+                v-model="form.overview" 
+                rows="5" 
+                required
+                placeholder="What the system does, who uses it, what is failing or vulnerable, and any critical upcoming deadlines." 
+                class="w-full bg-term-deep border border-term-rule text-term-fg text-sm rounded px-4 py-3 focus:border-term-acc transition-colors resize-y leading-relaxed"
+              ></textarea>
+            </div>
+
+            <div>
+              <label class="block text-xs font-mono uppercase tracking-wider text-term-mid mb-2">
+                Existing Links / Repository / Provider <span class="text-term-dim font-mono">(optional)</span>
+              </label>
+              <input 
+                v-model="form.link" 
+                type="text" 
+                placeholder="GitHub repo, staging URL, or current hosting provider" 
+                class="w-full bg-term-deep border border-term-rule text-term-fg text-sm rounded px-4 py-3 focus:border-term-acc transition-colors"
+              >
+            </div>
+
+            <div class="pt-2 flex flex-col sm:flex-row items-center gap-4">
+              <button 
+                type="submit" 
+                class="w-full sm:w-auto font-sans font-medium text-sm text-term-deep bg-term-acc px-6 py-3.5 rounded hover:bg-term-accHi transition-colors shadow-sm shadow-term-acc/10"
+              >
+                Send Request &rarr;
+              </button>
+              <span class="text-xs font-mono text-term-dim text-center sm:text-left">
+                Or email directly: <a href="mailto:hello@npts.tech" class="text-term-mid hover:text-term-acc">hello@npts.tech</a>
+              </span>
+            </div>
+
+            <div v-if="submitted" class="p-4 rounded bg-term-deep border border-term-acc text-xs font-mono text-term-acc">
+              Opening your email client with your pre-filled inquiry... If it does not open, please email us directly at <a href="mailto:hello@npts.tech" class="underline font-bold">hello@npts.tech</a>.
+            </div>
+          </form>
+        </div>
+
+        <!-- Right: Triage SLA & Outage Box -->
+        <div class="lg:col-span-5 p-6 sm:p-12 bg-term-deep/40 flex flex-col justify-between">
+          <div class="space-y-8">
+            <div>
+              <div class="font-mono text-xs text-term-acc uppercase tracking-widest mb-4">Triage &amp; SLA Process</div>
+              <h3 class="text-xl font-sans font-semibold text-term-fg mb-4">What Happens After You Submit</h3>
+              
+              <div class="space-y-4 font-mono">
+                <div class="flex items-start gap-3">
+                  <span class="text-term-acc font-semibold text-sm">01</span>
+                  <div class="font-sans text-xs sm:text-sm">
+                    <strong class="text-term-fg">Initial Review (&lt; 48 Hours):</strong> A senior technical lead evaluates your request and replies with an honest fit assessment.
+                  </div>
+                </div>
+                <div class="flex items-start gap-3">
+                  <span class="text-term-acc font-semibold text-sm">02</span>
+                  <div class="font-sans text-xs sm:text-sm">
+                    <strong class="text-term-fg">30-Minute Discovery Call:</strong> We map your user workflows, current data storage, and staff responsibilities.
+                  </div>
+                </div>
+                <div class="flex items-start gap-3">
+                  <span class="text-term-acc font-semibold text-sm">03</span>
+                  <div class="font-sans text-xs sm:text-sm">
+                    <strong class="text-term-fg">Architecture &amp; Code Inspection:</strong> We verify code security, dependencies, and database containers.
+                  </div>
+                </div>
+                <div class="flex items-start gap-3">
+                  <span class="text-term-acc font-semibold text-sm">04</span>
+                  <div class="font-sans text-xs sm:text-sm">
+                    <strong class="text-term-fg">Written Agreement &amp; Migration:</strong> Clear scope, transparent SLA, and container migration in under 14 days.
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Emergency Outage Box -->
+            <div class="p-6 rounded-lg bg-term-deep border border-term-line">
+              <div class="flex items-center gap-2 font-mono text-xs text-term-acc uppercase tracking-wider mb-2">
+                <span class="w-2 h-2 rounded-full bg-term-acc"></span> Active Outage Emergency
+              </div>
+              <p class="font-sans text-xs text-term-mid leading-relaxed mb-3">
+                Existing NPTS partners experiencing a live production outage: email <span class="text-term-fg font-mono font-medium">oncall@npts.tech</span> with <span class="text-term-fg font-mono">OUTAGE</span> in the subject line. This alerts our direct on-call pager.
+              </p>
+              <div class="text-[11px] font-mono text-term-dim">
+                Not a partner yet? Submit the intake form and flag urgent deadlines in your description.
+              </div>
+            </div>
+
+            <!-- Scope Reminder -->
+            <div class="p-4 rounded-lg bg-term-card/40 border border-term-line text-xs font-sans text-term-mid leading-relaxed">
+              <strong class="text-term-fg">Eligibility Notice:</strong> We support registered 501(c)(3) nonprofits and fiscally sponsored projects. We do not support direct credit card storage (PCI) or HIPAA health records, and we do not provide office IT desktop support.
+              <div class="mt-2 font-mono">
+                <NuxtLink to="/services" class="text-term-acc hover:underline">View complete service scope &rarr;</NuxtLink>
+              </div>
             </div>
           </div>
         </div>
-        <div class="px-10 py-12 border-b border-term-line bg-term-deep">
-          <div class="text-[13px] text-term-acc tracking-[0.1em] mb-5">[ IF SOMETHING IS DOWN RIGHT NOW ]</div>
-          <p class="font-sans text-sm leading-[1.7] text-term-mid m-0 mb-4">Existing partners: email <span class="text-term-fg">oncall@npts.tech</span> with OUTAGE in the subject line. That reaches a person, not a queue.</p>
-          <p class="font-sans text-sm leading-[1.7] text-term-dim m-0">Not a partner yet? Use the form — we can't guarantee a same-day response, but we'll tell you what we can do.</p>
-        </div>
-        <div class="px-10 py-12">
-          <div class="text-[13px] text-term-acc tracking-[0.1em] mb-5">[ BEFORE YOU WRITE ]</div>
-          <p class="font-sans text-sm leading-[1.7] text-term-mid m-0 mb-4">We support registered nonprofits and fiscally sponsored projects. We can't take on systems handling payments or regulated health records, and we're not a staff IT helpdesk.</p>
-          <NuxtLink to="/services" class="text-[13px] text-term-acc border-b border-term-acc/40">Full eligibility and service scope →</NuxtLink>
-        </div>
       </div>
-    </div>
+    </section>
   </div>
 </template>
+
+<script setup lang="ts">
+import { reactive, ref } from 'vue';
+
+useSeoMeta({
+  title: 'Request Technical Support & Systems Intake — NPTS',
+  ogTitle: 'Request Technical Support & Systems Intake — NPTS',
+  description: 'Submit an intake request for managed application hosting, maintenance rescue, Fractional CTO audits, or student capstone scoping.',
+  ogDescription: 'Submit an intake request for managed application hosting, maintenance rescue, Fractional CTO audits, or student capstone scoping.',
+});
+const form = reactive({
+  orgName: '',
+  name: '',
+  email: '',
+  need: 'host',
+  overview: '',
+  link: '',
+});
+
+const submitted = ref(false);
+
+function handleSubmit() {
+  submitted.value = true;
+  const subject = encodeURIComponent(`[NPTS Intake] ${form.need.toUpperCase()} - ${form.orgName}`);
+  const body = encodeURIComponent(
+    `Organization: ${form.orgName}\n` +
+    `Contact Name: ${form.name}\n` +
+    `Email: ${form.email}\n` +
+    `Primary Need: ${form.need}\n` +
+    `Links / Repo: ${form.link || 'N/A'}\n\n` +
+    `Situation Overview:\n${form.overview}\n`
+  );
+  window.location.href = `mailto:hello@npts.tech?subject=${subject}&body=${body}`;
+}
+</script>

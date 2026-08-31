@@ -1,107 +1,200 @@
 <template>
-  <div class="bg-term-bg text-term-fg font-mono">
-    <div class="px-10 pt-[76px] pb-14 border-b border-term-line">
-      <div class="text-[13px] text-term-acc tracking-[0.1em] mb-6">[ DONATE ]</div>
-      <h1 class="text-[52px] leading-[1.08] font-medium m-0 mb-6 -tracking-[0.02em] max-w-[26ch] text-pretty">$50 a month keeps one nonprofit online for a year.</h1>
-      <p class="font-sans text-[19px] leading-[1.6] text-term-mid m-0 max-w-[64ch] text-pretty">We're entirely volunteer-run. Nobody here draws a salary, so your donation buys servers, domains, and stipends for student engineers — and nothing else.</p>
-    </div>
-    <div class="grid grid-cols-[1.15fr_1fr] border-b border-term-line">
-      <div class="px-10 py-14 border-r border-term-line">
-        <div class="text-[13px] text-term-acc tracking-[0.1em] mb-7">[ CHOOSE AN AMOUNT ]</div>
-        <div class="grid grid-cols-3 gap-4 mb-4">
-          <div class="border border-term-rule px-5 py-6 hover:border-term-acc">
-            <div class="text-[26px] font-medium mb-2">$25</div>
-            <p class="font-sans m-0 text-sm leading-[1.6] text-term-mid">A month of hosting for a small partner app.</p>
-          </div>
-          <div class="border-2 border-term-acc bg-term-card px-5 py-6 relative">
-            <div class="absolute top-0 right-0 bg-term-acc text-term-bg text-[11px] px-2 py-1 font-semibold">MOST USEFUL</div>
-            <div class="text-[26px] font-medium mb-2 text-term-acc">$50<span class="text-[15px] text-term-mid">/mo</span></div>
-            <p class="font-sans m-0 text-sm leading-[1.6] text-term-mid">One partner organization, fully covered, for a year.</p>
-          </div>
-          <div class="border border-term-rule px-5 py-6 hover:border-term-acc">
-            <div class="text-[26px] font-medium mb-2">$250</div>
-            <p class="font-sans m-0 text-sm leading-[1.6] text-term-mid">A student stipend for a semester of real work.</p>
-          </div>
-        </div>
-        <div class="flex gap-4 items-center mb-8">
-          <div class="border border-term-rule px-5 py-4 text-[15px] text-term-dim flex-1">Other amount — $ ____</div>
-          <div class="flex gap-3 text-[13px] text-term-mid">
-            <span class="border border-term-rule px-4 py-4">One-time</span>
-            <span class="border border-term-acc bg-term-card text-term-acc px-4 py-4">Monthly</span>
-          </div>
-        </div>
-        <a href="https://donate.stripe.com/aFacN50j55vF9lt1Zk04800" class="text-[15px] font-semibold text-term-bg bg-term-acc px-7 py-4 inline-block hover:bg-term-accHi">Donate securely →</a>
-        <p class="font-sans text-[13px] text-term-dim mt-5 m-0">Processed by Stripe. NPTS is a 501(c)(3); US donations are tax-deductible and you'll get a receipt by email.</p>
+  <div class="bg-term-bg text-term-fg">
+    <!-- Header -->
+    <section class="max-w-7xl mx-auto px-6 sm:px-10 pt-16 pb-12 border-b border-term-line">
+      <div class="flex items-center gap-3 mb-4 font-mono text-xs text-term-acc uppercase tracking-widest">
+        <span class="h-px w-6 bg-term-acc"></span>
+        Philanthropic Support
       </div>
-      <div>
-        <div class="px-10 py-12 border-b border-term-line">
-          <div class="text-[13px] text-term-acc tracking-[0.1em] mb-6">[ WHERE IT GOES ]</div>
-          <div class="grid gap-4">
-            <div class="flex justify-between items-baseline gap-6 pb-3 border-b border-term-line">
-              <div class="flex-1"><h4 class="m-0 mb-1 text-[15px] font-semibold">Servers &amp; infrastructure</h4><p class="font-sans m-0 text-sm text-term-mid">Hosting, databases, backups, monitoring.</p></div>
-              <div class="text-term-acc text-[15px]">~55%</div>
+      <h1 class="text-4xl sm:text-5xl lg:text-6xl font-sans font-semibold tracking-tight text-term-fg max-w-3xl leading-[1.1] mb-6">
+        Fund one organization. Strengthen dozens.
+      </h1>
+      <p class="text-lg text-term-mid font-sans leading-relaxed max-w-3xl">
+        Your tax-deductible contribution keeps essential community software online and funds stipends for talented engineering students building public digital infrastructure.
+      </p>
+    </section>
+
+    <!-- Giving Form & Fund Allocations -->
+    <section class="border-b border-term-line">
+      <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 divide-y lg:divide-y-0 lg:divide-x divide-term-line">
+        <!-- Left: Giving Selection -->
+        <div class="lg:col-span-7 p-6 sm:p-12">
+          <div class="font-mono text-xs text-term-acc uppercase tracking-widest mb-6">Select Your Impact Level</div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-6">
+            <div class="p-6 rounded-lg bg-term-card/60 border border-term-line hover:border-term-acc transition-colors flex flex-col justify-between">
+              <div>
+                <div class="text-2xl font-mono text-term-fg font-medium mb-1">$25<span class="text-xs text-term-dim">/mo</span></div>
+                <div class="text-xs font-mono text-term-dim mb-3">($300 / year)</div>
+                <p class="font-sans text-xs text-term-mid leading-relaxed">
+                  Fully covers cloud compute, databases, and nightly offsite backups for two community nonprofits.
+                </p>
+              </div>
             </div>
-            <div class="flex justify-between items-baseline gap-6 pb-3 border-b border-term-line">
-              <div class="flex-1"><h4 class="m-0 mb-1 text-[15px] font-semibold">Student stipends</h4><p class="font-sans m-0 text-sm text-term-mid">Paying the interns we can afford to pay.</p></div>
-              <div class="text-term-acc text-[15px]">~35%</div>
+
+            <div class="p-6 rounded-lg bg-term-card border-2 border-term-acc relative flex flex-col justify-between shadow-sm shadow-term-acc/10">
+              <div class="absolute -top-3 right-4 font-mono text-[10px] uppercase font-semibold bg-term-acc text-term-deep px-2 py-0.5 rounded">
+                Most Impactful
+              </div>
+              <div>
+                <div class="text-2xl font-mono text-term-acc font-semibold mb-1">$50<span class="text-xs text-term-mid">/mo</span></div>
+                <div class="text-xs font-mono text-term-dim mb-3">($600 / year)</div>
+                <p class="font-sans text-xs text-term-mid leading-relaxed">
+                  Covers hosting, domain renewals, security patching, and on-call monitoring for five partner organizations.
+                </p>
+              </div>
             </div>
-            <div class="flex justify-between items-baseline gap-6">
-              <div class="flex-1"><h4 class="m-0 mb-1 text-[15px] font-semibold">Domains &amp; compliance</h4><p class="font-sans m-0 text-sm text-term-mid">Registrations, filings, insurance.</p></div>
-              <div class="text-term-acc text-[15px]">~10%</div>
+
+            <div class="p-6 rounded-lg bg-term-card/60 border border-term-line hover:border-term-acc transition-colors flex flex-col justify-between">
+              <div>
+                <div class="text-2xl font-mono text-term-fg font-medium mb-1">$250</div>
+                <div class="text-xs font-mono text-term-dim mb-3">(One-Time / Term)</div>
+                <p class="font-sans text-xs text-term-mid leading-relaxed">
+                  Directly funds a student engineering intern stipend for a full semester of active maintenance and PR reviews.
+                </p>
+              </div>
             </div>
           </div>
-          <p class="font-sans text-[13px] text-term-dim mt-6 m-0">$0 to salaries. <NuxtLink to="/about" class="text-term-acc border-b border-term-acc/40">See our Form 990 →</NuxtLink></p>
-        </div>
-        <div class="px-10 py-12 bg-term-deep">
-          <div class="text-[13px] text-term-acc tracking-[0.1em] mb-6">[ OTHER WAYS TO HELP ]</div>
-          <div class="grid gap-5">
+
+          <div class="p-6 rounded-lg bg-term-deep border border-term-line mb-8 flex flex-col sm:flex-row items-center justify-between gap-4">
             <div>
-              <h4 class="m-0 mb-1 text-[15px] font-semibold">Cover a partner directly</h4>
-              <p class="font-sans m-0 text-sm leading-[1.6] text-term-mid">Sponsor one organization's infrastructure by name, with a yearly report on what it did.</p>
+              <div class="text-sm font-sans font-semibold text-term-fg mb-1">Custom or Institutional Contribution</div>
+              <p class="text-xs font-sans text-term-mid">Support multiple cohorts, endowment grants, or donor-advised funds (DAF).</p>
             </div>
-            <div>
-              <h4 class="m-0 mb-1 text-[15px] font-semibold">Donate credits or hardware</h4>
-              <p class="font-sans m-0 text-sm leading-[1.6] text-term-mid">Cloud credits, licenses, and serviceable equipment go straight into production.</p>
-            </div>
-            <div>
-              <h4 class="m-0 mb-1 text-[15px] font-semibold">Give time instead</h4>
-              <p class="font-sans m-0 text-sm leading-[1.6] text-term-mid">Mentors and on-call volunteers are worth more to us than most cheques. <NuxtLink to="/careers" class="text-term-acc border-b border-term-acc/40">Open roles →</NuxtLink></p>
-            </div>
-            <div>
-              <h4 class="m-0 mb-1 text-[15px] font-semibold">Hire our alumni</h4>
-              <p class="font-sans m-0 text-sm leading-[1.6] text-term-mid">Closing that loop is the whole point. <NuxtLink to="/support" class="text-term-acc border-b border-term-acc/40">Talk to us →</NuxtLink></p>
+            <a :href="stripeLink" target="_blank" rel="noopener" class="shrink-0 font-sans font-medium text-xs text-term-fg border border-term-rule px-4 py-2 rounded hover:border-term-acc hover:text-term-acc transition-colors">
+              Custom Amount &rarr;
+            </a>
+          </div>
+
+          <div class="space-y-4">
+            <a :href="stripeLink" target="_blank" rel="noopener" class="w-full text-center block font-sans font-medium text-base text-term-deep bg-term-acc py-4 rounded hover:bg-term-accHi transition-colors shadow-sm shadow-term-acc/10">
+              Donate Securely via Stripe &rarr;
+            </a>
+            <div class="flex items-center justify-between text-xs font-mono text-term-dim">
+              <span>501(c)(3) Tax-Deductible</span>
+              <span>Instant Email Receipt</span>
+              <span>Cancel Anytime</span>
             </div>
           </div>
         </div>
+
+        <!-- Right: Fund Allocation Transparency -->
+        <div class="lg:col-span-5 p-6 sm:p-12 bg-term-deep/40 flex flex-col justify-between">
+          <div>
+            <div class="font-mono text-xs text-term-acc uppercase tracking-widest mb-6">Financial Transparency</div>
+            <h3 class="text-xl font-sans font-semibold text-term-fg mb-6">Where Every Dollar Goes</h3>
+
+            <div class="space-y-5 font-sans">
+              <div class="pb-4 border-b border-term-line">
+                <div class="flex items-center justify-between mb-1">
+                  <span class="font-semibold text-sm text-term-fg">Cloud Servers &amp; Hosting</span>
+                  <span class="font-mono text-sm text-term-acc">~55%</span>
+                </div>
+                <p class="text-xs text-term-mid leading-relaxed">Direct server compute, databases, isolated containers, encrypted backup storage, and monitoring tools.</p>
+              </div>
+
+              <div class="pb-4 border-b border-term-line">
+                <div class="flex items-center justify-between mb-1">
+                  <span class="font-semibold text-sm text-term-fg">Student Engineering Stipends</span>
+                  <span class="font-mono text-sm text-term-acc">~35%</span>
+                </div>
+                <p class="text-xs text-term-mid leading-relaxed">Direct stipends for student engineering interns managing partner maintenance and deployments.</p>
+              </div>
+
+              <div class="pb-4 border-b border-term-line">
+                <div class="flex items-center justify-between mb-1">
+                  <span class="font-semibold text-sm text-term-fg">Compliance &amp; Domains</span>
+                  <span class="font-mono text-sm text-term-acc">~10%</span>
+                </div>
+                <p class="text-xs text-term-mid leading-relaxed">Domain registrations, 501(c)(3) legal filings, liability insurance, and banking fees.</p>
+              </div>
+
+              <div class="p-3 rounded bg-term-card border border-term-line flex items-center justify-between">
+                <span class="font-semibold text-xs text-term-fg">Executive Salaries</span>
+                <span class="font-mono text-xs text-term-acc font-semibold">$0 (100% Volunteer)</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-8 pt-6 border-t border-term-line text-xs font-mono text-term-dim">
+            View our governance and public filings: <NuxtLink to="/about" class="text-term-acc hover:underline">Form 990 &amp; IRS Letter &rarr;</NuxtLink>
+          </div>
+        </div>
       </div>
-    </div>
-    <div class="px-10 py-[68px] border-b border-term-line">
-      <div class="text-[13px] text-term-acc tracking-[0.1em] mb-7">[ WHAT YOUR MONEY HAS ALREADY DONE ]</div>
-      <div class="grid grid-cols-4 gap-px bg-term-line border border-term-line">
-        <div class="bg-term-bg px-7 py-7">
-          <div class="text-[32px] text-term-acc font-medium mb-2">14</div>
-          <p class="font-sans m-0 text-sm leading-[1.6] text-term-mid">applications kept in production for partner organizations</p>
+    </section>
+
+    <!-- Corporate Partnerships & In-Kind Giving -->
+    <section class="max-w-7xl mx-auto px-6 sm:px-10 py-16 border-b border-term-line">
+      <div class="mb-10">
+        <div class="font-mono text-xs text-term-acc uppercase tracking-widest mb-3">Corporate &amp; In-Kind Sponsorships</div>
+        <h2 class="text-3xl font-sans font-semibold text-term-fg mb-3">
+          Beyond Financial Contributions
+        </h2>
+        <p class="text-term-mid font-sans text-sm sm:text-base max-w-2xl">
+          Tech companies and foundations partner with NPTS through cloud sponsorships, software credits, and talent recruitment pipelines.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="p-6 rounded-lg bg-term-card/50 border border-term-line">
+          <div class="font-mono text-xs text-term-acc mb-2">In-Kind 01</div>
+          <h3 class="font-sans font-semibold text-base text-term-fg mb-2">Cloud Credits &amp; Infrastructure</h3>
+          <p class="font-sans text-xs text-term-mid leading-relaxed">
+            Donated AWS, Google Cloud, DigitalOcean, or GitHub credits directly subsidize hosting capacity for partner nonprofits.
+          </p>
         </div>
-        <div class="bg-term-bg px-7 py-7">
-          <div class="text-[32px] text-term-acc font-medium mb-2">63</div>
-          <p class="font-sans m-0 text-sm leading-[1.6] text-term-mid">students mentored on work with real users</p>
+
+        <div class="p-6 rounded-lg bg-term-card/50 border border-term-line">
+          <div class="font-mono text-xs text-term-info mb-2">In-Kind 02</div>
+          <h3 class="font-sans font-semibold text-base text-term-fg mb-2">Software Licenses &amp; Tools</h3>
+          <p class="font-sans text-xs text-term-mid leading-relaxed">
+            Sponsorship of monitoring, analytics, and security tools directly equips student engineers with enterprise development toolchains.
+          </p>
         </div>
-        <div class="bg-term-bg px-7 py-7">
-          <div class="text-[32px] text-term-acc font-medium mb-2">99.96%</div>
-          <p class="font-sans m-0 text-sm leading-[1.6] text-term-mid">uptime across everything we host, last 90 days</p>
-        </div>
-        <div class="bg-term-bg px-7 py-7">
-          <div class="text-[32px] text-term-acc font-medium mb-2">$0</div>
-          <p class="font-sans m-0 text-sm leading-[1.6] text-term-mid">charged to a nonprofit, ever</p>
+
+        <div class="p-6 rounded-lg bg-term-card/50 border border-term-line">
+          <div class="font-mono text-xs text-term-warn mb-2">In-Kind 03</div>
+          <h3 class="font-sans font-semibold text-base text-term-fg mb-2">Hiring Network Membership</h3>
+          <p class="font-sans text-xs text-term-mid leading-relaxed">
+            Companies gain early recruitment access to our highest-performing student interns and Junior CTO alumni.
+          </p>
         </div>
       </div>
-    </div>
-    <div class="bg-term-acc text-term-bg px-10 py-14 grid grid-cols-[1fr_auto] gap-10 items-center">
-      <div>
-        <h3 class="text-[30px] font-semibold m-0 mb-3 -tracking-[0.01em]">Recurring gifts are what let us say yes.</h3>
-        <p class="font-sans text-base leading-[1.6] m-0 max-w-[54ch] opacity-80">We only take on a partner if we're confident we can carry them for years. Monthly donors are how we know.</p>
+    </section>
+
+    <!-- Impact Verified (4-up) -->
+    <section class="max-w-7xl mx-auto px-6 sm:px-10 py-16">
+      <div class="font-mono text-xs text-term-acc uppercase tracking-widest mb-6">Cumulative Impact</div>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6 font-mono">
+        <div class="p-6 rounded-lg bg-term-card/40 border border-term-line">
+          <div class="text-3xl text-term-acc font-semibold mb-1">14+</div>
+          <div class="text-xs text-term-dim font-sans">Applications maintained in production</div>
+        </div>
+        <div class="p-6 rounded-lg bg-term-card/40 border border-term-line">
+          <div class="text-3xl text-term-acc font-semibold mb-1">65+</div>
+          <div class="text-xs text-term-dim font-sans">Student engineers mentored</div>
+        </div>
+        <div class="p-6 rounded-lg bg-term-card/40 border border-term-line">
+          <div class="text-3xl text-term-acc font-semibold mb-1">99.9%</div>
+          <div class="text-xs text-term-dim font-sans">Platform uptime record</div>
+        </div>
+        <div class="p-6 rounded-lg bg-term-card/40 border border-term-line">
+          <div class="text-3xl text-term-acc font-semibold mb-1">0%</div>
+          <div class="text-xs text-term-dim font-sans">Spent on executive salaries</div>
+        </div>
       </div>
-      <a href="https://donate.stripe.com/aFacN50j55vF9lt1Zk04800" class="text-sm font-semibold bg-term-bg text-term-acc px-[22px] py-[14px]">Give monthly →</a>
-    </div>
+    </section>
   </div>
 </template>
+
+<script setup lang="ts">
+const config = useRuntimeConfig();
+const stripeLink = computed(() => config.public.stripeDonationLink || 'https://donate.stripe.com/aFacN50j55vF9lt1Zk04800');
+
+useSeoMeta({
+  title: 'Donate & Support Community Infrastructure — NPTS',
+  ogTitle: 'Donate & Support Community Infrastructure — NPTS',
+  description: 'Fund one organization, strengthen dozens. 100% of public contributions directly fund cloud servers, domain compliance, and student stipends.',
+  ogDescription: 'Fund one organization, strengthen dozens. 100% of public contributions directly fund cloud servers, domain compliance, and student stipends.',
+});
+</script>

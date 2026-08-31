@@ -10,11 +10,12 @@
 
 <script setup lang="ts">
 useSeoMeta({
-  title: 'Non-Profit Technical Support',
-  ogTitle: 'Non-Profit Technical Support',
-  description: 'Providing technical support for non-profit organizations.',
-  ogDescription: 'Providing technical support for non-profit organizations.',
+  title: 'NPTS — Non-Profit Technical Support',
+  ogTitle: 'NPTS — Non-Profit Technical Support',
+  description: 'Managed hosting, ongoing maintenance, and fractional CTO leadership for community nonprofits — powered by engineering students gaining real production experience.',
+  ogDescription: 'Managed hosting, ongoing maintenance, and fractional CTO leadership for community nonprofits — powered by engineering students gaining real production experience.',
   ogImage: '/img/logo_large.png',
   ogUrl: 'https://npts.tech',
+  twitterCard: 'summary_large_image',
 });
 </script>

@@ -1,128 +1,343 @@
 <template>
-  <div class="bg-term-bg text-term-fg font-mono">
-    <div class="px-10 pt-[76px] pb-14 border-b border-term-line">
-      <div class="text-[13px] text-term-acc tracking-[0.1em] mb-6">[ SERVICES ]</div>
-      <h1 class="text-[52px] leading-[1.08] font-medium m-0 mb-6 -tracking-[0.02em] max-w-[24ch] text-pretty">Everything your software needs, at no cost to you.</h1>
-      <p class="font-sans text-[19px] leading-[1.6] text-term-mid m-0 max-w-[62ch] text-pretty">No consulting engagement, no discovery phase, no invoice. Below is exactly what we take on, what we commit to, and what we need from you.</p>
-    </div>
-    <div class="grid grid-cols-3 border-b border-term-line">
-      <div class="px-10 py-7 border-r border-term-line">
-        <div class="text-[13px] text-term-dim mb-2">Response to outages</div>
-        <div class="text-[26px] text-term-acc font-medium">&lt; 24 hours</div>
+  <div class="bg-term-bg text-term-fg">
+    <!-- Header -->
+    <section class="max-w-7xl mx-auto px-6 sm:px-10 pt-16 pb-12 border-b border-term-line">
+      <div class="flex items-center gap-3 mb-4 font-mono text-xs text-term-acc uppercase tracking-widest">
+        <span class="h-px w-6 bg-term-acc"></span>
+        Service Specifications
       </div>
-      <div class="px-10 py-7 border-r border-term-line">
-        <div class="text-[13px] text-term-dim mb-2">Uptime target</div>
-        <div class="text-[26px] text-term-acc font-medium">99.9%</div>
-      </div>
-      <div class="px-10 py-7">
-        <div class="text-[13px] text-term-dim mb-2">Cost to partner orgs</div>
-        <div class="text-[26px] text-term-acc font-medium">$0</div>
-      </div>
-    </div>
-    <div class="px-10 py-[68px] border-b border-term-line">
-      <div class="text-[13px] text-term-acc tracking-[0.1em] mb-8">[ 01 — APPLICATION HOSTING ]</div>
-      <div class="grid grid-cols-[1fr_1.1fr] gap-16">
-        <div>
-          <h2 class="text-[30px] font-medium leading-[1.2] m-0 mb-5">We run it, so nobody on your staff has to.</h2>
-          <p class="font-sans text-base leading-[1.65] text-term-mid m-0 mb-6 max-w-[46ch]">Your web app, database, and background jobs live on our infrastructure. You get a domain, TLS, and a place to send bug reports.</p>
-          <NuxtLink to="/support" class="text-sm font-semibold text-term-bg bg-term-acc px-5 py-3 inline-block hover:bg-term-accHi">Request hosting →</NuxtLink>
+      <h1 class="text-4xl sm:text-5xl lg:text-6xl font-sans font-semibold tracking-tight text-term-fg max-w-3xl leading-[1.1] mb-6">
+        Reliable technical infrastructure, priced for the nonprofit reality.
+      </h1>
+      <p class="text-lg text-term-mid font-sans leading-relaxed max-w-3xl">
+        No corporate consulting retainers, no surprise invoices, and no abandoned code. Below is exactly what we take on, what it costs, and how we keep your mission-critical systems running.
+      </p>
+    </section>
+
+    <!-- Key SLA & Commitments -->
+    <section class="border-b border-term-line bg-term-deep/50 font-mono">
+      <div class="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-3 divide-y sm:divide-y-0 sm:divide-x divide-term-line">
+        <div class="px-6 py-6 sm:px-10 sm:py-8">
+          <div class="text-xs text-term-dim uppercase tracking-wider mb-1 font-sans">Outage Response SLA</div>
+          <div class="text-2xl sm:text-3xl text-term-acc font-medium">&lt; 24 Hours</div>
+          <div class="text-xs text-term-dim mt-1 font-sans">Direct engineer on-call assignment</div>
         </div>
-        <div class="grid grid-cols-2 gap-px bg-term-line border border-term-line">
-          <div class="bg-term-bg px-6 py-5">
-            <h4 class="m-0 mb-2 text-[15px] font-semibold">Included</h4>
-            <div class="font-sans text-sm leading-[1.9] text-term-mid">Managed deploys<br>TLS certificates<br>Custom domain<br>Nightly encrypted backups<br>Log retention (30 days)</div>
+        <div class="px-6 py-6 sm:px-10 sm:py-8">
+          <div class="text-xs text-term-dim uppercase tracking-wider mb-1 font-sans">Target Platform Uptime</div>
+          <div class="text-2xl sm:text-3xl text-term-acc font-medium">99.9%</div>
+          <div class="text-xs text-term-dim mt-1 font-sans">Automated uptime health checks</div>
+        </div>
+        <div class="px-6 py-6 sm:px-10 sm:py-8">
+          <div class="text-xs text-term-dim uppercase tracking-wider mb-1 font-sans">Base Compute Cost</div>
+          <div class="text-2xl sm:text-3xl text-term-acc font-medium">~$10<span class="text-base text-term-dim">/mo</span></div>
+          <div class="text-xs text-term-dim mt-1 font-sans">100% fee waiver guarantee for qualifying orgs</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pillar 01: Application Hosting -->
+    <section class="max-w-7xl mx-auto px-6 sm:px-10 py-16 border-b border-term-line">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+        <div class="lg:col-span-5">
+          <div class="font-mono text-xs text-term-acc uppercase tracking-widest mb-3">Pillar 01 — Infrastructure</div>
+          <h2 class="text-2xl sm:text-3xl font-sans font-semibold text-term-fg mb-4 leading-snug">
+            We run your software so your staff doesn't have to.
+          </h2>
+          <p class="text-term-mid font-sans text-sm sm:text-base leading-relaxed mb-6">
+            Your web application, database, and background workers run in secure, isolated containers on our managed infrastructure. You get automated deployments, SSL/TLS encryption, and a single point of technical contact.
+          </p>
+          <NuxtLink to="/support" class="inline-flex items-center gap-2 text-sm font-sans font-medium text-term-deep bg-term-acc px-5 py-2.5 rounded hover:bg-term-accHi transition-colors">
+            Request Hosting &rarr;
+          </NuxtLink>
+        </div>
+        <div class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div class="p-6 rounded-lg bg-term-card/60 border border-term-line">
+            <h4 class="text-sm font-mono font-semibold text-term-fg uppercase tracking-wider mb-3 flex items-center gap-2">
+              <span class="w-1.5 h-1.5 rounded-full bg-term-acc"></span> Included In Scope
+            </h4>
+            <ul class="font-sans text-sm text-term-mid space-y-2 leading-relaxed">
+              <li>• Managed container deployments &amp; CI/CD</li>
+              <li>• Automated SSL/TLS certificates</li>
+              <li>• Custom domain &amp; DNS routing</li>
+              <li>• Nightly encrypted database backups</li>
+              <li>• 30-day centralized log retention</li>
+            </ul>
           </div>
-          <div class="bg-term-bg px-6 py-5">
-            <h4 class="m-0 mb-2 text-[15px] font-semibold">We need from you</h4>
-            <div class="font-sans text-sm leading-[1.9] text-term-mid">Source code access<br>One staff point of contact<br>DNS delegation<br>A written owner for the data</div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="px-10 py-[68px] border-b border-term-line">
-      <div class="text-[13px] text-term-acc tracking-[0.1em] mb-8">[ 02 — MAINTENANCE &amp; ON-CALL ]</div>
-      <div class="grid grid-cols-[1fr_1.1fr] gap-16">
-        <div>
-          <h2 class="text-[30px] font-medium leading-[1.2] m-0 mb-5">Someone answers when it breaks.</h2>
-          <p class="font-sans text-base leading-[1.65] text-term-mid m-0 mb-6 max-w-[46ch]">Software rots without attention. We patch it, watch it, and pick up the phone — no ticket queue that ends in silence.</p>
-          <NuxtLink to="/support" class="text-sm text-term-fg border border-term-rule px-5 py-3 inline-block hover:border-term-acc">Talk to us →</NuxtLink>
-        </div>
-        <div class="grid grid-cols-2 gap-px bg-term-line border border-term-line">
-          <div class="bg-term-bg px-6 py-5">
-            <h4 class="m-0 mb-2 text-[15px] font-semibold">Included</h4>
-            <div class="font-sans text-sm leading-[1.9] text-term-mid">Dependency &amp; security patching<br>Uptime monitoring + alerts<br>Quarterly restore drills<br>Small fixes and copy changes<br>Annual health report</div>
-          </div>
-          <div class="bg-term-bg px-6 py-5">
-            <h4 class="m-0 mb-2 text-[15px] font-semibold">Not included</h4>
-            <div class="font-sans text-sm leading-[1.9] text-term-mid">New feature development<br>Staff IT / device support<br>24/7 phone on-call<br>Anything requiring a paid license we don't hold</div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="px-10 py-[68px] border-b border-term-line">
-      <div class="text-[13px] text-term-acc tracking-[0.1em] mb-8">[ 03 — STUDENT-BUILT SOFTWARE ]</div>
-      <div class="grid grid-cols-[1fr_1.1fr] gap-16 items-start">
-        <div>
-          <h2 class="text-[30px] font-medium leading-[1.2] m-0 mb-5">Need something built? We scope it with a student team.</h2>
-          <p class="font-sans text-base leading-[1.65] text-term-mid m-0 mb-6 max-w-[46ch]">We help you write a scope a capstone team can actually finish, then we adopt the result so it doesn't die when the semester does.</p>
-          <NuxtLink to="/programs" class="text-sm text-term-acc border-b border-term-acc/40">How the program works →</NuxtLink>
-        </div>
-        <div class="border border-term-line">
-          <div class="px-6 py-4 border-b border-term-line flex gap-4"><span class="text-term-acc">01</span><span class="font-sans text-sm leading-[1.6] text-term-mid flex-1">You describe the problem — we translate it into a technical scope.</span></div>
-          <div class="px-6 py-4 border-b border-term-line flex gap-4"><span class="text-term-acc">02</span><span class="font-sans text-sm leading-[1.6] text-term-mid flex-1">A student team builds it over one or two semesters, with our mentors reviewing code.</span></div>
-          <div class="px-6 py-4 border-b border-term-line flex gap-4"><span class="text-term-acc">03</span><span class="font-sans text-sm leading-[1.6] text-term-mid flex-1">We take ownership of hosting, backups, and monitoring at handoff.</span></div>
-          <div class="px-6 py-4 flex gap-4"><span class="text-term-acc">04</span><span class="font-sans text-sm leading-[1.6] text-term-mid flex-1">Your staff gets trained, and we stay on call indefinitely.</span></div>
-        </div>
-      </div>
-    </div>
-    <div class="px-10 py-[68px] border-b border-term-line">
-      <div class="flex items-baseline gap-4 mb-8">
-        <div class="text-[13px] text-term-acc tracking-[0.1em]">[ 04 — NONPROFIT SAAS SUITE ]</div>
-        <div class="text-[13px] text-term-warn">in development</div>
-      </div>
-      <div class="grid grid-cols-[1fr_1.1fr] gap-16 items-start">
-        <div>
-          <h2 class="text-[30px] font-medium leading-[1.2] m-0 mb-5">The tools every nonprofit needs, without the per-seat bill.</h2>
-          <p class="font-sans text-base leading-[1.65] text-term-mid m-0 mb-6 max-w-[46ch]">We're building affordable replacements for the commercial platforms quietly eating your operating budget. Tell us which one hurts most and we'll prioritise it.</p>
-          <NuxtLink to="/support" class="text-sm font-semibold text-term-bg bg-term-acc px-5 py-3 inline-block hover:bg-term-accHi">Join the waitlist →</NuxtLink>
-        </div>
-        <div class="grid grid-cols-2 gap-px bg-term-line border border-term-line font-sans">
-          <div class="bg-term-bg px-6 py-5"><h4 class="font-mono m-0 mb-1 text-[15px] font-semibold">Volunteer scheduling</h4><p class="m-0 text-sm text-term-dim">Design partners wanted</p></div>
-          <div class="bg-term-bg px-6 py-5"><h4 class="font-mono m-0 mb-1 text-[15px] font-semibold">Intake &amp; case notes</h4><p class="m-0 text-sm text-term-dim">In prototype</p></div>
-          <div class="bg-term-bg px-6 py-5"><h4 class="font-mono m-0 mb-1 text-[15px] font-semibold">Donor records</h4><p class="m-0 text-sm text-term-dim">Scoping</p></div>
-          <div class="bg-term-bg px-6 py-5"><h4 class="font-mono m-0 mb-1 text-[15px] font-semibold">Form &amp; survey builder</h4><p class="m-0 text-sm text-term-dim">Scoping</p></div>
-        </div>
-      </div>
-    </div>
-    <div class="px-10 py-[68px] border-b border-term-line">
-      <div class="text-[13px] text-term-acc tracking-[0.1em] mb-7">[ WHO WE CAN SUPPORT ]</div>
-      <div class="grid grid-cols-2 gap-16">
-        <div>
-          <h3 class="text-[21px] font-medium m-0 mb-4">We're a good fit if</h3>
-          <div class="font-sans text-[15px] leading-[2] text-term-mid">
-            <div>You're a registered nonprofit or a fiscally sponsored project.</div>
-            <div>You have no in-house engineer, or one who is stretched thin.</div>
-            <div>Your application serves your mission, not your marketing.</div>
-            <div>You can name one staff member as our point of contact.</div>
-          </div>
-        </div>
-        <div>
-          <h3 class="text-[21px] font-medium m-0 mb-4">We're probably not if</h3>
-          <div class="font-sans text-[15px] leading-[2] text-term-mid">
-            <div>You need a 24/7 guaranteed-response contract.</div>
-            <div>The system handles payments or regulated health records.</div>
-            <div>You need it live in under a month.</div>
-            <div>You're looking for staff IT and helpdesk support.</div>
+          <div class="p-6 rounded-lg bg-term-deep border border-term-line">
+            <h4 class="text-sm font-mono font-semibold text-term-dim uppercase tracking-wider mb-3">
+              Partner Prerequisites
+            </h4>
+            <ul class="font-sans text-sm text-term-mid space-y-2 leading-relaxed">
+              <li>• Source code repository access</li>
+              <li>• Designated staff liaison</li>
+              <li>• Domain DNS delegation</li>
+              <li>• Written data ownership designation</li>
+            </ul>
           </div>
         </div>
       </div>
-    </div>
-    <div class="bg-term-acc text-term-bg px-10 py-14 grid grid-cols-[1fr_auto] gap-10 items-center">
-      <div>
-        <h3 class="text-[30px] font-semibold m-0 mb-3 -tracking-[0.01em]">Tell us what's breaking.</h3>
-        <p class="font-sans text-base leading-[1.6] m-0 max-w-[54ch] opacity-80">One short form. We reply within two business days, and we'll tell you honestly if we're not the right fit.</p>
+    </section>
+
+    <!-- Pillar 02: Maintenance & On-Call -->
+    <section class="max-w-7xl mx-auto px-6 sm:px-10 py-16 border-b border-term-line">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+        <div class="lg:col-span-5">
+          <div class="font-mono text-xs text-term-acc uppercase tracking-widest mb-3">Pillar 02 — Continuity</div>
+          <h2 class="text-2xl sm:text-3xl font-sans font-semibold text-term-fg mb-4 leading-snug">
+            Someone answers when something breaks.
+          </h2>
+          <p class="text-term-mid font-sans text-sm sm:text-base leading-relaxed mb-6">
+            Software rots without attention. We patch dependencies, monitor uptime, and step in immediately when errors occur — avoiding ticket queues that lead to silence.
+          </p>
+          <NuxtLink to="/support" class="inline-flex items-center gap-2 text-sm font-sans font-medium text-term-fg border border-term-rule px-5 py-2.5 rounded hover:border-term-acc hover:text-term-acc transition-colors">
+            Talk to an Engineer &rarr;
+          </NuxtLink>
+        </div>
+        <div class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div class="p-6 rounded-lg bg-term-card/60 border border-term-line">
+            <h4 class="text-sm font-mono font-semibold text-term-fg uppercase tracking-wider mb-3 flex items-center gap-2">
+              <span class="w-1.5 h-1.5 rounded-full bg-term-acc"></span> Included In Scope
+            </h4>
+            <ul class="font-sans text-sm text-term-mid space-y-2 leading-relaxed">
+              <li>• Dependency &amp; security CVE patching</li>
+              <li>• Automated uptime monitoring &amp; alerts</li>
+              <li>• Quarterly disaster recovery restore drills</li>
+              <li>• Minor bug fixes &amp; copy adjustments</li>
+              <li>• Annual system health &amp; risk report</li>
+            </ul>
+          </div>
+          <div class="p-6 rounded-lg bg-term-deep border border-term-line">
+            <h4 class="text-sm font-mono font-semibold text-term-dim uppercase tracking-wider mb-3">
+              Explicitly Out of Scope
+            </h4>
+            <ul class="font-sans text-sm text-term-mid space-y-2 leading-relaxed">
+              <li>• General IT/desktop helpdesk or printers</li>
+              <li>• 24/7 immediate phone hotline</li>
+              <li>• Continuous major feature development</li>
+              <li>• Applications processing direct PCI/HIPAA data</li>
+            </ul>
+          </div>
+        </div>
       </div>
-      <NuxtLink to="/support" class="text-sm font-semibold bg-term-bg text-term-acc px-[22px] py-[14px]">Request support →</NuxtLink>
-    </div>
+    </section>
+
+    <!-- Pillar 03: Fractional CTO & Systems Ownership -->
+    <section class="max-w-7xl mx-auto px-6 sm:px-10 py-16 border-b border-term-line bg-term-card/20">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+        <div class="lg:col-span-5">
+          <div class="font-mono text-xs text-term-acc uppercase tracking-widest mb-3">Pillar 03 — Strategic Leadership</div>
+          <h2 class="text-2xl sm:text-3xl font-sans font-semibold text-term-fg mb-4 leading-snug">
+            Never wonder "Who owns our tech?" again.
+          </h2>
+          <p class="text-term-mid font-sans text-sm sm:text-base leading-relaxed mb-6">
+            Most nonprofits suffer from fragmented tools and lost passwords when staff rotate. We assign a dedicated technical lead providing ~4 hours/month of high-level systems oversight.
+          </p>
+          <NuxtLink to="/support" class="inline-flex items-center gap-2 text-sm font-sans font-medium text-term-acc hover:text-term-accHi transition-colors">
+            Inquire about Fractional CTO Support &rarr;
+          </NuxtLink>
+        </div>
+        <div class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-3 gap-4">
+          <div class="p-5 rounded-lg bg-term-card border border-term-line flex flex-col justify-between">
+            <div>
+              <div class="font-mono text-xs text-term-acc mb-2">Artifact 01</div>
+              <h4 class="font-sans font-semibold text-sm text-term-fg mb-2">Living Systems Inventory</h4>
+              <p class="font-sans text-xs text-term-mid leading-relaxed">Complete mapping of tools, hosting accounts, domain renewals, and API credentials.</p>
+            </div>
+          </div>
+          <div class="p-5 rounded-lg bg-term-card border border-term-line flex flex-col justify-between">
+            <div>
+              <div class="font-mono text-xs text-term-acc mb-2">Artifact 02</div>
+              <h4 class="font-sans font-semibold text-sm text-term-fg mb-2">3-Month Tech Roadmap</h4>
+              <p class="font-sans text-xs text-term-mid leading-relaxed">Prioritized guidance on migrations, vendor upgrades, and cost-reduction opportunities.</p>
+            </div>
+          </div>
+          <div class="p-5 rounded-lg bg-term-card border border-term-line flex flex-col justify-between">
+            <div>
+              <div class="font-mono text-xs text-term-acc mb-2">Artifact 03</div>
+              <h4 class="font-sans font-semibold text-sm text-term-fg mb-2">Plain-English Decision Log</h4>
+              <p class="font-sans text-xs text-term-mid leading-relaxed">Documenting why technical choices were made so institutional memory is never lost.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pillar 04: Capstone Scoping & Adoption -->
+    <section class="max-w-7xl mx-auto px-6 sm:px-10 py-16 border-b border-term-line">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+        <div class="lg:col-span-5">
+          <div class="font-mono text-xs text-term-acc uppercase tracking-widest mb-3">Pillar 04 — Academic Scoping</div>
+          <h2 class="text-2xl sm:text-3xl font-sans font-semibold text-term-fg mb-4 leading-snug">
+            Turn university student projects into durable software.
+          </h2>
+          <p class="text-term-mid font-sans text-sm sm:text-base leading-relaxed mb-6">
+            We partner with university experiential learning programs (such as UTDesign EPICS) to define achievable milestones, mentor student developers, and execute permanent production handoffs upon graduation.
+          </p>
+          <NuxtLink to="/programs" class="inline-flex items-center gap-2 text-sm font-sans font-medium text-term-acc hover:text-term-accHi transition-colors">
+            See Capstone Lifecycle &rarr;
+          </NuxtLink>
+        </div>
+        <div class="lg:col-span-7 space-y-3 font-mono">
+          <div class="p-4 rounded border border-term-line bg-term-card/40 flex items-start gap-4">
+            <span class="text-term-acc font-semibold text-sm">01</span>
+            <div class="font-sans text-sm text-term-mid">
+              <strong class="text-term-fg">Scope Translation:</strong> We convert your organizational workflow pain points into a realistic 1-to-2 semester technical specification.
+            </div>
+          </div>
+          <div class="p-4 rounded border border-term-line bg-term-card/40 flex items-start gap-4">
+            <span class="text-term-acc font-semibold text-sm">02</span>
+            <div class="font-sans text-sm text-term-mid">
+              <strong class="text-term-fg">Mentored Build:</strong> Student teams build the solution with weekly architectural reviews and PR oversight from working senior engineers.
+            </div>
+          </div>
+          <div class="p-4 rounded border border-term-line bg-term-card/40 flex items-start gap-4">
+            <span class="text-term-acc font-semibold text-sm">03</span>
+            <div class="font-sans text-sm text-term-mid">
+              <strong class="text-term-fg">Formal Adoption:</strong> Repositories, DNS, and server infrastructure transfer to NPTS within 14 days of final presentations.
+            </div>
+          </div>
+          <div class="p-4 rounded border border-term-line bg-term-card/40 flex items-start gap-4">
+            <span class="text-term-acc font-semibold text-sm">04</span>
+            <div class="font-sans text-sm text-term-mid">
+              <strong class="text-term-fg">Staff Runbooks:</strong> Your administrative team receives straightforward written operating guides and permanent on-call access.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Transparent Pricing & Fee Waiver Policy -->
+    <section class="max-w-7xl mx-auto px-6 sm:px-10 py-16 border-b border-term-line">
+      <div class="max-w-3xl mb-12">
+        <div class="font-mono text-xs text-term-acc uppercase tracking-widest mb-3">Transparent Cost Structure</div>
+        <h2 class="text-3xl font-sans font-semibold text-term-fg mb-4">
+          At-cost pricing with a 100% fee waiver guarantee.
+        </h2>
+        <p class="text-term-mid font-sans text-base leading-relaxed">
+          As a 501(c)(3) public charity, NPTS charges only pass-through compute infrastructure costs. If your organization cannot cover these fees, our community donor fund covers 100% of the cost.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="p-8 rounded-lg bg-term-card/60 border border-term-line flex flex-col justify-between">
+          <div>
+            <div class="font-mono text-xs text-term-dim uppercase mb-2">Standard Hosting</div>
+            <div class="text-3xl font-mono text-term-acc font-medium mb-1">$120<span class="text-base text-term-dim">/year</span></div>
+            <div class="text-xs font-mono text-term-dim mb-4">(~$10 / month)</div>
+            <p class="font-sans text-sm text-term-mid leading-relaxed">
+              Directly covers cloud server compute (up to $8/mo baseline), isolated database container, and automated offsite backup storage.
+            </p>
+          </div>
+        </div>
+
+        <div class="p-8 rounded-lg bg-term-card/60 border border-term-line flex flex-col justify-between">
+          <div>
+            <div class="font-mono text-xs text-term-dim uppercase mb-2">Mobile Application Compliance</div>
+            <div class="text-3xl font-mono text-term-acc font-medium">$35<span class="text-base text-term-dim">/year</span></div>
+            <div class="text-xs font-mono text-term-dim mb-4">(per active app)</div>
+            <p class="font-sans text-sm text-term-mid leading-relaxed">
+              Administrative and certificate maintenance for iOS applications published via our nonprofit Apple App Store organization account.
+            </p>
+          </div>
+        </div>
+
+        <div class="p-8 rounded-lg bg-term-deep border-2 border-term-acc flex flex-col justify-between relative">
+          <div class="absolute -top-3 right-6 font-mono text-[10px] uppercase font-semibold bg-term-acc text-term-deep px-2.5 py-0.5 rounded">
+            Community Commitment
+          </div>
+          <div>
+            <div class="font-mono text-xs text-term-acc uppercase mb-2">100% Fee Waiver Guarantee</div>
+            <div class="text-3xl font-mono text-term-fg font-medium mb-1">$0<span class="text-base text-term-dim">/eligible org</span></div>
+            <div class="text-xs font-mono text-term-acc mb-4">Subsidized by Donor Fund</div>
+            <p class="font-sans text-sm text-term-mid leading-relaxed">
+              Any community 501(c)(3) or fiscally sponsored group unable to cover compute costs is granted full fee waivers. No organization is turned away due to lack of funds.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Eligibility Check ("Who We Support") -->
+    <section class="max-w-7xl mx-auto px-6 sm:px-10 py-16 border-b border-term-line">
+      <div class="font-mono text-xs text-term-acc uppercase tracking-widest mb-3">Eligibility &amp; Fit</div>
+      <h2 class="text-2xl sm:text-3xl font-sans font-semibold text-term-fg mb-8">
+        Who We Are Built to Support
+      </h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div class="p-6 rounded-lg bg-term-card/40 border border-term-line">
+          <h3 class="text-lg font-sans font-semibold text-term-fg mb-4 flex items-center gap-2">
+            <span class="text-term-acc font-mono">&check;</span> Excellent Fit
+          </h3>
+          <ul class="space-y-3 font-sans text-sm text-term-mid leading-relaxed">
+            <li class="flex items-start gap-2">
+              <span class="text-term-acc">&bull;</span>
+              <span>Registered 501(c)(3) public charities or fiscally sponsored mission initiatives.</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-term-acc">&bull;</span>
+              <span>Small-to-midsize staff without in-house software engineers.</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-term-acc">&bull;</span>
+              <span>Custom web applications, intake portals, or volunteer systems vital to community operations.</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-term-acc">&bull;</span>
+              <span>Able to designate one responsive administrative staff member as the primary liaison.</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="p-6 rounded-lg bg-term-deep border border-term-line">
+          <h3 class="text-lg font-sans font-semibold text-term-dim mb-4 flex items-center gap-2">
+            <span class="text-term-warn font-mono">&times;</span> Outside Our Scope
+          </h3>
+          <ul class="space-y-3 font-sans text-sm text-term-mid leading-relaxed">
+            <li class="flex items-start gap-2">
+              <span class="text-term-warn">&bull;</span>
+              <span>For-profit businesses or commercial SaaS ventures.</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-term-warn">&bull;</span>
+              <span>Applications handling direct credit card storage (PCI) or HIPAA-regulated medical records.</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-term-warn">&bull;</span>
+              <span>General desktop IT troubleshooting, printer configuration, or office hardware repair.</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-term-warn">&bull;</span>
+              <span>High-frequency enterprise contracts requiring guaranteed 15-minute response SLAs.</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Bottom CTA Banner -->
+    <section class="bg-term-card py-16 px-6 sm:px-10">
+      <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-8">
+        <div>
+          <h3 class="text-2xl sm:text-3xl font-sans font-semibold text-term-fg mb-2">
+            Tell us what's breaking — or what you need built.
+          </h3>
+          <p class="font-sans text-term-mid text-sm max-w-xl leading-relaxed">
+            One straightforward intake form. A technical lead will review your request and reply within two business days.
+          </p>
+        </div>
+        <NuxtLink to="/support" class="shrink-0 font-sans font-medium text-sm text-term-deep bg-term-acc px-6 py-3.5 rounded hover:bg-term-accHi transition-colors shadow-sm">
+          Request Support &rarr;
+        </NuxtLink>
+      </div>
+    </section>
   </div>
 </template>
+
+<script setup lang="ts">
+useSeoMeta({
+  title: 'Services & Transparent Pricing — NPTS',
+  ogTitle: 'Services & Transparent Pricing — NPTS',
+  description: 'Managed application hosting, ongoing maintenance, Fractional CTO leadership, and student capstone scoping with 100% community fee waivers.',
+  ogDescription: 'Managed application hosting, ongoing maintenance, Fractional CTO leadership, and student capstone scoping with 100% community fee waivers.',
+});
+</script>
