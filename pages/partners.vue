@@ -90,7 +90,7 @@ const inProgressCount = projects.filter(p => p.status === 'in progress').length
     <div class="px-10 pt-[76px] pb-14 border-b border-term-line">
       <div class="text-[13px] text-term-acc tracking-[0.1em] mb-6">[ PARTNERS ]</div>
       <h1 class="text-[52px] leading-[1.08] font-medium m-0 mb-6 -tracking-[0.02em] max-w-[24ch] text-pretty">The nonprofits we support.</h1>
-      <p class="font-sans text-[19px] leading-[1.6] text-term-mid m-0 max-w-[62ch] text-pretty">Every app here was built for a nonprofit partner, most by UTDesign EPICS student teams. NPTS hosts and maintains them at no cost to keep serving the community.</p>
+      <p class="font-sans text-[19px] leading-[1.6] text-term-mid m-0 max-w-[62ch] text-pretty">Every app here was built for a nonprofit partner, most by UTDesign EPICS student teams. NPTS student interns, guided by volunteers, host and maintain them long after the project ends.</p>
     </div>
     <div class="flex items-center gap-4 md:gap-10 px-10 py-6 border-b border-term-line">
       <div class="text-[11px] tracking-[0.14em] uppercase text-term-dim shrink-0 w-24 md:w-auto">Partner organizations</div>
@@ -160,7 +160,7 @@ const inProgressCount = projects.filter(p => p.status === 'in progress').length
       <div>
         <div class="text-[13px] text-term-acc tracking-[0.1em] mb-7">[ WORK WITH US ]</div>
         <h2 class="text-[30px] font-medium leading-[1.2] m-0 mb-5">Four steps to get started.</h2>
-        <p class="font-sans text-base leading-[1.65] text-term-mid m-0 max-w-[44ch]">Most of the work is on our end. You'll know within a week if we're a match.</p>
+        <p class="font-sans text-base leading-[1.65] text-term-mid m-0 max-w-[44ch]">Most of the work is on our end. Here's what to expect.</p>
       </div>
       <div class="border border-term-line">
         <div class="px-7 py-5 border-b border-term-line flex gap-5">
