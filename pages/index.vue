@@ -1,42 +1,29 @@
 <template>
   <div class="bg-term-bg text-term-fg font-mono">
     <div class="px-10 pt-[104px] pb-[88px] text-center">
-      <div class="text-[13px] text-term-acc tracking-[0.1em] mb-7">[ 501(c)(3) &nbsp;·&nbsp; EST. 2023 ]</div>
-      <h1 class="text-[68px] leading-[1.06] font-medium m-0 mb-7 -tracking-[0.025em] text-pretty">Your nonprofit shouldn't need a CTO.</h1>
-      <p class="font-sans text-[20px] leading-[1.6] text-term-mid m-0 mx-auto mb-10 max-w-[60ch] text-pretty">We host, maintain, and support the software your mission runs on — free — and we staff it with student engineers who need the experience.</p>
+      <div class="text-[13px] text-term-acc tracking-[0.1em] mb-7">[ FOR UTDESIGN EPICS PARTNERS ]</div>
+      <h1 class="text-[68px] leading-[1.06] font-medium m-0 mb-7 -tracking-[0.025em] text-pretty">Hosting &amp; support for nonprofits.</h1>
+      <p class="font-sans text-[20px] leading-[1.6] text-term-mid m-0 mx-auto mb-10 max-w-[60ch] text-pretty">When a UTDesign EPICS team builds a solution for your nonprofit, NPTS provides the hosting and support to keep it running. New partners join us every semester.</p>
       <div class="flex gap-[14px] justify-center">
-        <NuxtLink to="/support" class="text-[15px] font-semibold text-term-bg bg-term-acc px-6 py-4 hover:bg-term-accHi">Get technical help →</NuxtLink>
-        <NuxtLink to="/services" class="text-[15px] text-term-fg border border-term-rule px-6 py-4 hover:border-term-acc">See what we support</NuxtLink>
+        <NuxtLink to="/support" class="text-[15px] font-semibold text-term-bg bg-term-acc px-6 py-4 hover:bg-term-accHi">Get in touch →</NuxtLink>
+        <NuxtLink to="/programs" class="text-[15px] text-term-fg border border-term-rule px-6 py-4 hover:border-term-acc">See our programs</NuxtLink>
       </div>
     </div>
 
-    <div class="flex items-center gap-10 px-10 py-8 border-y border-term-line">
-      <div class="text-[11px] tracking-[0.14em] uppercase text-term-dim shrink-0">Working with</div>
-      <div class="grid grid-cols-5 gap-4 flex-1">
-        <div class="h-11 border border-dashed border-term-rule flex items-center justify-center text-[11px] text-term-mid">UTDesign EPICS</div>
-        <div class="h-11 border border-dashed border-term-rule flex items-center justify-center text-[11px] text-term-dim">[ logo ]</div>
-        <div class="h-11 border border-dashed border-term-rule flex items-center justify-center text-[11px] text-term-dim">[ logo ]</div>
-        <div class="h-11 border border-dashed border-term-rule flex items-center justify-center text-[11px] text-term-dim">[ logo ]</div>
-        <div class="h-11 border border-dashed border-term-rule flex items-center justify-center text-[11px] text-term-dim">[ logo ]</div>
-      </div>
-    </div>
+    <PartnerMarquee label="Working with" class="border-y border-term-line" />
 
-    <div class="grid grid-cols-4 border-b border-term-line">
-      <div class="px-8 py-7 border-r border-term-line">
-        <div class="text-[34px] text-term-acc font-medium">14</div>
-        <div class="text-xs text-term-dim tracking-[0.06em] mt-[6px]">apps hosted for nonprofits</div>
+    <div class="grid grid-cols-1 md:grid-cols-3 border-b border-term-line">
+      <div class="px-10 py-9 border-b md:border-b-0 md:border-r border-term-line">
+        <div class="text-[40px] leading-none font-medium text-term-acc -tracking-[0.02em]">19</div>
+        <div class="font-sans text-[15px] leading-[1.5] text-term-mid mt-3">Apps hosted for nonprofits</div>
       </div>
-      <div class="px-8 py-7 border-r border-term-line">
-        <div class="text-[34px] text-term-acc font-medium">63</div>
-        <div class="text-xs text-term-dim tracking-[0.06em] mt-[6px]">students mentored</div>
+      <div class="px-10 py-9 border-b md:border-b-0 md:border-r border-term-line">
+        <div class="text-[40px] leading-none font-medium text-term-acc -tracking-[0.02em]">63</div>
+        <div class="font-sans text-[15px] leading-[1.5] text-term-mid mt-3">Students mentored</div>
       </div>
-      <div class="px-8 py-7 border-r border-term-line">
-        <div class="text-[34px] text-term-acc font-medium">$0</div>
-        <div class="text-xs text-term-dim tracking-[0.06em] mt-[6px]">cost to partner orgs</div>
-      </div>
-      <div class="px-8 py-7">
-        <div class="text-[34px] text-term-acc font-medium">99.96%</div>
-        <div class="text-xs text-term-dim tracking-[0.06em] mt-[6px]">90-day uptime</div>
+      <div class="px-10 py-9">
+        <div class="text-[40px] leading-none font-medium text-term-acc -tracking-[0.02em]">99.96%</div>
+        <div class="font-sans text-[15px] leading-[1.5] text-term-mid mt-3">90-day uptime</div>
       </div>
     </div>
 
@@ -45,94 +32,47 @@
       <div class="grid grid-cols-3 gap-5">
         <div class="border border-term-line bg-term-card px-[26px] py-[30px] hover:border-term-acc">
           <div class="text-xs text-term-dim mb-[14px]">./nonprofit.sh</div>
-          <h3 class="text-[21px] font-medium m-0 mb-3 leading-[1.3]">I run a nonprofit and something is broken</h3>
-          <p class="font-sans text-sm leading-[1.65] text-term-mid m-0 mb-5">Hosting, maintenance, migrations, and someone to call when the site goes down.</p>
-          <NuxtLink to="/support" class="text-[13px] text-term-acc border-b border-term-acc/40">Request support →</NuxtLink>
+          <h3 class="text-[21px] font-medium m-0 mb-3 leading-[1.3]">I run a nonprofit with an EPICS project</h3>
+          <p class="font-sans text-sm leading-[1.65] text-term-mid m-0 mb-5">We provide hosting and long-term support for projects built by UTDesign EPICS student teams.</p>
+          <NuxtLink to="/support" class="text-[13px] text-term-acc border-b border-term-acc/40">Get in touch →</NuxtLink>
         </div>
         <div class="border border-term-line bg-term-card px-[26px] py-[30px] hover:border-term-acc">
           <div class="text-xs text-term-dim mb-[14px]">./engineer.sh</div>
-          <h3 class="text-[21px] font-medium m-0 mb-3 leading-[1.3]">I'm a student or engineer who wants real work</h3>
-          <p class="font-sans text-sm leading-[1.65] text-term-mid m-0 mb-5">Ship to production on live partner projects. Mentorship, references, and a track record.</p>
-          <NuxtLink to="/careers" class="text-[13px] text-term-acc border-b border-term-acc/40">Open positions →</NuxtLink>
+          <h3 class="text-[21px] font-medium m-0 mb-3 leading-[1.3]">I'm a student in an experiential learning program</h3>
+          <p class="font-sans text-sm leading-[1.65] text-term-mid m-0 mb-5">We offer volunteer programs and internships to students of the programs we work with.</p>
+          <NuxtLink to="/careers" class="text-[13px] text-term-acc border-b border-term-acc/40">Get involved →</NuxtLink>
         </div>
         <div class="border border-term-line bg-term-card px-[26px] py-[30px] hover:border-term-acc">
           <div class="text-xs text-term-dim mb-[14px]">./fund.sh</div>
-          <h3 class="text-[21px] font-medium m-0 mb-3 leading-[1.3]">I want to fund infrastructure that lasts</h3>
-          <p class="font-sans text-sm leading-[1.65] text-term-mid m-0 mb-5">$50/month keeps one partner org's app online for a year. Every dollar is accounted for.</p>
-          <NuxtLink to="/donate" class="text-[13px] text-term-acc border-b border-term-acc/40">Donate →</NuxtLink>
+          <h3 class="text-[21px] font-medium m-0 mb-3 leading-[1.3]">I want to sponsor or give</h3>
+          <p class="font-sans text-sm leading-[1.65] text-term-mid m-0 mb-5">Keep the tools nonprofits rely on hosted and supported after the students who built them move on.</p>
+          <NuxtLink to="/donate" class="text-[13px] text-term-acc border-b border-term-acc/40">Support NPTS →</NuxtLink>
         </div>
       </div>
     </div>
 
     <div class="px-10 pb-[68px]">
-      <div class="text-[13px] text-term-acc tracking-[0.1em] mb-[26px]">[ WHAT YOU ACTUALLY GET ]</div>
+      <div class="text-[13px] text-term-acc tracking-[0.1em] mb-[26px]">[ WHAT WE DO ]</div>
       <div class="grid grid-cols-2 gap-px bg-term-line border border-term-line">
-        <div class="bg-term-bg px-7 py-[26px]">
+        <NuxtLink to="/programs" class="group bg-term-bg hover:bg-term-card px-7 py-[26px] flex flex-col">
           <div class="flex justify-between items-baseline mb-[10px]">
-            <h4 class="m-0 text-base font-semibold">Application hosting</h4>
-            <span class="text-xs text-term-acc">free</span>
+            <h4 class="m-0 text-base font-semibold group-hover:text-term-acc">Long-term support</h4>
+            <span class="text-xs text-term-acc">active</span>
           </div>
-          <p class="font-sans text-sm leading-[1.6] text-term-mid m-0">Managed deploys, TLS, nightly encrypted backups, 99.9% target uptime, 24h response on outages.</p>
-        </div>
-        <div class="bg-term-bg px-7 py-[26px]">
+          <p class="font-sans text-sm leading-[1.6] text-term-mid m-0 mb-4">Hosting and support for projects built by experiential learning programs. New partners join every semester through UTDesign EPICS.</p>
+          <span class="mt-auto self-start text-[13px] text-term-acc border-b border-term-acc/40">See our programs →</span>
+        </NuxtLink>
+        <NuxtLink to="/careers#interest-form" class="group bg-term-bg hover:bg-term-card px-7 py-[26px] flex flex-col">
           <div class="flex justify-between items-baseline mb-[10px]">
-            <h4 class="m-0 text-base font-semibold">Maintenance &amp; on-call</h4>
-            <span class="text-xs text-term-acc">free</span>
+            <h4 class="m-0 text-base font-semibold group-hover:text-term-acc">Volunteer programs &amp; internships</h4>
+            <span class="text-xs text-term-acc">active</span>
           </div>
-          <p class="font-sans text-sm leading-[1.6] text-term-mid m-0">Dependency and security patching, monitoring, and a human who answers when something breaks.</p>
-        </div>
-        <div class="bg-term-bg px-7 py-[26px]">
-          <div class="flex justify-between items-baseline mb-[10px]">
-            <h4 class="m-0 text-base font-semibold">Student-built software</h4>
-            <span class="text-xs text-term-acc">free</span>
-          </div>
-          <p class="font-sans text-sm leading-[1.6] text-term-mid m-0">Scoped with UTDesign EPICS teams, then adopted by us so it doesn't die at the end of the semester.</p>
-        </div>
-        <div class="bg-term-bg px-7 py-[26px]">
-          <div class="flex justify-between items-baseline mb-[10px]">
-            <h4 class="m-0 text-base font-semibold">Nonprofit SaaS suite</h4>
-            <span class="text-xs text-term-warn">in development</span>
-          </div>
-          <p class="font-sans text-sm leading-[1.6] text-term-mid m-0">Affordable replacements for the commercial tools eating your budget. Join the waitlist.</p>
-        </div>
+          <p class="font-sans text-sm leading-[1.6] text-term-mid m-0 mb-4">Opportunities for students of the experiential learning programs we work with. Most of our volunteers came through UTDesign EPICS.</p>
+          <span class="mt-auto self-start text-[13px] text-term-acc border-b border-term-acc/40">Fill out the interest form →</span>
+        </NuxtLink>
       </div>
     </div>
 
-    <div class="border-t border-term-line grid grid-cols-[1.05fr_0.95fr]">
-      <div class="px-10 py-[60px]">
-        <div class="text-[13px] text-term-acc tracking-[0.1em] mb-6">[ CASE STUDY ]</div>
-        <h3 class="text-[30px] font-medium leading-[1.25] m-0 mb-[18px] text-pretty">A semester project became permanent infrastructure.</h3>
-        <p class="font-sans text-base leading-[1.65] text-term-mid m-0 mb-6 max-w-[48ch]">Student engineers built the intake system. We took over hosting the week the class ended — it's been running two years without a maintainer of their own.</p>
-        <blockquote class="font-sans m-0 border-l-2 border-term-acc pl-[18px] text-[15px] leading-[1.6] text-term-fg italic">"Partner quote goes here — one sentence about what changed for their staff."
-          <div class="not-italic text-[13px] text-term-dim mt-[10px]">Name, Title — Partner Organization</div>
-        </blockquote>
-      </div>
-      <div class="border-l border-term-line px-10 py-[60px] bg-term-deep">
-        <div class="text-[13px] text-term-dim tracking-[0.1em] mb-6">[ WHAT THE HANDOFF INCLUDED ]</div>
-        <div class="text-[13px] leading-[2.1] text-term-mid">
-          <div><span class="text-term-acc">01</span> &nbsp;repository transferred</div>
-          <div><span class="text-term-acc">02</span> &nbsp;production deploy configured</div>
-          <div><span class="text-term-acc">03</span> &nbsp;nightly backups enabled</div>
-          <div><span class="text-term-acc">04</span> &nbsp;monitoring + on-call rotation</div>
-          <div><span class="text-term-acc">05</span> &nbsp;staff training delivered</div>
-          <div class="mt-4 text-term-dim">// completed in 9 days</div>
-          <div class="text-term-dim">// annual cost to the partner: $0</div>
-          <NuxtLink to="/partners" class="text-term-acc border-b border-term-acc/40 inline-block mt-5">See all supported projects →</NuxtLink>
-        </div>
-      </div>
-    </div>
-
-    <div class="bg-term-acc text-term-bg px-10 py-14 grid grid-cols-[1fr_auto] gap-10 items-center">
-      <div>
-        <h3 class="text-[30px] font-semibold m-0 mb-3 -tracking-[0.01em]">$50 a month keeps one nonprofit online for a year.</h3>
-        <p class="font-sans text-base leading-[1.6] m-0 max-w-[52ch] opacity-80">We're volunteer-run, so donations go to servers, domains, and student stipends — not salaries.</p>
-      </div>
-      <div class="flex gap-[10px] items-center">
-        <span class="border border-term-bg px-4 py-[13px] text-sm">$25</span>
-        <span class="border border-term-bg bg-term-bg text-term-acc px-4 py-[13px] text-sm font-semibold">$50/mo</span>
-        <span class="border border-term-bg px-4 py-[13px] text-sm">$250</span>
-        <NuxtLink to="/donate" class="text-sm font-semibold bg-term-bg text-term-acc px-[22px] py-[14px] ml-2">Donate →</NuxtLink>
-      </div>
-    </div>
+    <SponsorBanner />
   </div>
 </template>

@@ -1,114 +1,106 @@
+<script setup lang="ts">
+// Interest form. There's no server, so submitting opens the visitor's email app
+// with their answers addressed to NPTS; they press send.
+const TO = 'info@npts.tech'
+
+const form = reactive({
+  name: '',
+  email: '',
+  interest: 'Either',
+  epics: '',
+  project: '',
+  skills: '',
+  availability: '',
+  links: '',
+})
+const submitted = ref(false)
+
+function submit() {
+  const subject = `Internship & volunteer interest: ${form.name}`
+  const body = [
+    `Name: ${form.name}`,
+    `Email: ${form.email}`,
+    `Interested in: ${form.interest}`,
+    `UTDesign EPICS: ${form.epics}`,
+    `EPICS project / semester: ${form.project || '-'}`,
+    `Availability: ${form.availability || '-'}`,
+    `Links: ${form.links || '-'}`,
+    '',
+    'What I would like to work on / my skills:',
+    form.skills,
+  ].join('\n')
+  window.open(`mailto:${TO}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`, '_self')
+  submitted.value = true
+}
+
+const field = 'bg-term-deep border border-term-rule text-term-fg text-[15px] px-4 py-3'
+</script>
+
 <template>
   <div class="bg-term-bg text-term-fg font-mono">
     <div class="px-10 pt-[76px] pb-14 border-b border-term-line">
-      <div class="text-[13px] text-term-acc tracking-[0.1em] mb-6">[ POSITIONS ]</div>
-      <h1 class="text-[52px] leading-[1.08] font-medium m-0 mb-6 -tracking-[0.02em] max-w-[24ch] text-pretty">Unpaid, unglamorous, and the best line on your résumé.</h1>
-      <p class="font-sans text-[19px] leading-[1.6] text-term-mid m-0 max-w-[64ch] text-pretty">We're volunteer-run, so most roles are volunteer too — a few carry stipends when funding allows. What you get instead is production access, code review from working engineers, and a reference that means something.</p>
+      <div class="text-[13px] text-term-acc tracking-[0.1em] mb-6">[ GET INVOLVED ]</div>
+      <h1 class="text-[52px] leading-[1.08] font-medium m-0 mb-6 -tracking-[0.02em] max-w-[24ch] text-pretty">Volunteer programs and internships.</h1>
+      <p class="font-sans text-[19px] leading-[1.6] text-term-mid m-0 max-w-[64ch] text-pretty">We provide volunteer programs and internships to students of the experiential learning programs we work with. Most of our volunteers came up through UTDesign EPICS.</p>
     </div>
-    <div class="px-10 py-[68px] border-b border-term-line">
-      <div class="flex items-baseline justify-between mb-8">
-        <div class="text-[13px] text-term-acc tracking-[0.1em]">[ OPEN ROLES ]</div>
-        <div class="text-[13px] text-term-dim">Rolling applications · remote-first, DFW preferred</div>
-      </div>
-      <div class="border border-term-line">
-        <div class="px-8 py-7 border-b border-term-line flex gap-10 items-start hover:bg-term-card">
-          <div class="flex-1">
-            <div class="flex items-baseline gap-4 mb-2">
-              <h3 class="text-[21px] font-medium m-0">Full-stack engineering intern</h3>
-              <span class="text-xs text-term-acc">stipend available</span>
-            </div>
-            <p class="font-sans text-sm leading-[1.65] text-term-mid m-0 mb-3 max-w-[70ch]">Own features on a live partner application end to end — database through interface. You'll write the migration, review someone else's, and be the person who gets pinged when it misbehaves.</p>
-            <div class="text-xs text-term-dim">10–15 hrs/week · one semester minimum · TypeScript, Postgres, or a willingness to learn both</div>
+    <div id="interest-form" class="px-10 py-[68px] border-b border-term-line scroll-mt-6">
+      <div class="text-[13px] text-term-acc tracking-[0.1em] mb-4">[ INTEREST FORM ]</div>
+      <h2 class="text-[30px] font-medium leading-[1.2] m-0 mb-4">Interested in volunteering or interning?</h2>
+      <p class="font-sans text-base leading-[1.65] text-term-mid m-0 mb-10 max-w-[62ch]">Fill this out and we'll get in touch when there's a fit. Submitting opens your email app with your answers ready to send to <span class="text-term-fg">{{ TO }}</span>.</p>
+      <form class="grid gap-6 max-w-[640px]" @submit.prevent="submit">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+          <div class="grid gap-2">
+            <label for="if-name" class="text-[13px] text-term-mid">Name</label>
+            <input id="if-name" v-model.trim="form.name" type="text" required autocomplete="name" :class="field">
           </div>
-          <a href="#" class="text-[13px] font-semibold text-term-bg bg-term-acc px-4 py-[10px] shrink-0 hover:bg-term-accHi">Apply →</a>
-        </div>
-        <div class="px-8 py-7 border-b border-term-line flex gap-10 items-start hover:bg-term-card">
-          <div class="flex-1">
-            <div class="flex items-baseline gap-4 mb-2">
-              <h3 class="text-[21px] font-medium m-0">Infrastructure &amp; on-call volunteer</h3>
-              <span class="text-xs text-term-dim">volunteer</span>
-            </div>
-            <p class="font-sans text-sm leading-[1.65] text-term-mid m-0 mb-3 max-w-[70ch]">Help run the platform every partner sits on: deploys, monitoring, backup verification, and incident response. Best fit for someone with a year or two of professional experience who wants ops reps.</p>
-            <div class="text-xs text-term-dim">5–10 hrs/week · shared rotation, never alone on a page · Linux, Docker, some CI</div>
+          <div class="grid gap-2">
+            <label for="if-email" class="text-[13px] text-term-mid">Email</label>
+            <input id="if-email" v-model.trim="form.email" type="email" required autocomplete="email" :class="field">
           </div>
-          <a href="#" class="text-[13px] text-term-fg border border-term-rule px-4 py-[10px] shrink-0 hover:border-term-acc">Apply →</a>
         </div>
-        <div class="px-8 py-7 border-b border-term-line flex gap-10 items-start hover:bg-term-card">
-          <div class="flex-1">
-            <div class="flex items-baseline gap-4 mb-2">
-              <h3 class="text-[21px] font-medium m-0">Student team mentor</h3>
-              <span class="text-xs text-term-dim">volunteer</span>
-            </div>
-            <p class="font-sans text-sm leading-[1.65] text-term-mid m-0 mb-3 max-w-[70ch]">Sit with a capstone team for a semester: weekly check-in, pull request reviews, and the occasional hard conversation about scope. Former EPICS students strongly encouraged.</p>
-            <div class="text-xs text-term-dim">3–5 hrs/week · one semester · prior experience shipping something real</div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+          <div class="grid gap-2">
+            <label for="if-interest" class="text-[13px] text-term-mid">Interested in</label>
+            <select id="if-interest" v-model="form.interest" :class="field">
+              <option>Internship</option>
+              <option>Volunteering</option>
+              <option>Either</option>
+            </select>
           </div>
-          <a href="#" class="text-[13px] text-term-fg border border-term-rule px-4 py-[10px] shrink-0 hover:border-term-acc">Apply →</a>
-        </div>
-        <div class="px-8 py-7 flex gap-10 items-start hover:bg-term-card">
-          <div class="flex-1">
-            <div class="flex items-baseline gap-4 mb-2">
-              <h3 class="text-[21px] font-medium m-0">Nothing here fits?</h3>
-            </div>
-            <p class="font-sans text-sm leading-[1.65] text-term-mid m-0 max-w-[70ch]">We also need design, technical writing, and grant help. Tell us what you're good at and how much time you have.</p>
+          <div class="grid gap-2">
+            <label for="if-epics" class="text-[13px] text-term-mid">Have you been on a UTDesign EPICS team?</label>
+            <select id="if-epics" v-model="form.epics" required :class="field">
+              <option value="" disabled>Choose one</option>
+              <option>Yes, currently</option>
+              <option>Yes, previously</option>
+              <option>No</option>
+            </select>
           </div>
-          <NuxtLink to="/support" class="text-[13px] text-term-acc border-b border-term-acc/40 shrink-0">Get in touch →</NuxtLink>
         </div>
-      </div>
+        <div class="grid gap-2">
+          <label for="if-project" class="text-[13px] text-term-mid">EPICS project and semester <span class="text-term-dim">(optional)</span></label>
+          <input id="if-project" v-model.trim="form.project" type="text" placeholder="e.g. Carson's Village, Spring 2026" :class="field">
+        </div>
+        <div class="grid gap-2">
+          <label for="if-skills" class="text-[13px] text-term-mid">What would you like to work on, and what are you good at?</label>
+          <textarea id="if-skills" v-model.trim="form.skills" rows="5" required placeholder="Languages, frameworks, design, writing, anything you'd like to learn." :class="[field, 'leading-[1.6] resize-y']"></textarea>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+          <div class="grid gap-2">
+            <label for="if-availability" class="text-[13px] text-term-mid">Availability <span class="text-term-dim">(optional)</span></label>
+            <input id="if-availability" v-model.trim="form.availability" type="text" placeholder="e.g. 5 hrs/week, Fall 2026" :class="field">
+          </div>
+          <div class="grid gap-2">
+            <label for="if-links" class="text-[13px] text-term-mid">LinkedIn, GitHub, or portfolio <span class="text-term-dim">(optional)</span></label>
+            <input id="if-links" v-model.trim="form.links" type="text" :class="field">
+          </div>
+        </div>
+        <div class="flex flex-wrap items-center gap-5 mt-2">
+          <button type="submit" class="text-[15px] font-semibold text-term-bg bg-term-acc px-6 py-4 hover:bg-term-accHi">Submit interest →</button>
+          <span v-if="submitted" class="font-sans text-[13px] text-term-mid">Your email app should now be open with your answers. Press send to finish. If nothing opened, email us at <a :href="`mailto:${TO}`" class="text-term-acc border-b border-term-acc/40">{{ TO }}</a>.</span>
+        </div>
+      </form>
     </div>
-    <div class="px-10 py-[68px] border-b border-term-line grid grid-cols-2 gap-16">
-      <div>
-        <div class="text-[13px] text-term-acc tracking-[0.1em] mb-7">[ WHAT YOU GET ]</div>
-        <div class="font-sans text-[15px] leading-[2] text-term-mid">
-          <div>Production access on systems with real users.</div>
-          <div>Code review from engineers who do this for a living.</div>
-          <div>A named reference willing to take a recruiter's call.</div>
-          <div>Introductions to our hiring partners when you're ready.</div>
-          <div>Work you're allowed to talk about publicly.</div>
-        </div>
-      </div>
-      <div>
-        <div class="text-[13px] text-term-acc tracking-[0.1em] mb-7">[ WHAT WE EXPECT ]</div>
-        <div class="font-sans text-[15px] leading-[2] text-term-mid">
-          <div>You show up for the semester you committed to.</div>
-          <div>You ask for help before the deadline, not after.</div>
-          <div>You treat partner data as if it were your own medical record.</div>
-          <div>You leave documentation behind for the next person.</div>
-          <div>You mentor the people who come after you.</div>
-        </div>
-      </div>
-    </div>
-    <div class="px-10 py-[68px] border-b border-term-line">
-      <div class="text-[13px] text-term-acc tracking-[0.1em] mb-8">[ HOW HIRING WORKS ]</div>
-      <div class="grid grid-cols-4 gap-px bg-term-line border border-term-line">
-        <div class="bg-term-bg px-7 py-6">
-          <div class="text-term-acc text-[22px] mb-3">01</div>
-          <h4 class="m-0 mb-2 text-[15px] font-semibold">Apply</h4>
-          <p class="font-sans m-0 text-sm leading-[1.6] text-term-mid">A short form and anything you've built. No cover letter.</p>
-        </div>
-        <div class="bg-term-bg px-7 py-6">
-          <div class="text-term-acc text-[22px] mb-3">02</div>
-          <h4 class="m-0 mb-2 text-[15px] font-semibold">Conversation</h4>
-          <p class="font-sans m-0 text-sm leading-[1.6] text-term-mid">Thirty minutes about something you made and what broke.</p>
-        </div>
-        <div class="bg-term-bg px-7 py-6">
-          <div class="text-term-acc text-[22px] mb-3">03</div>
-          <h4 class="m-0 mb-2 text-[15px] font-semibold">Pair session</h4>
-          <p class="font-sans m-0 text-sm leading-[1.6] text-term-mid">We fix a real issue together. No whiteboard puzzles.</p>
-        </div>
-        <div class="bg-term-bg px-7 py-6">
-          <div class="text-term-acc text-[22px] mb-3">04</div>
-          <h4 class="m-0 mb-2 text-[15px] font-semibold">Onboard</h4>
-          <p class="font-sans m-0 text-sm leading-[1.6] text-term-mid">Scoped access, a mentor, and a first task in week one.</p>
-        </div>
-      </div>
-      <p class="font-sans text-sm text-term-dim mt-6 m-0">No student is given unsupervised access to partner production data. Access is scoped, logged, and revoked when a term ends.</p>
-    </div>
-    <div class="bg-term-acc text-term-bg px-10 py-14 grid grid-cols-[1fr_auto] gap-10 items-center">
-      <div>
-        <h3 class="text-[30px] font-semibold m-0 mb-3 -tracking-[0.01em]">Applications are always open.</h3>
-        <p class="font-sans text-base leading-[1.6] m-0 max-w-[54ch] opacity-80">We review weekly and reply either way. Tell us what you want to learn.</p>
-      </div>
-      <a href="#" class="text-sm font-semibold bg-term-bg text-term-acc px-[22px] py-[14px]">Apply now →</a>
-    </div>
+    <SponsorBanner />
   </div>
 </template>

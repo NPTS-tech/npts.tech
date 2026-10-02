@@ -4,9 +4,10 @@
       <span class="text-term-acc font-semibold">npts</span><span class="text-term-dim">.tech</span>
     </NuxtLink>
     <div class="flex gap-7 text-[13px] text-term-mid">
-      <NuxtLink to="/services" class="hover:text-term-acc">services</NuxtLink>
+      <NuxtLink to="/" class="hover:text-term-acc">home</NuxtLink>
       <NuxtLink to="/programs" class="hover:text-term-acc">programs</NuxtLink>
       <NuxtLink to="/partners" class="hover:text-term-acc">partners</NuxtLink>
+      <NuxtLink to="/case-studies" class="hover:text-term-acc">case studies</NuxtLink>
       <NuxtLink to="/about" class="hover:text-term-acc">about</NuxtLink>
     </div>
     <div class="flex items-center gap-[10px]">
