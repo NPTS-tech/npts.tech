@@ -25,7 +25,7 @@ export default defineNuxtConfig({
   },
   nitro: {
     prerender: {
-      routes: ['/'],
+      routes: ['/', '/privacy', '/privacy/esperanza', '/delete-account/esperanza'],
     },
   },
 })
