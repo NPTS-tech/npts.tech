@@ -24,6 +24,9 @@
       <main>
         <NuxtPage />
       </main>
+      <footer class="mt-12 pt-6 border-t-2 border-terminal-dark text-sm">
+        <NuxtLink class="hover:text-terminal-light hover:underline text-terminal-text" to="/privacy">[ Privacy Policy ]</NuxtLink>
+      </footer>
     </div>
   </div>
 </template>
