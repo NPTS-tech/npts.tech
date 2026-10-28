@@ -61,14 +61,14 @@ const inProgressCount = projects.filter(p => p.status === 'in progress').length
 <template>
   <div class="bg-term-bg text-term-fg font-mono">
     <div class="px-10 pt-[76px] pb-14 border-b border-term-line">
-      <div class="text-[13px] text-term-acc tracking-[0.1em] mb-6">[ PARTNERS ]</div>
+      <div class="text-base text-term-acc tracking-[0.1em] mb-6">[ PARTNERS ]</div>
       <h1 class="text-[52px] leading-[1.08] font-medium m-0 mb-6 -tracking-[0.02em] max-w-[24ch] text-pretty">The nonprofits we support.</h1>
       <p class="font-sans text-[19px] leading-[1.6] text-term-mid m-0 max-w-[62ch] text-pretty">Every app here was built for a nonprofit partner, most by UTDesign EPICS student teams. NPTS student interns, guided by volunteers, host and maintain them long after the project ends.</p>
     </div>
     <PartnerMarquee label="Partner organizations" class="border-b border-term-line" />
     <div class="px-10 py-[68px] border-b border-term-line">
       <div class="flex flex-wrap gap-2 items-baseline justify-between mb-8">
-        <div class="text-[13px] text-term-acc tracking-[0.1em]">[ OUR WORK ]</div>
+        <div class="text-base text-term-acc tracking-[0.1em]">[ OUR WORK ]</div>
         <div class="text-[13px] text-term-dim">{{ projects.length }} total · {{ maintenanceCount }} in maintenance · {{ inProgressCount }} in progress</div>
       </div>
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
@@ -99,7 +99,7 @@ const inProgressCount = projects.filter(p => p.status === 'in progress').length
     </div>
     <div class="px-10 py-[68px] border-b border-term-line grid grid-cols-1 lg:grid-cols-[1fr_1.4fr] gap-10 lg:gap-16 items-start">
       <div>
-        <div class="text-[13px] text-term-acc tracking-[0.1em] mb-7">[ OUR IMPACT ]</div>
+        <div class="text-base text-term-acc tracking-[0.1em] mb-7">[ OUR IMPACT ]</div>
         <h2 class="text-[30px] font-medium leading-[1.2] m-0 mb-5">Read more about our impact.</h2>
         <p class="font-sans text-base leading-[1.65] text-term-mid m-0 mb-6 max-w-[44ch]">See how student-built tools are helping our partners, and what it takes to keep them running.</p>
         <NuxtLink to="/case-studies" class="text-[13px] text-term-acc border-b border-term-acc/40">All case studies →</NuxtLink>

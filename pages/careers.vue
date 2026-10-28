@@ -39,12 +39,12 @@ const field = 'bg-term-deep border border-term-rule text-term-fg text-[15px] px-
 <template>
   <div class="bg-term-bg text-term-fg font-mono">
     <div class="px-10 pt-[76px] pb-14 border-b border-term-line">
-      <div class="text-[13px] text-term-acc tracking-[0.1em] mb-6">[ GET INVOLVED ]</div>
+      <div class="text-base text-term-acc tracking-[0.1em] mb-6">[ GET INVOLVED ]</div>
       <h1 class="text-[52px] leading-[1.08] font-medium m-0 mb-6 -tracking-[0.02em] max-w-[24ch] text-pretty">Volunteer programs and internships.</h1>
       <p class="font-sans text-[19px] leading-[1.6] text-term-mid m-0 max-w-[64ch] text-pretty">We provide volunteer programs and internships to students of the experiential learning programs we work with. Most of our volunteers came up through UTDesign EPICS.</p>
     </div>
     <div id="interest-form" class="px-10 py-[68px] border-b border-term-line scroll-mt-6">
-      <div class="text-[13px] text-term-acc tracking-[0.1em] mb-4">[ INTEREST FORM ]</div>
+      <div class="text-base text-term-acc tracking-[0.1em] mb-4">[ INTEREST FORM ]</div>
       <h2 class="text-[30px] font-medium leading-[1.2] m-0 mb-4">Interested in volunteering or interning?</h2>
       <p class="font-sans text-base leading-[1.65] text-term-mid m-0 mb-10 max-w-[62ch]">Fill this out and we'll get in touch when there's a fit. Submitting opens your email app with your answers ready to send to <span class="text-term-fg">{{ TO }}</span>.</p>
       <form class="grid gap-6 max-w-[640px]" @submit.prevent="submit">

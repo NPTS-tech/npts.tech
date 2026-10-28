@@ -44,12 +44,12 @@ const caseStudies: {
 <template>
   <div class="bg-term-bg text-term-fg font-mono">
     <div class="px-10 pt-[76px] pb-14 border-b border-term-line">
-      <div class="text-[13px] text-term-acc tracking-[0.1em] mb-6">[ CASE STUDIES ]</div>
+      <div class="text-base text-term-acc tracking-[0.1em] mb-6">[ CASE STUDIES ]</div>
       <h1 class="text-[52px] leading-[1.08] font-medium m-0 mb-6 -tracking-[0.02em] max-w-[24ch] text-pretty">Projects built for our partners.</h1>
       <p class="font-sans text-[19px] leading-[1.6] text-term-mid m-0 max-w-[62ch] text-pretty">Bespoke solutions built for nonprofit partners through experiential learning programs, and the hosting and support that keeps them running.</p>
     </div>
     <div class="px-10 py-[68px] border-b border-term-line">
-      <div class="text-[13px] text-term-acc tracking-[0.1em] mb-8">[ STORIES ]</div>
+      <div class="text-base text-term-acc tracking-[0.1em] mb-8">[ STORIES ]</div>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
         <NuxtLink
           v-for="story in stories"
@@ -68,7 +68,7 @@ const caseStudies: {
       </div>
     </div>
     <div class="px-10 py-[68px] border-b border-term-line">
-      <div class="text-[13px] text-term-acc tracking-[0.1em] mb-8">[ PROJECTS ]</div>
+      <div class="text-base text-term-acc tracking-[0.1em] mb-8">[ PROJECTS ]</div>
       <div class="border border-term-line">
         <div
           v-for="(study, i) in caseStudies"

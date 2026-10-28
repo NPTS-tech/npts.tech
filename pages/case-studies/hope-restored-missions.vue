@@ -35,7 +35,7 @@ const model = [
       <NuxtLink to="/case-studies" class="text-[13px] text-term-dim hover:text-term-acc">← All case studies</NuxtLink>
       <div class="flex flex-col md:flex-row md:items-end gap-10 mt-8">
         <div class="flex-1">
-          <div class="text-[13px] text-term-acc tracking-[0.1em] mb-6">[ CASE STUDY · HOPE RESTORED MISSIONS ]</div>
+          <div class="text-base text-term-acc tracking-[0.1em] mb-6">[ CASE STUDY · HOPE RESTORED MISSIONS ]</div>
           <h1 class="text-[48px] leading-[1.1] font-medium m-0 mb-6 -tracking-[0.02em] max-w-[26ch] text-pretty">{{ TITLE }}</h1>
           <p class="font-sans text-[19px] leading-[1.6] text-term-mid m-0 max-w-[62ch] text-pretty">Hope Restored Missions used to track roughly 3,500 donated garments by hand. A UTDesign EPICS team built an inventory system to replace that, and NPTS hosts and maintains it so HRM can keep relying on it long after the semester ended. Today it is fully in use.</p>
           <ShareLinks :title="TITLE" class="mt-8" />
@@ -72,12 +72,12 @@ const model = [
 
     <article class="px-10 py-[68px] border-b border-term-line">
       <div class="max-w-[72ch] mx-auto">
-        <div class="text-[13px] text-term-acc tracking-[0.1em] mb-5">[ THE PARTNER ]</div>
+        <div class="text-base text-term-acc tracking-[0.1em] mb-5">[ THE PARTNER ]</div>
         <h2 class="text-[28px] font-medium leading-[1.25] m-0 mb-5">Help for anyone who walks through the door.</h2>
         <p class="font-sans text-[17px] leading-[1.75] text-term-mid m-0 mb-5">Hope Restored Missions (HRM) began in the spring of 2019 as a grassroots effort led by Dr. Tamara Monroe and three other servant leaders. Based in Plano, HRM serves people experiencing poverty and homelessness across Collin County and North Texas, and since 2019 has supported over 8,100 people on their journey to securing housing, accessing medical and mental healthcare, building employability skills, and regaining stability.</p>
         <p class="font-sans text-[17px] leading-[1.75] text-term-mid m-0 mb-12">HRM is zero-barrier by design: “We do not have any service eligibility requirements; we will help anyone who comes through our doors.” Its work spans street outreach, a resource center for emergency needs, the Bridge to Hope housing program, and See Me, which has helped over 140 people obtain the identification they need to access shelter, government assistance, and medical care.</p>
 
-        <div class="text-[13px] text-term-acc tracking-[0.1em] mb-5">[ THE CHALLENGE ]</div>
+        <div class="text-base text-term-acc tracking-[0.1em] mb-5">[ THE CHALLENGE ]</div>
         <h2 class="text-[28px] font-medium leading-[1.25] m-0 mb-5">A warehouse that never stops moving.</h2>
         <p class="font-sans text-[17px] leading-[1.75] text-term-mid m-0 mb-5">One way HRM restores dignity is by replacing clients’ tattered clothing. HRM receives about 100 clothing donations a day and distributes about 85, with roughly 3,500 garments on hand at any time, all in a warehouse of about 600 square feet.</p>
         <figure class="m-0 mb-5">
@@ -86,16 +86,16 @@ const model = [
         </figure>
         <p class="font-sans text-[17px] leading-[1.75] text-term-mid m-0 mb-12">For years, HRM tracked that inventory by hand. The counting and logging took staff time, and the results weren’t reliably accurate.</p>
 
-        <div class="text-[13px] text-term-acc tracking-[0.1em] mb-5">[ WHAT THE STUDENTS BUILT ]</div>
+        <div class="text-base text-term-acc tracking-[0.1em] mb-5">[ WHAT THE STUDENTS BUILT ]</div>
         <h2 class="text-[28px] font-medium leading-[1.25] m-0 mb-5">Designed with the people who use it.</h2>
         <p class="font-sans text-[17px] leading-[1.75] text-term-mid m-0 mb-12">A UTDesign EPICS team took on the problem. The students and their mentors listened to HRM’s needs and adjusted the design based on feedback. Some came onsite to see the issues first-hand, and used what they saw to refine each beta version. The result is an electronic inventory control system built specifically for HRM that is simple, accurate, and easy to maintain.</p>
 
-        <div class="text-[13px] text-term-acc tracking-[0.1em] mb-5">[ NPTS’S ROLE ]</div>
+        <div class="text-base text-term-acc tracking-[0.1em] mb-5">[ NPTS’S ROLE ]</div>
         <h2 class="text-[28px] font-medium leading-[1.25] m-0 mb-5">Without long-term support, a semester’s work disappears.</h2>
         <p class="font-sans text-[17px] leading-[1.75] text-term-mid m-0 mb-5">A student project has a built-in end date. When the semester is over, the team graduates or moves on to new work. If no one hosts and maintains what they built, the application stops being usable, and the nonprofit loses a tool it has come to depend on.</p>
         <p class="font-sans text-[17px] leading-[1.75] text-term-mid m-0 mb-8">NPTS exists to close that gap. Hosting and support of projects built by experiential learning programs is a core part of our mission, and HRM’s inventory system is exactly that kind of project.</p>
         <div class="border border-term-acc bg-term-card px-7 py-6 mb-12">
-          <div class="text-[13px] text-term-acc tracking-[0.1em] mb-4">WHAT NPTS DOES FOR HRM</div>
+          <div class="text-base text-term-acc tracking-[0.1em] mb-4">WHAT NPTS DOES FOR HRM</div>
           <div class="grid gap-3">
             <div v-for="item in nptsRole" :key="item" class="flex gap-4">
               <span class="text-term-acc">→</span>
@@ -104,7 +104,7 @@ const model = [
           </div>
         </div>
 
-        <div class="text-[13px] text-term-acc tracking-[0.1em] mb-5">[ THE IMPACT ]</div>
+        <div class="text-base text-term-acc tracking-[0.1em] mb-5">[ THE IMPACT ]</div>
         <h2 class="text-[28px] font-medium leading-[1.25] m-0 mb-5">Less counting, better data.</h2>
         <p class="font-sans text-[17px] leading-[1.75] text-term-mid m-0">According to HRM, the system has eased its staffing constraints. Because its inventory and service data is now granular and accurate, it may also help HRM secure future grants. None of that would last without someone keeping the system running, and that is the work NPTS does.</p>
         <div class="border-t border-term-line mt-12 pt-8">
@@ -115,7 +115,7 @@ const model = [
 
     <div class="px-10 py-[68px] border-b border-term-line">
       <div class="max-w-[1100px] mx-auto">
-        <div class="text-[13px] text-term-acc tracking-[0.1em] mb-5">[ WHY IT MATTERS ]</div>
+        <div class="text-base text-term-acc tracking-[0.1em] mb-5">[ WHY IT MATTERS ]</div>
         <h2 class="text-[28px] font-medium leading-[1.25] m-0 mb-5 max-w-[36ch]">One investment, two kinds of impact.</h2>
         <p class="font-sans text-[17px] leading-[1.75] text-term-mid m-0 mb-10 max-w-[72ch]">HRM’s inventory system is one example of the model NPTS is built around. Supporting NPTS keeps tools like this running for the communities they serve, and creates volunteer and internship opportunities for the students of the programs that build them.</p>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-px bg-term-line border border-term-line mb-10">
