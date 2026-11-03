@@ -1,5 +1,7 @@
-// Case study posts, shown on /case-studies and on the partners page.
-// To add one, create pages/case-studies/<slug>.vue and add an entry here (newest first).
+// Case study cards shown on /case-studies and the partners page.
+// They come from the article files in data/case-studies/articles, so there's nothing to edit here.
+import { caseStudies, imagePath } from './case-studies'
+
 export interface Story {
   to: string
   partner: string
@@ -9,13 +11,11 @@ export interface Story {
   imageAlt: string
 }
 
-export const stories: Story[] = [
-  {
-    to: '/case-studies/hope-restored-missions',
-    partner: 'Hope Restored Missions',
-    title: '3,500 garments, counted by hand. Until a student team built a better way.',
-    excerpt: "Hope Restored Missions used to track ~3,500 donated garments by hand. A UTDesign EPICS team built an inventory system, and NPTS hosts and maintains it so HRM can keep relying on it.",
-    image: '/img/case-studies/hope-restored-missions/warehouse.webp',
-    imageAlt: 'Racks of donated clothing in the Hope Restored Missions warehouse',
-  },
-]
+export const stories: Story[] = caseStudies.map(s => ({
+  to: `/case-studies/${s.slug}`,
+  partner: s.partner.name,
+  title: s.title,
+  excerpt: s.card.excerpt,
+  image: imagePath(s, s.card.image),
+  imageAlt: s.card.imageAlt,
+}))

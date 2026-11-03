@@ -12,7 +12,8 @@ const links = computed(() => {
   const t = encodeURIComponent(props.title)
   return [
     { name: 'X', href: `https://twitter.com/intent/tweet?url=${u}&text=${t}` },
-    { name: 'LinkedIn', href: `https://www.linkedin.com/sharing/share-offsite/?url=${u}` },
+    // Pre-fills the post text with the title and link, so the link is visible even before LinkedIn loads a preview card.
+    { name: 'LinkedIn', href: `https://www.linkedin.com/feed/?shareActive=true&text=${encodeURIComponent(`${props.title} ${url.value}`)}` },
     { name: 'Facebook', href: `https://www.facebook.com/sharer/sharer.php?u=${u}` },
     { name: 'Email', href: `mailto:?subject=${t}&body=${u}` },
   ]
