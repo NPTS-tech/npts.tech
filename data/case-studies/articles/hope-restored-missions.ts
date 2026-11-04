@@ -17,7 +17,7 @@ const article: CaseStudy = {
   },
   shareImage: 'warehouse.jpg',
   facts: [
-    { label: 'Partner', value: 'Hope Restored Missions' },
+    { label: 'Partner', value: 'Hope Restored Missions', url: 'https://hoperestoredmissions.org' },
     { label: 'Built by', value: 'UTDesign EPICS students' },
     { label: 'Hosted & maintained by', value: 'NPTS', highlight: true },
     { label: 'Status', value: 'fully in use', highlight: true },

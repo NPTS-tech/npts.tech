@@ -43,9 +43,9 @@ const article: CaseStudy = {
   shareImage: 'photo.jpg',
 
   // The bar of facts under the headline. Up to 4 work best.
-  // `highlight: true` shows the value in green.
+  // `url` (optional) makes the value a link; `highlight: true` shows it in green.
   facts: [
-    { label: 'Partner', value: '...' },
+    { label: 'Partner', value: '...', url: 'https://...' },
     { label: 'Built by', value: 'UTDesign EPICS students' },
     { label: 'Hosted & maintained by', value: 'NPTS', highlight: true },
     { label: 'Status', value: '...', highlight: true },

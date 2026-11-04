@@ -47,8 +47,8 @@ const partnerHost = computed(() => props.study.partner.url?.replace(/^https?:\/\
       >
         <div class="text-term-dim mb-1">{{ fact.label }}</div>
         <a
-          v-if="fact.label === 'Partner' && study.partner.url"
-          :href="study.partner.url"
+          v-if="fact.url"
+          :href="fact.url"
           target="_blank"
           rel="noopener"
           class="text-term-fg hover:text-term-acc"
@@ -58,34 +58,38 @@ const partnerHost = computed(() => props.study.partner.url?.replace(/^https?:\/\
     </div>
 
     <div v-if="study.quote" class="px-10 py-[60px] border-b border-term-line bg-term-deep">
-      <div class="max-w-[72ch] mx-auto">
+      <figure class="max-w-[72ch] mx-auto m-0">
         <blockquote class="m-0 text-[24px] leading-[1.45] font-medium text-term-fg text-pretty">“{{ study.quote.text }}”</blockquote>
-        <div class="font-sans text-[15px] text-term-mid mt-6">{{ study.quote.author }}</div>
-      </div>
+        <figcaption class="font-sans text-[15px] text-term-mid mt-6">{{ study.quote.author }}</figcaption>
+      </figure>
     </div>
 
     <article class="px-10 py-[68px] border-b border-term-line">
       <div class="max-w-[72ch] mx-auto">
-        <section v-for="(section, s) in study.sections" :key="section.label" :class="{ 'mb-12': s < study.sections.length - 1 }">
-          <div class="text-base text-term-acc tracking-[0.1em] mb-5 uppercase">[ {{ section.label }} ]</div>
-          <h2 class="text-[28px] font-medium leading-[1.25] m-0 mb-5">{{ section.heading }}</h2>
-          <template v-for="(block, b) in section.body" :key="b">
-            <figure v-if="isImage(block)" class="m-0 mb-5">
-              <img :src="img(block.image.src)" :alt="block.image.alt" class="w-full border border-term-line" loading="lazy">
-              <figcaption v-if="block.image.caption" class="font-sans text-[13px] text-term-dim mt-3">{{ block.image.caption }}</figcaption>
-            </figure>
-            <div v-else-if="isHighlight(block)" class="border border-term-acc bg-term-card px-7 py-6" :class="{ 'mb-5': b < section.body.length - 1 }">
-              <div class="text-base text-term-acc tracking-[0.1em] mb-4 uppercase">{{ block.highlight.title }}</div>
-              <div class="grid gap-3">
-                <div v-for="item in block.highlight.items" :key="item" class="flex gap-4">
-                  <span class="text-term-acc">→</span>
-                  <span class="font-sans text-[16px] leading-[1.6] text-term-fg flex-1">{{ item }}</span>
+        <div class="flex flex-col gap-12">
+          <section v-for="(section, s) in study.sections" :key="s">
+            <div class="text-base text-term-acc tracking-[0.1em] mb-5 uppercase">[ {{ section.label }} ]</div>
+            <h2 class="text-[28px] font-medium leading-[1.25] m-0 mb-5">{{ section.heading }}</h2>
+            <div class="flex flex-col gap-5">
+              <template v-for="(block, b) in section.body" :key="b">
+                <figure v-if="isImage(block)" class="m-0">
+                  <img :src="img(block.image.src)" :alt="block.image.alt" class="w-full border border-term-line" loading="lazy">
+                  <figcaption v-if="block.image.caption" class="font-sans text-[13px] text-term-dim mt-3">{{ block.image.caption }}</figcaption>
+                </figure>
+                <div v-else-if="isHighlight(block)" class="border border-term-acc bg-term-card px-7 py-6">
+                  <div class="text-base text-term-acc tracking-[0.1em] mb-4 uppercase">{{ block.highlight.title }}</div>
+                  <div class="grid gap-3">
+                    <div v-for="(item, n) in block.highlight.items" :key="n" class="flex gap-4">
+                      <span class="text-term-acc" aria-hidden="true">→</span>
+                      <span class="font-sans text-[16px] leading-[1.6] text-term-fg flex-1">{{ item }}</span>
+                    </div>
+                  </div>
                 </div>
-              </div>
+                <p v-else class="font-sans text-[17px] leading-[1.75] text-term-mid m-0">{{ block }}</p>
+              </template>
             </div>
-            <p v-else class="font-sans text-[17px] leading-[1.75] text-term-mid m-0" :class="{ 'mb-5': b < section.body.length - 1 }">{{ block }}</p>
-          </template>
-        </section>
+          </section>
+        </div>
         <div class="border-t border-term-line mt-12 pt-8">
           <ShareLinks :title="study.title" label="Share this story" />
         </div>
@@ -94,11 +98,11 @@ const partnerHost = computed(() => props.study.partner.url?.replace(/^https?:\/\
 
     <div v-if="study.whyItMatters" class="px-10 py-[68px] border-b border-term-line">
       <div class="max-w-[1100px] mx-auto">
-        <div class="text-base text-term-acc tracking-[0.1em] mb-5">[ WHY IT MATTERS ]</div>
+        <div class="text-base text-term-acc tracking-[0.1em] mb-5 uppercase">[ Why it matters ]</div>
         <h2 class="text-[28px] font-medium leading-[1.25] m-0 mb-5 max-w-[36ch]">{{ study.whyItMatters.heading }}</h2>
         <p class="font-sans text-[17px] leading-[1.75] text-term-mid m-0 mb-10 max-w-[72ch]">{{ study.whyItMatters.intro }}</p>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-px bg-term-line border border-term-line mb-10">
-          <div v-for="(step, i) in study.whyItMatters.steps" :key="step.title" class="bg-term-bg px-7 py-7">
+          <div v-for="(step, i) in study.whyItMatters.steps" :key="i" class="bg-term-bg px-7 py-7">
             <div class="text-term-acc text-[22px] mb-3">{{ String(i + 1).padStart(2, '0') }}</div>
             <h3 class="m-0 mb-2 text-[17px] font-semibold">{{ step.title }}</h3>
             <p class="font-sans m-0 text-[15px] leading-[1.6] text-term-mid">{{ step.body }}</p>

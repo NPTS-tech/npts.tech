@@ -39,7 +39,8 @@ export interface CaseStudy {
     imageAlt: string
   }
   shareImage?: string // .jpg or .png shown in LinkedIn/Facebook previews (webp isn't reliable there)
-  facts: { label: string; value: string; highlight?: boolean }[] // the bar under the headline
+  // The bar under the headline. `url` makes the value a link; `highlight` shows it in green.
+  facts: { label: string; value: string; url?: string; highlight?: boolean }[]
   quote?: { text: string; author: string }
   sections: ArticleSection[]
   whyItMatters?: {

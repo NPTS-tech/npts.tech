@@ -2,6 +2,9 @@
 // Shows any case study from data/case-studies/articles, based on the page address.
 import { findCaseStudy, imagePath } from '~/data/case-studies'
 
+// Re-run this page when moving from one article straight to another.
+definePageMeta({ key: route => route.fullPath })
+
 const route = useRoute()
 const study = findCaseStudy(String(route.params.slug))
 if (!study) {
