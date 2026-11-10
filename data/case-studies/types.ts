@@ -1,5 +1,5 @@
 // The shape of a case study article. Every article file in ./articles fills in these fields,
-// and components/CaseStudyArticle.vue turns them into the page.
+// and components/case-study/CaseStudyArticle.vue turns them into the page.
 
 // A photo inside a section. `src` is a file name in public/img/case-studies/<slug>/.
 export interface ArticleImage {
@@ -14,8 +14,25 @@ export interface ArticleHighlight {
   items: string[]
 }
 
-// One block of a section: a plain string is a paragraph; objects add a photo or a highlight box.
-export type ArticleBlock = string | { image: ArticleImage } | { highlight: ArticleHighlight }
+// One block of a section: a plain string is a paragraph; objects add a photo, a highlight box,
+// or a placeholder box (e.g. "Demo to be added") that marks where a photo will go later.
+export type ArticleBlock = string | { image: ArticleImage } | { highlight: ArticleHighlight } | { placeholder: string }
+
+// One item in the bar under the headline. `url` makes the value a link; `highlight` shows it in green.
+export interface ArticleFact {
+  label: string
+  value: string
+  url?: string
+  highlight?: boolean
+}
+
+// The "Why it matters" block with numbered steps.
+export interface ArticleWhyItMatters {
+  heading: string
+  intro: string
+  steps: { title: string; body: string }[]
+  closing?: string // shown above the "See all partners" link
+}
 
 export interface ArticleSection {
   label: string // small green label, e.g. "The challenge"
@@ -35,19 +52,13 @@ export interface CaseStudy {
   summary: string // paragraph under the headline
   card: {
     excerpt: string // short text on the Case studies and Partners page cards
-    image: string // file name of the card photo
-    imageAlt: string
+    image?: string // file name of the card photo. Leave out to show "Picture to be added".
+    imageAlt?: string
   }
-  shareImage?: string // .jpg or .png shown in LinkedIn/Facebook previews (webp isn't reliable there)
-  // The bar under the headline. `url` makes the value a link; `highlight` shows it in green.
-  facts: { label: string; value: string; url?: string; highlight?: boolean }[]
+  shareImage?: string // .jpg or .png for LinkedIn/Facebook previews (webp isn't reliable there). Defaults to the card image.
+  facts: ArticleFact[] // the bar under the headline
   quote?: { text: string; author: string }
   sections: ArticleSection[]
-  whyItMatters?: {
-    heading: string
-    intro: string
-    steps: { title: string; body: string }[]
-    closing?: string // shown above the "See all partners" link
-  }
+  whyItMatters?: ArticleWhyItMatters
   sources?: string
 }

@@ -7,8 +7,8 @@ export interface Story {
   partner: string
   title: string
   excerpt: string
-  image: string
-  imageAlt: string
+  image?: string // missing until a photo is added
+  imageAlt?: string
 }
 
 export const stories: Story[] = caseStudies.map(s => ({
@@ -16,6 +16,6 @@ export const stories: Story[] = caseStudies.map(s => ({
   partner: s.partner.name,
   title: s.title,
   excerpt: s.card.excerpt,
-  image: imagePath(s, s.card.image),
+  image: s.card.image && imagePath(s, s.card.image),
   imageAlt: s.card.imageAlt,
 }))

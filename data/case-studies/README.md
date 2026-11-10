@@ -1,6 +1,6 @@
 # Case studies
 
-Each case study is one file in `articles/`. The page design lives in `components/CaseStudyArticle.vue`, so every article looks the same and you never need to touch layout code to publish one.
+Each case study is one file in `articles/`. The page design lives in `components/case-study/`, so every article looks the same and you never need to touch layout code to publish one.
 
 ## Add a new case study
 
@@ -16,3 +16,20 @@ Each case study is one file in `articles/`. The page design lives in `components
 - The newest article (by `date`) is the one featured on the Partners page.
 - `hope-restored-missions.ts` is a complete, real example to copy from.
 - Files starting with `_` (like the template) are never published.
+- No photo yet? Leave out `card.image` to show "Picture to be added" on the card, and use `{ placeholder: 'Demo to be added' }` in a section. Swap in the real photo later.
+
+## How the design is split up
+
+`CaseStudyArticle` puts the page together from smaller pieces in `components/case-study/`. To change one part for every article, edit just that piece:
+
+| Component | Part of the page |
+|---|---|
+| `CaseStudyHero` | Back link, label, headline, summary, share buttons, logo |
+| `CaseStudyFacts` | The facts bar under the headline |
+| `CaseStudyQuote` | The partner quote |
+| `CaseStudySection` | One section: label, heading, paragraphs, photos |
+| `CaseStudyHighlight` | The green-bordered list box |
+| `CaseStudyWhyItMatters` | The numbered "Why it matters" steps |
+| `CaseStudySources` | The sources line |
+| `CaseStudyCard` | The preview card on the Case studies page (`stacked`) and Partners page (`side`) |
+| `CaseStudyPlaceholder` | The "Picture to be added" / "Demo to be added" box |

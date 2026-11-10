@@ -35,7 +35,7 @@ const article: CaseStudy = {
   // The card on the Case studies and Partners pages.
   card: {
     excerpt: '...', // one or two sentences
-    image: 'photo.webp', // file name in the photo folder
+    image: 'photo.webp', // file name in the photo folder (optional: leave out to show "Picture to be added")
     imageAlt: '...', // describe the photo, e.g. "Volunteers sorting donations"
   },
 
@@ -62,6 +62,7 @@ const article: CaseStudy = {
   //   - a plain '...' line is a paragraph
   //   - { image: { ... } } adds a photo
   //   - { highlight: { ... } } adds a green-bordered box with a list
+  //   - { placeholder: 'Demo to be added' } marks where a photo will go until you have one
   sections: [
     {
       label: 'The partner',

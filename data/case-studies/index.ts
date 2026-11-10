@@ -20,7 +20,11 @@ export function findCaseStudy(slug: string) {
   return caseStudies.find(s => s.slug === slug)
 }
 
-// Folder for an article's photos: public/img/case-studies/<slug>/
+// Folder for an article's photos: public/img/case-studies/<slug>
+export function imageFolder(study: CaseStudy) {
+  return `/img/case-studies/${study.slug}`
+}
+
 export function imagePath(study: CaseStudy, file: string) {
-  return `/img/case-studies/${study.slug}/${file}`
+  return `${imageFolder(study)}/${file}`
 }

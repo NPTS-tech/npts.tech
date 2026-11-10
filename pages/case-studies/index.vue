@@ -51,20 +51,7 @@ const caseStudies: {
     <div class="px-10 py-[68px] border-b border-term-line">
       <div class="text-base text-term-acc tracking-[0.1em] mb-8">[ STORIES ]</div>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
-        <NuxtLink
-          v-for="story in stories"
-          :key="story.to"
-          :to="story.to"
-          class="group border border-term-line bg-term-card hover:border-term-acc flex flex-col"
-        >
-          <img :src="story.image" :alt="story.imageAlt" class="w-full aspect-[16/9] object-cover border-b border-term-line" loading="lazy">
-          <div class="px-7 py-6 flex flex-col flex-1">
-            <div class="text-xs text-term-dim mb-3">{{ story.partner }}</div>
-            <h2 class="text-[21px] font-medium leading-[1.3] m-0 mb-3">{{ story.title }}</h2>
-            <p class="font-sans text-sm leading-[1.65] text-term-mid m-0 mb-5">{{ story.excerpt }}</p>
-            <span class="mt-auto self-start text-[13px] text-term-acc border-b border-term-acc/40">Read the case study →</span>
-          </div>
-        </NuxtLink>
+        <CaseStudyCard v-for="story in stories" :key="story.to" :story="story" />
       </div>
     </div>
     <div class="px-10 py-[68px] border-b border-term-line">

@@ -22,8 +22,8 @@ useSeoMeta({
   ogDescription: study.summary,
   ogType: 'article',
   ogUrl: url,
-  ogImage: `https://npts.tech${imagePath(study, shareImage)}`,
-  twitterCard: 'summary_large_image',
+  ogImage: shareImage ? `https://npts.tech${imagePath(study, shareImage)}` : undefined,
+  twitterCard: shareImage ? 'summary_large_image' : 'summary',
 })
 </script>
 

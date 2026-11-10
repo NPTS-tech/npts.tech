@@ -104,20 +104,7 @@ const inProgressCount = projects.filter(p => p.status === 'in progress').length
         <p class="font-sans text-base leading-[1.65] text-term-mid m-0 mb-6 max-w-[44ch]">See how student-built tools are helping our partners, and what it takes to keep them running.</p>
         <NuxtLink to="/case-studies" class="text-[13px] text-term-acc border-b border-term-acc/40">All case studies →</NuxtLink>
       </div>
-      <NuxtLink
-        v-for="story in featuredStories"
-        :key="story.to"
-        :to="story.to"
-        class="border border-term-line bg-term-card hover:border-term-acc grid grid-cols-1 md:grid-cols-[1fr_1.2fr]"
-      >
-        <img :src="story.image" :alt="story.imageAlt" class="w-full h-full min-h-[200px] object-cover border-b md:border-b-0 md:border-r border-term-line" loading="lazy">
-        <div class="px-7 py-6 flex flex-col">
-          <div class="text-xs text-term-dim mb-3">{{ story.partner }}</div>
-          <h3 class="text-[19px] font-medium leading-[1.3] m-0 mb-3">{{ story.title }}</h3>
-          <p class="font-sans text-sm leading-[1.65] text-term-mid m-0 mb-5">{{ story.excerpt }}</p>
-          <span class="mt-auto self-start text-[13px] text-term-acc border-b border-term-acc/40">Read the case study →</span>
-        </div>
-      </NuxtLink>
+      <CaseStudyCard v-for="story in featuredStories" :key="story.to" :story="story" layout="side" />
     </div>
     <SponsorBanner />
   </div>
