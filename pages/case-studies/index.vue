@@ -69,7 +69,7 @@ const caseStudies: {
               <div class="text-xs whitespace-nowrap" :class="study.status === 'maintenance' ? 'text-term-acc' : 'text-term-warn'">{{ study.status }}</div>
             </div>
             <h2 class="text-[26px] font-medium leading-[1.25] m-0 mb-2">{{ study.title }}</h2>
-            <a :href="study.partnerUrl" target="_blank" rel="noopener" class="text-sm font-semibold text-term-mid hover:text-term-acc">{{ study.partner }}</a>
+            <a :href="study.partnerUrl" target="_blank" rel="noopener" class="text-sm font-semibold text-term-mid hover:text-term-acc tap-target">{{ study.partner }}</a>
           </div>
           <div>
             <p class="font-sans text-base leading-[1.65] text-term-mid m-0">{{ study.summary }}</p>
@@ -78,7 +78,7 @@ const caseStudies: {
               :href="study.liveUrl"
               target="_blank"
               rel="noopener"
-              class="inline-block mt-5 text-[13px] text-term-acc border-b border-term-acc/40"
+              class="inline-block mt-5 text-[13px] text-term-acc border-b border-term-acc/40 tap-target"
             >view live →</a>
           </div>
         </div>

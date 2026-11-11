@@ -46,7 +46,7 @@ onBeforeUnmount(() => {
 <template>
   <nav class="border-b border-term-line bg-term-bg text-term-fg font-mono relative z-20">
     <div class="flex items-center justify-between px-5 md:px-10 py-[18px]">
-      <NuxtLink to="/" class="flex items-baseline gap-[2px]">
+      <NuxtLink to="/" class="tap-target flex items-baseline gap-[2px]">
         <span class="text-term-acc font-semibold">npts</span><span class="text-term-dim">.tech</span>
       </NuxtLink>
 
@@ -88,10 +88,10 @@ onBeforeUnmount(() => {
 
       <!-- Phones and tablets: Donate stays visible, everything else is in the menu -->
       <div class="flex lg:hidden items-center gap-[10px]">
-        <NuxtLink to="/donate" class="text-[13px] font-semibold text-term-bg bg-term-acc px-[14px] py-[9px] hover:bg-term-accHi">Donate</NuxtLink>
+        <NuxtLink to="/donate" class="min-h-[44px] inline-flex items-center text-[13px] font-semibold text-term-bg bg-term-acc px-[14px] hover:bg-term-accHi">Donate</NuxtLink>
         <button
           type="button"
-          class="text-[13px] text-term-mid border border-term-rule px-[14px] py-[8px] hover:border-term-acc hover:text-term-acc"
+          class="min-h-[44px] inline-flex items-center text-[13px] text-term-mid border border-term-rule px-[14px] hover:border-term-acc hover:text-term-acc"
           :aria-expanded="mobileOpen"
           aria-controls="mobile-menu"
           @click="mobileOpen = !mobileOpen"
@@ -122,7 +122,7 @@ onBeforeUnmount(() => {
           <div class="font-sans text-xs text-term-dim mt-1">{{ a.hint }} →</div>
         </NuxtLink>
       </div>
-      <NuxtLink to="/support" class="block text-center text-[13px] text-term-mid border border-term-rule px-[14px] py-3 mt-5 hover:border-term-acc hover:text-term-acc">Request support</NuxtLink>
+      <NuxtLink to="/support" class="block text-center text-[13px] text-term-mid border border-term-rule px-[14px] py-3.5 mt-5 hover:border-term-acc hover:text-term-acc">Request support</NuxtLink>
     </div>
   </nav>
 </template>

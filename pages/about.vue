@@ -12,7 +12,7 @@
       </div>
       <div>
         <div class="text-[13px] md:text-base text-term-acc tracking-[0.1em] mb-6">[ OUR STORY ]</div>
-        <p class="font-sans text-base leading-[1.7] text-term-mid m-0 mb-4">NPTS has legally existed for a while. Our long-term support program acquires new partners every semester through our relationship with the <a href="https://epics.utdallas.edu" class="text-term-acc border-b border-term-acc/40">UTDesign EPICS</a> program, and most of our volunteers came up through that program.</p>
+        <p class="font-sans text-base leading-[1.7] text-term-mid m-0 mb-4">NPTS has legally existed for a while. Our long-term support program acquires new partners every semester through our relationship with the <a href="https://epics.utdallas.edu" class="text-term-acc border-b border-term-acc/40 tap-target">UTDesign EPICS</a> program, and most of our volunteers came up through that program.</p>
         <p class="font-sans text-base leading-[1.7] text-term-mid m-0">We've only recently begun building a donor base and branching out into our other planned programs.</p>
       </div>
     </div>
@@ -43,17 +43,17 @@
       <div class="px-5 md:px-10 py-12 border-b md:border-b-0 md:border-r border-term-line">
         <h3 class="text-[21px] font-medium m-0 mb-3">Have an EPICS project</h3>
         <p class="font-sans text-sm leading-[1.65] text-term-mid m-0 mb-5">We provide hosting and long-term support for projects built by experiential learning programs.</p>
-        <NuxtLink to="/support" class="text-[13px] text-term-acc border-b border-term-acc/40">Get in touch →</NuxtLink>
+        <NuxtLink to="/support" class="text-[13px] text-term-acc border-b border-term-acc/40 tap-target">Get in touch →</NuxtLink>
       </div>
       <div class="px-5 md:px-10 py-12 border-b md:border-b-0 md:border-r border-term-line">
         <h3 class="text-[21px] font-medium m-0 mb-3">Want to volunteer</h3>
         <p class="font-sans text-sm leading-[1.65] text-term-mid m-0 mb-5">Volunteer programs and internships for students of the programs we work with.</p>
-        <NuxtLink to="/careers" class="text-[13px] text-term-acc border-b border-term-acc/40">Get involved →</NuxtLink>
+        <NuxtLink to="/careers" class="text-[13px] text-term-acc border-b border-term-acc/40 tap-target">Get involved →</NuxtLink>
       </div>
       <div class="px-5 md:px-10 py-12">
         <h3 class="text-[21px] font-medium m-0 mb-3">Want to support us</h3>
         <p class="font-sans text-sm leading-[1.65] text-term-mid m-0 mb-5">Sponsorship keeps student-built tools running for nonprofits after the semester ends.</p>
-        <NuxtLink to="/donate" class="text-[13px] text-term-acc border-b border-term-acc/40">Support NPTS →</NuxtLink>
+        <NuxtLink to="/donate" class="text-[13px] text-term-acc border-b border-term-acc/40 tap-target">Support NPTS →</NuxtLink>
       </div>
     </div>
     <SponsorBanner />

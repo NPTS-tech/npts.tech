@@ -23,7 +23,7 @@ defineProps<{
       </div>
       <p class="font-sans text-[15px] leading-[1.7] text-term-mid m-0 max-w-[72ch]">
         <template v-if="closing">{{ closing }} </template>
-        <NuxtLink to="/partners" class="text-term-acc border-b border-term-acc/40">See all partners →</NuxtLink>
+        <NuxtLink to="/partners" class="text-term-acc border-b border-term-acc/40 tap-target">See all partners →</NuxtLink>
       </p>
     </div>
   </div>

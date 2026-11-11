@@ -11,7 +11,7 @@ const partnerHost = computed(() => props.partnerUrl?.replace(/^https?:\/\/(www\.
       <template v-if="sources">{{ sources }} </template>
       <template v-if="partnerUrl">
         Learn more about {{ partnerName }} or support its work at
-        <a :href="partnerUrl" target="_blank" rel="noopener" class="text-term-mid border-b border-term-rule hover:text-term-acc">{{ partnerHost }}</a>.
+        <a :href="partnerUrl" target="_blank" rel="noopener" class="text-term-mid border-b border-term-rule hover:text-term-acc tap-target">{{ partnerHost }}</a>.
       </template>
     </div>
   </div>

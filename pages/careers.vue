@@ -33,7 +33,7 @@ function submit() {
   submitted.value = true
 }
 
-const field = 'bg-term-deep border border-term-rule text-term-fg text-[15px] px-4 py-3'
+const field = 'w-full min-w-0 bg-term-deep border border-term-rule text-term-fg text-base md:text-[15px] px-4 py-3'
 </script>
 
 <template>
@@ -49,17 +49,17 @@ const field = 'bg-term-deep border border-term-rule text-term-fg text-[15px] px-
       <p class="font-sans text-base leading-[1.65] text-term-mid m-0 mb-10 max-w-[62ch]">Fill this out and we'll get in touch when there's a fit. Submitting opens your email app with your answers ready to send to <span class="text-term-fg">{{ TO }}</span>.</p>
       <form class="grid gap-6 max-w-[640px]" @submit.prevent="submit">
         <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
-          <div class="grid gap-2">
+          <div class="grid gap-2 min-w-0">
             <label for="if-name" class="text-[13px] text-term-mid">Name</label>
             <input id="if-name" v-model.trim="form.name" type="text" required autocomplete="name" :class="field">
           </div>
-          <div class="grid gap-2">
+          <div class="grid gap-2 min-w-0">
             <label for="if-email" class="text-[13px] text-term-mid">Email</label>
             <input id="if-email" v-model.trim="form.email" type="email" required autocomplete="email" :class="field">
           </div>
         </div>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
-          <div class="grid gap-2">
+          <div class="grid gap-2 min-w-0">
             <label for="if-interest" class="text-[13px] text-term-mid">Interested in</label>
             <select id="if-interest" v-model="form.interest" :class="field">
               <option>Internship</option>
@@ -67,7 +67,7 @@ const field = 'bg-term-deep border border-term-rule text-term-fg text-[15px] px-
               <option>Either</option>
             </select>
           </div>
-          <div class="grid gap-2">
+          <div class="grid gap-2 min-w-0">
             <label for="if-epics" class="text-[13px] text-term-mid">Have you been on a UTDesign EPICS team?</label>
             <select id="if-epics" v-model="form.epics" required :class="field">
               <option value="" disabled>Choose one</option>
@@ -77,27 +77,27 @@ const field = 'bg-term-deep border border-term-rule text-term-fg text-[15px] px-
             </select>
           </div>
         </div>
-        <div class="grid gap-2">
+        <div class="grid gap-2 min-w-0">
           <label for="if-project" class="text-[13px] text-term-mid">EPICS project and semester <span class="text-term-dim">(optional)</span></label>
           <input id="if-project" v-model.trim="form.project" type="text" placeholder="e.g. Carson's Village, Spring 2026" :class="field">
         </div>
-        <div class="grid gap-2">
+        <div class="grid gap-2 min-w-0">
           <label for="if-skills" class="text-[13px] text-term-mid">What would you like to work on, and what are you good at?</label>
           <textarea id="if-skills" v-model.trim="form.skills" rows="5" required placeholder="Languages, frameworks, design, writing, anything you'd like to learn." :class="[field, 'leading-[1.6] resize-y']"></textarea>
         </div>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
-          <div class="grid gap-2">
+          <div class="grid gap-2 min-w-0">
             <label for="if-availability" class="text-[13px] text-term-mid">Availability <span class="text-term-dim">(optional)</span></label>
             <input id="if-availability" v-model.trim="form.availability" type="text" placeholder="e.g. 5 hrs/week, Fall 2026" :class="field">
           </div>
-          <div class="grid gap-2">
+          <div class="grid gap-2 min-w-0">
             <label for="if-links" class="text-[13px] text-term-mid">LinkedIn, GitHub, or portfolio <span class="text-term-dim">(optional)</span></label>
             <input id="if-links" v-model.trim="form.links" type="text" :class="field">
           </div>
         </div>
         <div class="flex flex-wrap items-center gap-5 mt-2">
           <button type="submit" class="text-[15px] font-semibold text-term-bg bg-term-acc px-6 py-4 hover:bg-term-accHi">Submit interest →</button>
-          <span v-if="submitted" class="font-sans text-[13px] text-term-mid">Your email app should now be open with your answers. Press send to finish. If nothing opened, email us at <a :href="`mailto:${TO}`" class="text-term-acc border-b border-term-acc/40">{{ TO }}</a>.</span>
+          <span v-if="submitted" class="font-sans text-[13px] text-term-mid">Your email app should now be open with your answers. Press send to finish. If nothing opened, email us at <a :href="`mailto:${TO}`" class="text-term-acc border-b border-term-acc/40 tap-target">{{ TO }}</a>.</span>
         </div>
       </form>
     </div>

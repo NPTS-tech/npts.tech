@@ -36,7 +36,7 @@
             <span class="text-xs text-term-acc">active</span>
           </div>
           <p class="font-sans text-sm leading-[1.6] text-term-mid m-0 mb-4">Hosting and long-term support for the software nonprofits rely on, including tools built by student engineering teams.</p>
-          <span class="mt-auto self-start text-[13px] text-term-acc border-b border-term-acc/40">See our programs →</span>
+          <span class="mt-auto self-start text-[13px] text-term-acc border-b border-term-acc/40 tap-target">See our programs →</span>
         </NuxtLink>
         <NuxtLink to="/careers#interest-form" class="group bg-term-bg hover:bg-term-card px-7 py-[26px] flex flex-col">
           <div class="flex justify-between items-baseline mb-[10px]">
@@ -44,7 +44,7 @@
             <span class="text-xs text-term-acc">active</span>
           </div>
           <p class="font-sans text-sm leading-[1.6] text-term-mid m-0 mb-4">Opportunities for students of the experiential learning programs we work with.</p>
-          <span class="mt-auto self-start text-[13px] text-term-acc border-b border-term-acc/40">Fill out the interest form →</span>
+          <span class="mt-auto self-start text-[13px] text-term-acc border-b border-term-acc/40 tap-target">Fill out the interest form →</span>
         </NuxtLink>
       </div>
     </div>

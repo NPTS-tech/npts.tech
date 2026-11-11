@@ -86,14 +86,14 @@ const inProgressCount = projects.filter(p => p.status === 'in progress').length
               :href="project.liveUrl"
               target="_blank"
               rel="noopener"
-              class="text-[13px] text-term-acc border-b border-term-acc/40 whitespace-nowrap"
+              class="text-[13px] text-term-acc border-b border-term-acc/40 tap-target whitespace-nowrap"
             >view live →</a>
           </div>
         </div>
         <div class="border border-dashed border-term-rule px-7 py-6 flex flex-col justify-center items-start">
           <div class="text-xs text-term-dim mb-3">./your-project</div>
           <h3 class="text-[17px] md:text-[19px] font-medium m-0 mb-3 leading-[1.3] text-term-mid">This could be your organization</h3>
-          <NuxtLink to="/support" class="text-[13px] text-term-acc border-b border-term-acc/40">Request support →</NuxtLink>
+          <NuxtLink to="/support" class="text-[13px] text-term-acc border-b border-term-acc/40 tap-target">Request support →</NuxtLink>
         </div>
       </div>
     </div>
@@ -102,7 +102,7 @@ const inProgressCount = projects.filter(p => p.status === 'in progress').length
         <div class="text-[13px] md:text-base text-term-acc tracking-[0.1em] mb-7">[ OUR IMPACT ]</div>
         <h2 class="text-[26px] md:text-[30px] font-medium leading-[1.2] m-0 mb-5">Read more about our impact.</h2>
         <p class="font-sans text-base leading-[1.65] text-term-mid m-0 mb-6 max-w-[44ch]">See how student-built tools are helping our partners, and what it takes to keep them running.</p>
-        <NuxtLink to="/case-studies" class="text-[13px] text-term-acc border-b border-term-acc/40">All case studies →</NuxtLink>
+        <NuxtLink to="/case-studies" class="text-[13px] text-term-acc border-b border-term-acc/40 tap-target">All case studies →</NuxtLink>
       </div>
       <CaseStudyCard v-for="story in featuredStories" :key="story.to" :story="story" layout="side" />
     </div>

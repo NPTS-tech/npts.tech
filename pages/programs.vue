@@ -25,7 +25,7 @@
           </div>
           <div class="bg-term-bg px-6 md:px-7 py-5">
             <h4 class="m-0 mb-2 text-[15px] font-semibold">A team you can reach</h4>
-            <p class="font-sans m-0 text-sm leading-[1.6] text-term-mid">In-person meetings most weeks, virtual meetings as needed, and email and Discord availability nearly 24/7.</p>
+            <p class="font-sans m-0 text-sm leading-[1.6] text-term-mid">A responsive team that supports you every step of the way and explains the technical side in plain language.</p>
           </div>
         </div>
       </div>

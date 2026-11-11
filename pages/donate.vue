@@ -23,7 +23,7 @@ useSeoMeta({
         <p class="font-sans text-base leading-[1.65] text-term-mid m-0 mb-4 max-w-[56ch]">A gift to NPTS doesn't help just one organization. It helps keep the software running for every nonprofit partner we support.</p>
         <p class="font-sans text-base leading-[1.65] text-term-mid m-0 mb-8 max-w-[56ch]">Donations support our mission: hosting and support for projects built by experiential learning programs, and volunteer programs and internships for their students.</p>
         <a :href="stripeDonationLink" class="text-[15px] font-semibold text-term-bg bg-term-acc px-7 py-4 inline-block hover:bg-term-accHi">Donate</a>
-        <p class="font-sans text-sm leading-[1.65] text-term-dim mt-8 m-0 max-w-[56ch]">Interested in corporate sponsorship or a larger gift? Email <a href="mailto:info@npts.tech" class="text-term-mid border-b border-term-rule hover:text-term-acc">info@npts.tech</a>.</p>
+        <p class="font-sans text-sm leading-[1.65] text-term-dim mt-8 m-0 max-w-[56ch]">Interested in corporate sponsorship or a larger gift? Email <a href="mailto:info@npts.tech" class="text-term-mid border-b border-term-rule hover:text-term-acc tap-target">info@npts.tech</a>.</p>
       </div>
     </div>
   </div>
