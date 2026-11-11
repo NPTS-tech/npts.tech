@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="./tailwind-npts.js"></script>
+<style>
+  body { margin: 0; background: oklch(0.17 0.008 150); }
+  a { color: inherit; text-decoration: none; }
+  ::selection { background: oklch(0.78 0.16 150); color: #000; }
+</style>
+</helmet>
+
+<dc-import name="Nav" hint-size="100%,63px"></dc-import>
+
+<div class="bg-term-bg text-term-fg font-mono">
+
+  <div class="px-10 pt-[76px] pb-14 border-b border-term-line">
+    <div class="text-[13px] text-term-acc tracking-[0.1em] mb-6">[ POSITIONS ]</div>
+    <h1 class="text-[52px] leading-[1.08] font-medium m-0 mb-6 -tracking-[0.02em] max-w-[24ch] text-pretty">Unpaid, unglamorous, and the best line on your résumé.</h1>
+    <p class="font-sans text-[19px] leading-[1.6] text-term-mid m-0 max-w-[64ch] text-pretty">We're volunteer-run, so most roles are volunteer too — a few carry stipends when funding allows. What you get instead is production access, code review from working engineers, and a reference that means something.</p>
+  </div>
+
+  <div class="px-10 py-[68px] border-b border-term-line">
+    <div class="flex items-baseline justify-between mb-8">
+      <div class="text-[13px] text-term-acc tracking-[0.1em]">[ OPEN ROLES ]</div>
+      <div class="text-[13px] text-term-dim">Rolling applications · remote-first, DFW preferred</div>
+    </div>
+    <div class="border border-term-line">
+      <div class="px-8 py-7 border-b border-term-line flex gap-10 items-start hover:bg-term-card">
+        <div class="flex-1">
+          <div class="flex items-baseline gap-4 mb-2">
+            <h3 class="text-[21px] font-medium m-0">Full-stack engineering intern</h3>
+            <span class="text-xs text-term-acc">stipend available</span>
+          </div>
+          <p class="font-sans text-sm leading-[1.65] text-term-mid m-0 mb-3 max-w-[70ch]">Own features on a live partner application end to end — database through interface. You'll write the migration, review someone else's, and be the person who gets pinged when it misbehaves.</p>
+          <div class="text-xs text-term-dim">10–15 hrs/week · one semester minimum · TypeScript, Postgres, or a willingness to learn both</div>
+        </div>
+        <a href="#" class="text-[13px] font-semibold text-term-bg bg-term-acc px-4 py-[10px] shrink-0 hover:bg-term-accHi">Apply →</a>
+      </div>
+      <div class="px-8 py-7 border-b border-term-line flex gap-10 items-start hover:bg-term-card">
+        <div class="flex-1">
+          <div class="flex items-baseline gap-4 mb-2">
+            <h3 class="text-[21px] font-medium m-0">Infrastructure &amp; on-call volunteer</h3>
+            <span class="text-xs text-term-dim">volunteer</span>
+          </div>
+          <p class="font-sans text-sm leading-[1.65] text-term-mid m-0 mb-3 max-w-[70ch]">Help run the platform every partner sits on: deploys, monitoring, backup verification, and incident response. Best fit for someone with a year or two of professional experience who wants ops reps.</p>
+          <div class="text-xs text-term-dim">5–10 hrs/week · shared rotation, never alone on a page · Linux, Docker, some CI</div>
+        </div>
+        <a href="#" class="text-[13px] text-term-fg border border-term-rule px-4 py-[10px] shrink-0 hover:border-term-acc">Apply →</a>
+      </div>
+      <div class="px-8 py-7 border-b border-term-line flex gap-10 items-start hover:bg-term-card">
+        <div class="flex-1">
+          <div class="flex items-baseline gap-4 mb-2">
+            <h3 class="text-[21px] font-medium m-0">Student team mentor</h3>
+            <span class="text-xs text-term-dim">volunteer</span>
+          </div>
+          <p class="font-sans text-sm leading-[1.65] text-term-mid m-0 mb-3 max-w-[70ch]">Sit with a capstone team for a semester: weekly check-in, pull request reviews, and the occasional hard conversation about scope. Former EPICS students strongly encouraged.</p>
+          <div class="text-xs text-term-dim">3–5 hrs/week · one semester · prior experience shipping something real</div>
+        </div>
+        <a href="#" class="text-[13px] text-term-fg border border-term-rule px-4 py-[10px] shrink-0 hover:border-term-acc">Apply →</a>
+      </div>
+      <div class="px-8 py-7 flex gap-10 items-start hover:bg-term-card">
+        <div class="flex-1">
+          <div class="flex items-baseline gap-4 mb-2">
+            <h3 class="text-[21px] font-medium m-0">Nothing here fits?</h3>
+          </div>
+          <p class="font-sans text-sm leading-[1.65] text-term-mid m-0 max-w-[70ch]">We also need design, technical writing, and grant help. Tell us what you're good at and how much time you have.</p>
+        </div>
+        <a href="Support.dc.html" class="text-[13px] text-term-acc border-b border-term-acc/40 shrink-0">Get in touch →</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="px-10 py-[68px] border-b border-term-line grid grid-cols-2 gap-16">
+    <div>
+      <div class="text-[13px] text-term-acc tracking-[0.1em] mb-7">[ WHAT YOU GET ]</div>
+      <div class="font-sans text-[15px] leading-[2] text-term-mid">
+        <div>Production access on systems with real users.</div>
+        <div>Code review from engineers who do this for a living.</div>
+        <div>A named reference willing to take a recruiter's call.</div>
+        <div>Introductions to our hiring partners when you're ready.</div>
+        <div>Work you're allowed to talk about publicly.</div>
+      </div>
+    </div>
+    <div>
+      <div class="text-[13px] text-term-acc tracking-[0.1em] mb-7">[ WHAT WE EXPECT ]</div>
+      <div class="font-sans text-[15px] leading-[2] text-term-mid">
+        <div>You show up for the semester you committed to.</div>
+        <div>You ask for help before the deadline, not after.</div>
+        <div>You treat partner data as if it were your own medical record.</div>
+        <div>You leave documentation behind for the next person.</div>
+        <div>You mentor the people who come after you.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="px-10 py-[68px] border-b border-term-line">
+    <div class="text-[13px] text-term-acc tracking-[0.1em] mb-8">[ HOW HIRING WORKS ]</div>
+    <div class="grid grid-cols-4 gap-px bg-term-line border border-term-line">
+      <div class="bg-term-bg px-7 py-6">
+        <div class="text-term-acc text-[22px] mb-3">01</div>
+        <h4 class="m-0 mb-2 text-[15px] font-semibold">Apply</h4>
+        <p class="font-sans m-0 text-sm leading-[1.6] text-term-mid">A short form and anything you've built. No cover letter.</p>
+      </div>
+      <div class="bg-term-bg px-7 py-6">
+        <div class="text-term-acc text-[22px] mb-3">02</div>
+        <h4 class="m-0 mb-2 text-[15px] font-semibold">Conversation</h4>
+        <p class="font-sans m-0 text-sm leading-[1.6] text-term-mid">Thirty minutes about something you made and what broke.</p>
+      </div>
+      <div class="bg-term-bg px-7 py-6">
+        <div class="text-term-acc text-[22px] mb-3">03</div>
+        <h4 class="m-0 mb-2 text-[15px] font-semibold">Pair session</h4>
+        <p class="font-sans m-0 text-sm leading-[1.6] text-term-mid">We fix a real issue together. No whiteboard puzzles.</p>
+      </div>
+      <div class="bg-term-bg px-7 py-6">
+        <div class="text-term-acc text-[22px] mb-3">04</div>
+        <h4 class="m-0 mb-2 text-[15px] font-semibold">Onboard</h4>
+        <p class="font-sans m-0 text-sm leading-[1.6] text-term-mid">Scoped access, a mentor, and a first task in week one.</p>
+      </div>
+    </div>
+    <p class="font-sans text-sm text-term-dim mt-6 m-0">No student is given unsupervised access to partner production data. Access is scoped, logged, and revoked when a term ends.</p>
+  </div>
+
+  <div class="bg-term-acc text-term-bg px-10 py-14 grid grid-cols-[1fr_auto] gap-10 items-center">
+    <div>
+      <h3 class="text-[30px] font-semibold m-0 mb-3 -tracking-[0.01em]">Applications are always open.</h3>
+      <p class="font-sans text-base leading-[1.6] m-0 max-w-[54ch] opacity-80">We review weekly and reply either way. Tell us what you want to learn.</p>
+    </div>
+    <a href="#" class="text-sm font-semibold bg-term-bg text-term-acc px-[22px] py-[14px]">Apply now →</a>
+  </div>
+</div>
+
+<dc-import name="Footer" hint-size="100%,180px"></dc-import>
+
+</x-dc>
+</body>
+</html>

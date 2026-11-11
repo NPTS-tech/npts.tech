@@ -5,7 +5,7 @@ export default defineNuxtConfig({
     preference: 'dark'
   },
   css: ['~/assets/main.css'],
-  modules: ['@nuxt/content', "@nuxt/ui"],
+  modules: ["@nuxt/ui"],
   runtimeConfig: {
     public: {
       stripeDonationLink: process.env.STRIPE_DONATION_LINK || 'https://donate.stripe.com/aFacN50j55vF9lt1Zk04800'

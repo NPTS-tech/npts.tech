@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="./tailwind-npts.js"></script>
+<style>
+  body { margin: 0; background: oklch(0.17 0.008 150); }
+  a { color: inherit; text-decoration: none; }
+  ::selection { background: oklch(0.78 0.16 150); color: #000; }
+  input, select, textarea { font-family: 'IBM Plex Sans', sans-serif; }
+  input::placeholder, textarea::placeholder { color: oklch(0.5 0.01 150); }
+  input:focus, select:focus, textarea:focus { outline: none; border-color: oklch(0.82 0.17 150); }
+</style>
+</helmet>
+
+<dc-import name="Nav" hint-size="100%,63px"></dc-import>
+
+<div class="bg-term-bg text-term-fg font-mono">
+
+  <div class="px-10 pt-[76px] pb-14 border-b border-term-line">
+    <div class="text-[13px] text-term-acc tracking-[0.1em] mb-6">[ REQUEST SUPPORT ]</div>
+    <h1 class="text-[52px] leading-[1.08] font-medium m-0 mb-6 -tracking-[0.02em] max-w-[24ch] text-pretty">Tell us what's breaking.</h1>
+    <p class="font-sans text-[19px] leading-[1.6] text-term-mid m-0 max-w-[62ch] text-pretty">Five fields. A human reads it — usually the person who'd end up doing the work. We reply within two business days, including when the answer is no.</p>
+  </div>
+
+  <div class="grid grid-cols-[1.3fr_1fr] border-b border-term-line">
+    <div class="px-10 py-14 border-r border-term-line">
+      <form class="grid gap-6 max-w-[560px]">
+        <div class="grid gap-2">
+          <label class="text-[13px] text-term-mid">Organization name</label>
+          <input type="text" placeholder="Acme Community Services" class="bg-term-deep border border-term-rule text-term-fg text-[15px] px-4 py-3">
+        </div>
+        <div class="grid grid-cols-2 gap-5">
+          <div class="grid gap-2">
+            <label class="text-[13px] text-term-mid">Your name</label>
+            <input type="text" placeholder="Jane Okafor" class="bg-term-deep border border-term-rule text-term-fg text-[15px] px-4 py-3">
+          </div>
+          <div class="grid gap-2">
+            <label class="text-[13px] text-term-mid">Email</label>
+            <input type="email" placeholder="jane@acme.org" class="bg-term-deep border border-term-rule text-term-fg text-[15px] px-4 py-3">
+          </div>
+        </div>
+        <div class="grid gap-2">
+          <label class="text-[13px] text-term-mid">What do you need?</label>
+          <select class="bg-term-deep border border-term-rule text-term-fg text-[15px] px-4 py-3">
+            <option>Host an application we already have</option>
+            <option>Take over maintenance of something unsupported</option>
+            <option>Migrate off a platform that's failing us</option>
+            <option>Scope something new with a student team</option>
+            <option>Join the SaaS suite waitlist</option>
+            <option>Something else</option>
+          </select>
+        </div>
+        <div class="grid gap-2">
+          <label class="text-[13px] text-term-mid">Describe the situation</label>
+          <textarea rows="6" placeholder="What the system does, who uses it, what's going wrong, and any deadline you're working against." class="bg-term-deep border border-term-rule text-term-fg text-[15px] px-4 py-3 leading-[1.6] resize-y"></textarea>
+        </div>
+        <div class="grid gap-2">
+          <label class="text-[13px] text-term-mid">Anything we can look at? <span class="text-term-dim">(optional)</span></label>
+          <input type="text" placeholder="Repository, live URL, or hosting provider" class="bg-term-deep border border-term-rule text-term-fg text-[15px] px-4 py-3">
+        </div>
+        <div class="flex items-center gap-5 mt-2">
+          <button type="button" class="text-[15px] font-semibold text-term-bg bg-term-acc px-6 py-4 hover:bg-term-accHi">Send request →</button>
+          <span class="text-[13px] text-term-dim">Or email <span class="text-term-mid">hello@npts.tech</span></span>
+        </div>
+      </form>
+    </div>
+
+    <div>
+      <div class="px-10 py-12 border-b border-term-line">
+        <div class="text-[13px] text-term-acc tracking-[0.1em] mb-6">[ WHAT HAPPENS NEXT ]</div>
+        <div class="grid gap-5">
+          <div class="flex gap-5">
+            <span class="text-term-acc text-[13px] pt-[2px]">01</span>
+            <div class="flex-1"><h4 class="m-0 mb-1 text-[15px] font-semibold">We read it and reply</h4><p class="font-sans m-0 text-sm leading-[1.6] text-term-mid">Within two business days, with a straight answer about fit.</p></div>
+          </div>
+          <div class="flex gap-5">
+            <span class="text-term-acc text-[13px] pt-[2px]">02</span>
+            <div class="flex-1"><h4 class="m-0 mb-1 text-[15px] font-semibold">Thirty-minute call</h4><p class="font-sans m-0 text-sm leading-[1.6] text-term-mid">What you have, what's failing, and who on your staff touches it.</p></div>
+          </div>
+          <div class="flex gap-5">
+            <span class="text-term-acc text-[13px] pt-[2px]">03</span>
+            <div class="flex-1"><h4 class="m-0 mb-1 text-[15px] font-semibold">Technical review</h4><p class="font-sans m-0 text-sm leading-[1.6] text-term-mid">We look at the code and data before promising anything.</p></div>
+          </div>
+          <div class="flex gap-5">
+            <span class="text-term-acc text-[13px] pt-[2px]">04</span>
+            <div class="flex-1"><h4 class="m-0 mb-1 text-[15px] font-semibold">Written agreement, then migration</h4><p class="font-sans m-0 text-sm leading-[1.6] text-term-mid">Plain-language scope. Most moves take under two weeks.</p></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="px-10 py-12 border-b border-term-line bg-term-deep">
+        <div class="text-[13px] text-term-acc tracking-[0.1em] mb-5">[ IF SOMETHING IS DOWN RIGHT NOW ]</div>
+        <p class="font-sans text-sm leading-[1.7] text-term-mid m-0 mb-4">Existing partners: email <span class="text-term-fg">oncall@npts.tech</span> with OUTAGE in the subject line. That reaches a person, not a queue.</p>
+        <p class="font-sans text-sm leading-[1.7] text-term-dim m-0">Not a partner yet? Use the form — we can't guarantee a same-day response, but we'll tell you what we can do.</p>
+      </div>
+
+      <div class="px-10 py-12">
+        <div class="text-[13px] text-term-acc tracking-[0.1em] mb-5">[ BEFORE YOU WRITE ]</div>
+        <p class="font-sans text-sm leading-[1.7] text-term-mid m-0 mb-4">We support registered nonprofits and fiscally sponsored projects. We can't take on systems handling payments or regulated health records, and we're not a staff IT helpdesk.</p>
+        <a href="Services.dc.html" class="text-[13px] text-term-acc border-b border-term-acc/40">Full eligibility and service scope →</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<dc-import name="Footer" hint-size="100%,180px"></dc-import>
+
+</x-dc>
+</body>
+</html>

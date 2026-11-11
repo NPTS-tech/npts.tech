@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<template id="__bundler_thumbnail" data-bg-color="#0d1a12">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <rect width="200" height="200" fill="#0d1a12"/>
+  <text x="100" y="112" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="44" font-weight="600" fill="#5be59a">npts</text>
+</svg>
+</template>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      fontFamily: {
+        mono: ['"IBM Plex Mono"', 'monospace'],
+        sans: ['"IBM Plex Sans"', 'sans-serif'],
+      },
+      colors: {
+        term: {
+          bg:   'oklch(0.17 0.008 150)',
+          deep: 'oklch(0.13 0.008 150)',
+          card: 'oklch(0.20 0.008 150)',
+          line: 'oklch(0.28 0.020 150)',
+          rule: 'oklch(0.34 0.020 150)',
+          dim:  'oklch(0.55 0.010 150)',
+          mid:  'oklch(0.72 0.010 150)',
+          fg:   'oklch(0.93 0.006 150)',
+          acc:  'oklch(0.82 0.170 150)',
+          accHi:'oklch(0.90 0.170 150)',
+          warn: 'oklch(0.72 0.090 90)',
+        },
+      },
+    },
+  },
+};
+</script>
+<style>
+  body { margin: 0; background: oklch(0.17 0.008 150); }
+  a { color: inherit; text-decoration: none; }
+  a:hover { text-decoration: none; }
+  ::selection { background: oklch(0.78 0.16 150); color: #000; }
+</style>
+</helmet>
+
+<dc-import name="Nav" hint-size="100%,63px"></dc-import>
+
+<div class="bg-term-bg text-term-fg font-mono">
+
+  <div class="px-10 pt-[104px] pb-[88px] text-center">
+    <div class="text-[13px] text-term-acc tracking-[0.1em] mb-7">[ 501(c)(3) &nbsp;·&nbsp; EST. 2023 ]</div>
+    <h1 class="text-[68px] leading-[1.06] font-medium m-0 mb-7 -tracking-[0.025em] text-pretty">Your nonprofit shouldn't need a CTO.</h1>
+    <p class="font-sans text-[20px] leading-[1.6] text-term-mid m-0 mx-auto mb-10 max-w-[60ch] text-pretty">We host, maintain, and support the software your mission runs on — free — and we staff it with student engineers who need the experience.</p>
+    <div class="flex gap-[14px] justify-center">
+      <a href="Support.dc.html" class="text-[15px] font-semibold text-term-bg bg-term-acc px-6 py-4 hover:bg-term-accHi">Get technical help →</a>
+      <a href="Services.dc.html" class="text-[15px] text-term-fg border border-term-rule px-6 py-4 hover:border-term-acc">See what we support</a>
+    </div>
+  </div>
+
+  <div class="flex items-center gap-10 px-10 py-8 border-y border-term-line">
+    <div class="text-[11px] tracking-[0.14em] uppercase text-term-dim shrink-0">Working with</div>
+    <div class="grid grid-cols-5 gap-4 flex-1">
+      <div class="h-11 border border-dashed border-term-rule flex items-center justify-center text-[11px] text-term-mid">UTDesign EPICS</div>
+      <div class="h-11 border border-dashed border-term-rule flex items-center justify-center text-[11px] text-term-dim">[ logo ]</div>
+      <div class="h-11 border border-dashed border-term-rule flex items-center justify-center text-[11px] text-term-dim">[ logo ]</div>
+      <div class="h-11 border border-dashed border-term-rule flex items-center justify-center text-[11px] text-term-dim">[ logo ]</div>
+      <div class="h-11 border border-dashed border-term-rule flex items-center justify-center text-[11px] text-term-dim">[ logo ]</div>
+    </div>
+  </div>
+
+  <div class="grid grid-cols-4 border-b border-term-line">
+    <div class="px-8 py-7 border-r border-term-line">
+      <div class="text-[34px] text-term-acc font-medium">14</div>
+      <div class="text-xs text-term-dim tracking-[0.06em] mt-[6px]">apps hosted for nonprofits</div>
+    </div>
+    <div class="px-8 py-7 border-r border-term-line">
+      <div class="text-[34px] text-term-acc font-medium">63</div>
+      <div class="text-xs text-term-dim tracking-[0.06em] mt-[6px]">students mentored</div>
+    </div>
+    <div class="px-8 py-7 border-r border-term-line">
+      <div class="text-[34px] text-term-acc font-medium">$0</div>
+      <div class="text-xs text-term-dim tracking-[0.06em] mt-[6px]">cost to partner orgs</div>
+    </div>
+    <div class="px-8 py-7">
+      <div class="text-[34px] text-term-acc font-medium">99.96%</div>
+      <div class="text-xs text-term-dim tracking-[0.06em] mt-[6px]">90-day uptime</div>
+    </div>
+  </div>
+
+  <div class="px-10 py-[68px]">
+    <div class="text-[13px] text-term-acc tracking-[0.1em] mb-[26px]">[ WHO ARE YOU? ]</div>
+    <div class="grid grid-cols-3 gap-5">
+      <div class="border border-term-line bg-term-card px-[26px] py-[30px] hover:border-term-acc">
+        <div class="text-xs text-term-dim mb-[14px]">./nonprofit.sh</div>
+        <h3 class="text-[21px] font-medium m-0 mb-3 leading-[1.3]">I run a nonprofit and something is broken</h3>
+        <p class="font-sans text-sm leading-[1.65] text-term-mid m-0 mb-5">Hosting, maintenance, migrations, and someone to call when the site goes down.</p>
+        <a href="Support.dc.html" class="text-[13px] text-term-acc border-b border-term-acc/40">Request support →</a>
+      </div>
+      <div class="border border-term-line bg-term-card px-[26px] py-[30px] hover:border-term-acc">
+        <div class="text-xs text-term-dim mb-[14px]">./engineer.sh</div>
+        <h3 class="text-[21px] font-medium m-0 mb-3 leading-[1.3]">I'm a student or engineer who wants real work</h3>
+        <p class="font-sans text-sm leading-[1.65] text-term-mid m-0 mb-5">Ship to production on live partner projects. Mentorship, references, and a track record.</p>
+        <a href="Careers.dc.html" class="text-[13px] text-term-acc border-b border-term-acc/40">Open positions →</a>
+      </div>
+      <div class="border border-term-line bg-term-card px-[26px] py-[30px] hover:border-term-acc">
+        <div class="text-xs text-term-dim mb-[14px]">./fund.sh</div>
+        <h3 class="text-[21px] font-medium m-0 mb-3 leading-[1.3]">I want to fund infrastructure that lasts</h3>
+        <p class="font-sans text-sm leading-[1.65] text-term-mid m-0 mb-5">$50/month keeps one partner org's app online for a year. Every dollar is accounted for.</p>
+        <a href="Donate.dc.html" class="text-[13px] text-term-acc border-b border-term-acc/40">Donate →</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="px-10 pb-[68px]">
+    <div class="text-[13px] text-term-acc tracking-[0.1em] mb-[26px]">[ WHAT YOU ACTUALLY GET ]</div>
+    <div class="grid grid-cols-2 gap-px bg-term-line border border-term-line">
+      <div class="bg-term-bg px-7 py-[26px]">
+        <div class="flex justify-between items-baseline mb-[10px]">
+          <h4 class="m-0 text-base font-semibold">Application hosting</h4>
+          <span class="text-xs text-term-acc">free</span>
+        </div>
+        <p class="font-sans text-sm leading-[1.6] text-term-mid m-0">Managed deploys, TLS, nightly encrypted backups, 99.9% target uptime, 24h response on outages.</p>
+      </div>
+      <div class="bg-term-bg px-7 py-[26px]">
+        <div class="flex justify-between items-baseline mb-[10px]">
+          <h4 class="m-0 text-base font-semibold">Maintenance &amp; on-call</h4>
+          <span class="text-xs text-term-acc">free</span>
+        </div>
+        <p class="font-sans text-sm leading-[1.6] text-term-mid m-0">Dependency and security patching, monitoring, and a human who answers when something breaks.</p>
+      </div>
+      <div class="bg-term-bg px-7 py-[26px]">
+        <div class="flex justify-between items-baseline mb-[10px]">
+          <h4 class="m-0 text-base font-semibold">Student-built software</h4>
+          <span class="text-xs text-term-acc">free</span>
+        </div>
+        <p class="font-sans text-sm leading-[1.6] text-term-mid m-0">Scoped with UTDesign EPICS teams, then adopted by us so it doesn't die at the end of the semester.</p>
+      </div>
+      <div class="bg-term-bg px-7 py-[26px]">
+        <div class="flex justify-between items-baseline mb-[10px]">
+          <h4 class="m-0 text-base font-semibold">Nonprofit SaaS suite</h4>
+          <span class="text-xs text-term-warn">in development</span>
+        </div>
+        <p class="font-sans text-sm leading-[1.6] text-term-mid m-0">Affordable replacements for the commercial tools eating your budget. Join the waitlist.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="border-t border-term-line grid grid-cols-[1.05fr_0.95fr]">
+    <div class="px-10 py-[60px]">
+      <div class="text-[13px] text-term-acc tracking-[0.1em] mb-6">[ CASE STUDY ]</div>
+      <h3 class="text-[30px] font-medium leading-[1.25] m-0 mb-[18px] text-pretty">A semester project became permanent infrastructure.</h3>
+      <p class="font-sans text-base leading-[1.65] text-term-mid m-0 mb-6 max-w-[48ch]">Student engineers built the intake system. We took over hosting the week the class ended — it's been running two years without a maintainer of their own.</p>
+      <blockquote class="font-sans m-0 border-l-2 border-term-acc pl-[18px] text-[15px] leading-[1.6] text-term-fg italic">"Partner quote goes here — one sentence about what changed for their staff."
+        <div class="not-italic text-[13px] text-term-dim mt-[10px]">Name, Title — Partner Organization</div>
+      </blockquote>
+    </div>
+    <div class="border-l border-term-line px-10 py-[60px] bg-term-deep">
+      <div class="text-[13px] text-term-dim tracking-[0.1em] mb-6">[ WHAT THE HANDOFF INCLUDED ]</div>
+      <div class="text-[13px] leading-[2.1] text-term-mid">
+        <div><span class="text-term-acc">01</span> &nbsp;repository transferred</div>
+        <div><span class="text-term-acc">02</span> &nbsp;production deploy configured</div>
+        <div><span class="text-term-acc">03</span> &nbsp;nightly backups enabled</div>
+        <div><span class="text-term-acc">04</span> &nbsp;monitoring + on-call rotation</div>
+        <div><span class="text-term-acc">05</span> &nbsp;staff training delivered</div>
+        <div class="mt-4 text-term-dim">// completed in 9 days</div>
+        <div class="text-term-dim">// annual cost to the partner: $0</div>
+        <a href="Partners.dc.html" class="text-term-acc border-b border-term-acc/40 inline-block mt-5">See all supported projects →</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="bg-term-acc text-term-bg px-10 py-14 grid grid-cols-[1fr_auto] gap-10 items-center">
+    <div>
+      <h3 class="text-[30px] font-semibold m-0 mb-3 -tracking-[0.01em]">$50 a month keeps one nonprofit online for a year.</h3>
+      <p class="font-sans text-base leading-[1.6] m-0 max-w-[52ch] opacity-80">We're volunteer-run, so donations go to servers, domains, and student stipends — not salaries.</p>
+    </div>
+    <div class="flex gap-[10px] items-center">
+      <span class="border border-term-bg px-4 py-[13px] text-sm">$25</span>
+      <span class="border border-term-bg bg-term-bg text-term-acc px-4 py-[13px] text-sm font-semibold">$50/mo</span>
+      <span class="border border-term-bg px-4 py-[13px] text-sm">$250</span>
+      <a href="Donate.dc.html" class="text-sm font-semibold bg-term-bg text-term-acc px-[22px] py-[14px] ml-2">Donate →</a>
+    </div>
+  </div>
+
+</div>
+
+<dc-import name="Footer" hint-size="100%,180px"></dc-import>
+
+</x-dc>
+</body>
+</html>
