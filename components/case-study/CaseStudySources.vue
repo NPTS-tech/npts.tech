@@ -6,7 +6,7 @@ const partnerHost = computed(() => props.partnerUrl?.replace(/^https?:\/\/(www\.
 </script>
 
 <template>
-  <div class="px-10 py-10 border-b border-term-line">
+  <div class="px-5 md:px-10 py-10 border-b border-term-line">
     <div class="max-w-[72ch] mx-auto font-sans text-[13px] leading-[1.7] text-term-dim">
       <template v-if="sources">{{ sources }} </template>
       <template v-if="partnerUrl">

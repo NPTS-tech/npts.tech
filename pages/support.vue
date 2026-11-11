@@ -28,13 +28,13 @@ function submit() {
 
 <template>
   <div class="bg-term-bg text-term-fg font-mono">
-    <div class="px-10 pt-[76px] pb-14 border-b border-term-line">
-      <div class="text-base text-term-acc tracking-[0.1em] mb-6">[ CONTACT ]</div>
-      <h1 class="text-[52px] leading-[1.08] font-medium m-0 mb-6 -tracking-[0.02em] max-w-[24ch] text-pretty">Get in touch.</h1>
-      <p class="font-sans text-[19px] leading-[1.6] text-term-mid m-0 max-w-[62ch] text-pretty">Whether you have an EPICS project, want to volunteer, or want to support our programs, we'd like to hear from you.</p>
+    <div class="px-5 md:px-10 pt-14 md:pt-[76px] pb-14 border-b border-term-line">
+      <div class="text-[13px] md:text-base text-term-acc tracking-[0.1em] mb-6">[ CONTACT ]</div>
+      <h1 class="text-[34px] md:text-[52px] leading-[1.08] font-medium m-0 mb-6 -tracking-[0.02em] max-w-[24ch] text-pretty">Get in touch.</h1>
+      <p class="font-sans text-[17px] md:text-[19px] leading-[1.6] text-term-mid m-0 max-w-[62ch] text-pretty">Whether you have an EPICS project, want to volunteer, or want to support our programs, we'd like to hear from you.</p>
     </div>
     <div class="border-b border-term-line">
-      <div class="px-10 py-14">
+      <div class="px-5 md:px-10 py-14">
         <form class="grid gap-6 max-w-[560px]" @submit.prevent="submit">
           <div class="grid gap-2">
             <label for="cf-org" class="text-[13px] text-term-mid">Organization name <span class="text-term-dim">(optional)</span></label>
