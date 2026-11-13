@@ -32,7 +32,7 @@ Because this is a statically generated site, the environment variable must be pr
 6. Set the Value to: The Stripe URL you copied in Step 2.
 7. Click **Add variable**.
 
-The next time the site deploys to `master`, the Nuxt application will build with your Stripe URL embedded in the Donors page.
+The next time the site deploys to `master`, the Nuxt application will build with your Stripe URL embedded in the Donate page.
 
 ### Local Development
 To test this locally:

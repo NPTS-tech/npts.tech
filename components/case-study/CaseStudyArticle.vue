@@ -12,13 +12,15 @@ defineProps<{ study: CaseStudy }>()
     <CaseStudyHero
       :title="study.title"
       :summary="study.summary"
+      :date="study.date"
+      :updated="study.updated"
       :partner-name="study.partner.name"
       :logo="study.partner.logo && imagePath(study, study.partner.logo)"
     />
     <CaseStudyFacts v-if="study.facts.length" :facts="study.facts" />
     <CaseStudyQuote v-if="study.quote" :text="study.quote.text" :author="study.quote.author" />
 
-    <article class="px-10 py-[68px] border-b border-term-line">
+    <article class="px-5 md:px-10 py-14 md:py-[68px] border-b border-term-line">
       <div class="max-w-[72ch] mx-auto">
         <div class="flex flex-col gap-12">
           <CaseStudySection v-for="(section, s) in study.sections" :key="s" :section="section" :image-base="imageFolder(study)" />

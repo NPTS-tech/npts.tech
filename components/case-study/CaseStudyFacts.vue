@@ -17,7 +17,7 @@ function borders(i: number) {
 
 <template>
   <div class="grid grid-cols-2 md:grid-cols-4 border-b border-term-line text-[13px]">
-    <div v-for="(fact, i) in facts" :key="i" class="px-10 py-6 border-term-line" :class="borders(i)">
+    <div v-for="(fact, i) in facts" :key="i" class="px-5 md:px-10 py-6 border-term-line" :class="borders(i)">
       <div class="text-term-dim mb-1">{{ fact.label }}</div>
       <a v-if="fact.url" :href="fact.url" target="_blank" rel="noopener" class="text-term-fg hover:text-term-acc">{{ fact.value }}</a>
       <div v-else :class="fact.highlight ? 'text-term-acc' : 'text-term-fg'">{{ fact.value }}</div>

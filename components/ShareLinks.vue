@@ -3,9 +3,8 @@
 // (people paste the link into a bio or story).
 const props = defineProps<{ title: string; label?: string }>()
 
-const SITE = 'https://npts.tech'
 const route = useRoute()
-const url = computed(() => `${SITE}${route.path}`)
+const url = computed(() => siteUrl(route.path))
 
 const links = computed(() => {
   const u = encodeURIComponent(url.value)
@@ -40,11 +39,11 @@ async function copyLink() {
       :href="link.href"
       target="_blank"
       rel="noopener"
-      class="text-term-mid border border-term-rule px-3 py-[6px] hover:border-term-acc hover:text-term-acc"
+      class="text-term-mid border border-term-rule px-3 py-2.5 md:py-[6px] hover:border-term-acc hover:text-term-acc"
     >{{ link.name }}</a>
     <button
       type="button"
-      class="text-term-mid border border-term-rule px-3 py-[6px] hover:border-term-acc hover:text-term-acc"
+      class="text-term-mid border border-term-rule px-3 py-2.5 md:py-[6px] hover:border-term-acc hover:text-term-acc"
       @click="copyLink"
     >{{ copied ? 'Link copied ✓' : 'Copy link' }}</button>
   </div>

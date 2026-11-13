@@ -9,6 +9,7 @@ const article: CaseStudy = {
     logo: 'logo.jpg',
   },
   title: '3,500 garments, counted by hand. Until a student team built a better way.',
+  seoTitle: 'Hope Restored Missions: donation inventory system case study',
   summary: 'Hope Restored Missions used to track roughly 3,500 donated garments by hand. A UTDesign EPICS team built an inventory system to replace that, and NPTS hosts and maintains it so HRM can keep relying on it long after the semester ended. Today it is fully in use.',
   card: {
     excerpt: 'Hope Restored Missions used to track ~3,500 donated garments by hand. A UTDesign EPICS team built an inventory system, and NPTS hosts and maintains it so HRM can keep relying on it.',

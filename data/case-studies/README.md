@@ -13,9 +13,14 @@ Each case study is one file in `articles/`. The page design lives in `components
 ## Things to know
 
 - Text goes inside quotes. If the text has an apostrophe, use a curly one (`’`) or wrap the whole text in double quotes: `"It's ready"`.
-- The newest article (by `date`) is the one featured on the Partners page.
+- The newest article (by `date`) is the one featured on the Partners page. The date is also shown on the article as "Published …".
 - `hope-restored-missions.ts` is a complete, real example to copy from.
 - Files starting with `_` (like the template) are never published.
+- **Search engines and AI assistants.** The page's search title, description, publish date, and "official address" are set for you from the article. To help it get found:
+  - Set `seoTitle` (under 60 characters) with the partner's name and what was built, since the headline is written to grab attention rather than to match searches.
+  - Start the `summary` with the partner's name and the key fact. It's the description in Google results.
+  - Use real numbers and name the source in `sources`. Specific, sourced facts are what AI assistants quote.
+  - If you revise an article later, set `updated` to that day's date.
 - No photo yet? Leave out `card.image` to show "Picture to be added" on the card, and use `{ placeholder: 'Demo to be added' }` in a section. Swap in the real photo later.
 
 ## How the design is split up
@@ -24,7 +29,7 @@ Each case study is one file in `articles/`. The page design lives in `components
 
 | Component | Part of the page |
 |---|---|
-| `CaseStudyHero` | Back link, label, headline, summary, share buttons, logo |
+| `CaseStudyHero` | Back link, label, headline, summary, publish date, share buttons, logo |
 | `CaseStudyFacts` | The facts bar under the headline |
 | `CaseStudyQuote` | The partner quote |
 | `CaseStudySection` | One section: label, heading, paragraphs, photos |
