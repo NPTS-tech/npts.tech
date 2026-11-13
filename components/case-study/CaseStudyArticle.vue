@@ -12,6 +12,8 @@ defineProps<{ study: CaseStudy }>()
     <CaseStudyHero
       :title="study.title"
       :summary="study.summary"
+      :date="study.date"
+      :updated="study.updated"
       :partner-name="study.partner.name"
       :logo="study.partner.logo && imagePath(study, study.partner.logo)"
     />

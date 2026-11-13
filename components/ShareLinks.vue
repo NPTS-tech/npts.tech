@@ -3,9 +3,8 @@
 // (people paste the link into a bio or story).
 const props = defineProps<{ title: string; label?: string }>()
 
-const SITE = 'https://npts.tech'
 const route = useRoute()
-const url = computed(() => `${SITE}${route.path}`)
+const url = computed(() => siteUrl(route.path))
 
 const links = computed(() => {
   const u = encodeURIComponent(url.value)

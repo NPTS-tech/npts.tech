@@ -42,13 +42,15 @@ export interface ArticleSection {
 
 export interface CaseStudy {
   slug: string // page address: npts.tech/case-studies/<slug>
-  date: string // YYYY-MM-DD, used to list the newest articles first
+  date: string // YYYY-MM-DD publish date, shown on the article and used to list the newest first
+  updated?: string // YYYY-MM-DD, set when the article is meaningfully revised
   partner: {
     name: string
     url?: string // the partner's website
     logo?: string // file name in public/img/case-studies/<slug>/
   }
   title: string // headline
+  seoTitle?: string // title in Google results and the browser tab, if it should differ from the headline. Aim for under 60 characters with the partner's name and what was built.
   summary: string // paragraph under the headline
   card: {
     excerpt: string // short text on the Case studies and Partners page cards

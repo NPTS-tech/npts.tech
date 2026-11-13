@@ -1,4 +1,10 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
+import { writeFile } from 'node:fs/promises'
+import { join } from 'node:path'
+
+// Pages left out of sitemap.xml (redirects).
+const SITEMAP_EXCLUDE = ['/services']
+
 export default defineNuxtConfig({
   devtools: { enabled: true },
   colorMode: {
@@ -35,6 +41,26 @@ export default defineNuxtConfig({
   nitro: {
     prerender: {
       routes: ['/'],
+    },
+  },
+  hooks: {
+    // Builds sitemap.xml from every page the site generates, so new pages and case studies
+    // are listed for search engines automatically.
+    'nitro:init'(nitro) {
+      const pages = new Set<string>()
+      nitro.hooks.hook('prerender:route', (route) => {
+        const isPage = route.contentType?.includes('text/html') && !route.error && !route.route.includes('.')
+        if (isPage && !SITEMAP_EXCLUDE.includes(route.route)) pages.add(route.route)
+      })
+      nitro.hooks.hook('prerender:done', async () => {
+        if (!pages.size) return
+        const urls = [...pages].sort().map((path) => {
+          const clean = path.replace(/\/+$/, '')
+          return `  <url><loc>https://npts.tech${clean}/</loc></url>`
+        })
+        const xml = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls.join('\n')}\n</urlset>\n`
+        await writeFile(join(nitro.options.output.publicDir, 'sitemap.xml'), xml)
+      })
     },
   },
 })

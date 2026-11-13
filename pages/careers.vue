@@ -34,6 +34,11 @@ function submit() {
 }
 
 const field = 'w-full min-w-0 bg-term-deep border border-term-rule text-term-fg text-base md:text-[15px] px-4 py-3'
+
+usePageSeo({
+  title: 'Internships and volunteering',
+  description: 'Students from experiential learning programs like UTDesign EPICS can volunteer or intern with NPTS, working on live software that nonprofits rely on.',
+})
 </script>
 
 <template>

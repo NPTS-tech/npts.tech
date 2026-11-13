@@ -21,6 +21,7 @@ const article: CaseStudy = {
 
   // Date published, YYYY-MM-DD. Newest articles are listed first.
   date: '2026-01-01',
+  // updated: '2026-02-01', // optional: date of a meaningful revision, shown next to the publish date
 
   partner: {
     name: '...',
@@ -30,7 +31,11 @@ const article: CaseStudy = {
 
   // Headline and the paragraph under it.
   title: '...',
-  summary: '...',
+  summary: '...', // also the description in Google results: lead with the partner's name and the key fact
+
+  // Optional: the title in Google results and the browser tab, if the headline doesn't say who and what.
+  // Under 60 characters, e.g. 'Carson’s Village: family support page platform case study'.
+  seoTitle: '...',
 
   // The card on the Case studies and Partners pages.
   card: {

@@ -3,8 +3,8 @@
 // falling back to NPTS's current link set in nuxt.config.ts.
 const { stripeDonationLink } = useRuntimeConfig().public
 
-useSeoMeta({
-  title: 'Donate · Non-Profit Technical Support',
+usePageSeo({
+  title: 'Donate',
   description: 'Sponsor the software nonprofits depend on. A gift to NPTS helps keep the software running for every nonprofit partner we support.',
 })
 </script>

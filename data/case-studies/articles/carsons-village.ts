@@ -8,7 +8,8 @@ const article: CaseStudy = {
     url: 'https://carsonsvillage.org',
     logo: 'logo.png',
   },
-  title: '30–40 family pages a year, built by hand. Soon, families can build their own.',
+  title: 'Turning a moment of loss into a village of support.',
+  seoTitle: 'Carson’s Village: family support page platform case study',
   summary: 'Carson’s Village has helped 9,806 grieving families since 2018. Its family support pages raise tens of thousands of dollars a year, but staff build every one by hand inside the organization’s website. A UTDesign EPICS team started a platform to change that, and NPTS took it over and is bringing it to launch.',
   card: {
     excerpt: 'Carson’s Village raised $60,406 for grieving families in 2025 through pages its staff build by hand. NPTS is bringing a self-service platform to launch so any family can build one.',

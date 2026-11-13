@@ -39,6 +39,11 @@ const caseStudies: {
     liveUrl: 'https://twci.npts.tech',
   },
 ]
+
+usePageSeo({
+  title: 'Case studies',
+  description: 'How NPTS and student teams build, host, and maintain software for nonprofits, and the difference it makes for the communities they serve.',
+})
 </script>
 
 <template>

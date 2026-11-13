@@ -7,7 +7,7 @@ const form = reactive({
   organization: '',
   name: '',
   email: '',
-  topic: 'Hosting and support for an EPICS project',
+  topic: 'Hosting and support for our software',
   message: '',
 })
 const submitted = ref(false)
@@ -24,6 +24,11 @@ function submit() {
   window.open(`mailto:${TO}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`, '_self')
   submitted.value = true
 }
+
+usePageSeo({
+  title: 'Request support',
+  description: 'Contact NPTS about hosting and support for your nonprofit’s software, volunteering, sponsorship, or anything else.',
+})
 </script>
 
 <template>
@@ -31,7 +36,7 @@ function submit() {
     <div class="px-5 md:px-10 pt-14 md:pt-[76px] pb-14 border-b border-term-line">
       <div class="text-[13px] md:text-base text-term-acc tracking-[0.1em] mb-6">[ CONTACT ]</div>
       <h1 class="text-[34px] md:text-[52px] leading-[1.08] font-medium m-0 mb-6 -tracking-[0.02em] max-w-[24ch] text-pretty">Get in touch.</h1>
-      <p class="font-sans text-[17px] md:text-[19px] leading-[1.6] text-term-mid m-0 max-w-[62ch] text-pretty">Whether you have an EPICS project, want to volunteer, or want to support our programs, we'd like to hear from you.</p>
+      <p class="font-sans text-[17px] md:text-[19px] leading-[1.6] text-term-mid m-0 max-w-[62ch] text-pretty">Whether you need support for your nonprofit's software, want to volunteer, or want to support our programs, we'd like to hear from you.</p>
     </div>
     <div class="border-b border-term-line">
       <div class="px-5 md:px-10 py-14">
@@ -53,7 +58,7 @@ function submit() {
           <div class="grid gap-2 min-w-0">
             <label for="cf-topic" class="text-[13px] text-term-mid">What's this about?</label>
             <select id="cf-topic" v-model="form.topic" class="w-full min-w-0 bg-term-deep border border-term-rule text-term-fg text-base md:text-[15px] px-4 py-3">
-              <option>Hosting and support for an EPICS project</option>
+              <option>Hosting and support for our software</option>
               <option>Volunteering or internships</option>
               <option>Corporate sponsorship or giving</option>
               <option>Something else</option>

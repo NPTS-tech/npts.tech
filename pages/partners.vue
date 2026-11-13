@@ -25,7 +25,6 @@ const projects: {
     partner: "Carson's Village",
     description: 'Automates memorial pages for grieving families (obituary, service details, photos, and donations) to ease the load on Advocates and families.',
     status: 'in progress',
-    liveUrl: 'https://carsons-village.npts.tech',
   },
   {
     slug: 'kids-u-reporting',
@@ -40,7 +39,6 @@ const projects: {
     partner: 'The Warren Center',
     description: 'Inventory tracking with secure email sign-in.',
     status: 'maintenance',
-    liveUrl: 'https://twci.npts.tech',
   },
   {
     slug: 'cope-text-support',
@@ -56,6 +54,11 @@ const featuredStories = stories.slice(0, 1)
 
 const maintenanceCount = projects.filter(p => p.status === 'maintenance').length
 const inProgressCount = projects.filter(p => p.status === 'in progress').length
+
+usePageSeo({
+  title: 'Partners and supported applications',
+  description: 'The North Texas nonprofits NPTS partners with, and the software we host and support for them, from donation inventory systems to family support pages.',
+})
 </script>
 
 <template>

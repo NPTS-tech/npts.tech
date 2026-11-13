@@ -1,3 +1,10 @@
+<script setup lang="ts">
+usePageSeo({
+  title: 'Programs: Hosting, long-term support, and internships',
+  description: 'NPTS hosts and supports software built for nonprofits by student teams and volunteers, and offers internships and volunteer roles with real production experience.',
+})
+</script>
+
 <template>
   <div class="bg-term-bg text-term-fg font-mono">
     <div class="px-5 md:px-10 pt-14 md:pt-[76px] pb-12 md:pb-14 border-b border-term-line">

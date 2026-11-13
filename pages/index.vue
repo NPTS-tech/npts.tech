@@ -1,3 +1,10 @@
+<script setup lang="ts">
+usePageSeo({
+  title: 'NPTS: Software hosting and support for nonprofits',
+  description: 'Non-Profit Technical Support (NPTS) hosts and maintains the software nonprofits depend on, including tools built by student teams, so it keeps working after the semester ends.',
+})
+</script>
+
 <template>
   <div class="bg-term-bg text-term-fg font-mono">
     <div class="px-5 md:px-10 pt-16 md:pt-[104px] pb-14 md:pb-[88px] text-center">
