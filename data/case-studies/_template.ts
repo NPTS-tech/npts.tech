@@ -21,6 +21,7 @@ const article: CaseStudy = {
 
   // Date published, YYYY-MM-DD. Newest articles are listed first.
   date: '2026-01-01',
+  // updated: '2026-02-01', // optional: date of a meaningful revision, shown next to the publish date
 
   partner: {
     name: '...',
@@ -30,7 +31,11 @@ const article: CaseStudy = {
 
   // Headline and the paragraph under it.
   title: '...',
-  summary: '...',
+  summary: '...', // also the description in Google results: lead with the partner's name and the key fact
+
+  // Optional: the title in Google results and the browser tab, if the headline doesn't say who and what.
+  // Under 60 characters, e.g. 'Carson’s Village: family support page platform case study'.
+  seoTitle: '...',
 
   // The card on the Case studies and Partners pages.
   card: {
@@ -46,7 +51,7 @@ const article: CaseStudy = {
   // `url` (optional) makes the value a link; `highlight: true` shows it in green.
   facts: [
     { label: 'Partner', value: '...', url: 'https://...' },
-    { label: 'Built by', value: 'UTDesign EPICS students' },
+    { label: 'Built by', value: 'UTDesign EPICS students', url: 'https://epics.utdallas.edu' },
     { label: 'Hosted & maintained by', value: 'NPTS', highlight: true },
     { label: 'Status', value: '...', highlight: true },
   ],

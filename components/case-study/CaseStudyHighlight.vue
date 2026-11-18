@@ -5,7 +5,7 @@ defineProps<{ title: string; items: string[] }>()
 
 <template>
   <div class="border border-term-acc bg-term-card px-7 py-6">
-    <div class="text-base text-term-acc tracking-[0.1em] mb-4 uppercase">{{ title }}</div>
+    <div class="text-[13px] md:text-base text-term-acc tracking-[0.1em] mb-4 uppercase">{{ title }}</div>
     <div class="grid gap-3">
       <div v-for="(item, n) in items" :key="n" class="flex gap-4">
         <span class="text-term-acc" aria-hidden="true">→</span>

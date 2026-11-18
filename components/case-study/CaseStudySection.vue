@@ -15,7 +15,7 @@ const isPlaceholder = (b: ArticleBlock): b is { placeholder: string } => typeof 
 <template>
   <section>
     <SectionLabel class="mb-5">{{ section.label }}</SectionLabel>
-    <h2 class="text-[28px] font-medium leading-[1.25] m-0 mb-5">{{ section.heading }}</h2>
+    <h2 class="text-[24px] md:text-[28px] font-medium leading-[1.25] m-0 mb-5">{{ section.heading }}</h2>
     <div class="flex flex-col gap-5">
       <template v-for="(block, b) in section.body" :key="b">
         <figure v-if="isImage(block)" class="m-0">

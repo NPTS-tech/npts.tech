@@ -25,7 +25,7 @@ const marqueeCopies = COPIES_PER_HALF * 2
 </script>
 
 <template>
-  <div class="flex items-center gap-4 md:gap-10 px-10 py-6">
+  <div class="flex items-center gap-4 md:gap-10 px-5 md:px-10 py-6">
     <div class="text-[11px] tracking-[0.14em] uppercase text-term-dim shrink-0 w-24 md:w-auto">{{ label }}</div>
     <div class="marquee flex-1 min-w-0 overflow-hidden">
       <div class="marquee-track flex w-max">

@@ -39,23 +39,28 @@ const caseStudies: {
     liveUrl: 'https://twci.npts.tech',
   },
 ]
+
+usePageSeo({
+  title: 'Case studies',
+  description: 'How NPTS and student teams build, host, and maintain software for nonprofits, and the difference it makes for the communities they serve.',
+})
 </script>
 
 <template>
   <div class="bg-term-bg text-term-fg font-mono">
-    <div class="px-10 pt-[76px] pb-14 border-b border-term-line">
-      <div class="text-base text-term-acc tracking-[0.1em] mb-6">[ CASE STUDIES ]</div>
-      <h1 class="text-[52px] leading-[1.08] font-medium m-0 mb-6 -tracking-[0.02em] max-w-[24ch] text-pretty">Projects built for our partners.</h1>
-      <p class="font-sans text-[19px] leading-[1.6] text-term-mid m-0 max-w-[62ch] text-pretty">Bespoke solutions built for nonprofit partners through experiential learning programs, and the hosting and support that keeps them running.</p>
+    <div class="px-5 md:px-10 pt-14 md:pt-[76px] pb-14 border-b border-term-line">
+      <div class="text-[13px] md:text-base text-term-acc tracking-[0.1em] mb-6">[ CASE STUDIES ]</div>
+      <h1 class="text-[34px] md:text-[52px] leading-[1.08] font-medium m-0 mb-6 -tracking-[0.02em] max-w-[24ch] text-pretty">Projects built for our partners.</h1>
+      <p class="font-sans text-[17px] md:text-[19px] leading-[1.6] text-term-mid m-0 max-w-[62ch] text-pretty">Bespoke solutions built for nonprofit partners through experiential learning programs, and the hosting and support that keeps them running.</p>
     </div>
-    <div class="px-10 py-[68px] border-b border-term-line">
-      <div class="text-base text-term-acc tracking-[0.1em] mb-8">[ STORIES ]</div>
+    <div class="px-5 md:px-10 py-14 md:py-[68px] border-b border-term-line">
+      <div class="text-[13px] md:text-base text-term-acc tracking-[0.1em] mb-8">[ STORIES ]</div>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
         <CaseStudyCard v-for="story in stories" :key="story.to" :story="story" />
       </div>
     </div>
-    <div class="px-10 py-[68px] border-b border-term-line">
-      <div class="text-base text-term-acc tracking-[0.1em] mb-8">[ PROJECTS ]</div>
+    <div class="px-5 md:px-10 py-14 md:py-[68px] border-b border-term-line">
+      <div class="text-[13px] md:text-base text-term-acc tracking-[0.1em] mb-8">[ PROJECTS ]</div>
       <div class="border border-term-line">
         <div
           v-for="(study, i) in caseStudies"
@@ -69,7 +74,7 @@ const caseStudies: {
               <div class="text-xs whitespace-nowrap" :class="study.status === 'maintenance' ? 'text-term-acc' : 'text-term-warn'">{{ study.status }}</div>
             </div>
             <h2 class="text-[26px] font-medium leading-[1.25] m-0 mb-2">{{ study.title }}</h2>
-            <a :href="study.partnerUrl" target="_blank" rel="noopener" class="text-sm font-semibold text-term-mid hover:text-term-acc">{{ study.partner }}</a>
+            <a :href="study.partnerUrl" target="_blank" rel="noopener" class="text-sm font-semibold text-term-mid hover:text-term-acc tap-target">{{ study.partner }}</a>
           </div>
           <div>
             <p class="font-sans text-base leading-[1.65] text-term-mid m-0">{{ study.summary }}</p>
@@ -78,7 +83,7 @@ const caseStudies: {
               :href="study.liveUrl"
               target="_blank"
               rel="noopener"
-              class="inline-block mt-5 text-[13px] text-term-acc border-b border-term-acc/40"
+              class="inline-block mt-5 text-[13px] text-term-acc border-b border-term-acc/40 tap-target"
             >view live →</a>
           </div>
         </div>

@@ -8,17 +8,18 @@ const article: CaseStudy = {
     url: 'https://carsonsvillage.org',
     logo: 'logo.png',
   },
-  title: '30–40 family pages a year, built by hand. Soon, families can build their own.',
+  title: 'Turning a moment of loss into a village of support.',
+  seoTitle: 'Carson’s Village: family support page platform case study',
   summary: 'Carson’s Village has helped 9,806 grieving families since 2018. Its family support pages raise tens of thousands of dollars a year, but staff build every one by hand inside the organization’s website. A UTDesign EPICS team started a platform to change that, and NPTS took it over and is bringing it to launch.',
   card: {
     excerpt: 'Carson’s Village raised $60,406 for grieving families in 2025 through pages its staff build by hand. NPTS is bringing a self-service platform to launch so any family can build one.',
-    image: 'family-page.jpg',
-    imageAlt: 'A Carson’s Village family support page on a laptop, showing a photo of the loved one, donations raised, and service details',
+    image: 'platform-demo.jpg',
+    imageAlt: 'A demo family support page on the new Carson’s Village platform, shown on a laptop with a photo of the loved one, visitation and funeral service details, and a Donate Now button',
   },
-  shareImage: 'family-page.jpg',
+  shareImage: 'platform-demo.jpg',
   facts: [
     { label: 'Partner', value: 'Carson’s Village', url: 'https://carsonsvillage.org' },
-    { label: 'Built by', value: 'UTDesign EPICS students' },
+    { label: 'Built by', value: 'UTDesign EPICS students', url: 'https://epics.utdallas.edu' },
     { label: 'Led & maintained by', value: 'NPTS', highlight: true },
     { label: 'Status', value: 'in development', highlight: true },
   ],
@@ -58,7 +59,13 @@ const article: CaseStudy = {
       body: [
         'A UTDesign EPICS team set out to build a dedicated platform for family support pages. Carson’s Village Advocates can create and manage pages for partner families, invite family members, and turn pages on or off, while families from outside the partner network can build a page themselves.',
         'Each page brings together the write-up, service details, a photo gallery, sharing, and donations with goals, and Carson’s Village staff get reports on donations across families.',
-        { placeholder: 'Demo to be added' },
+        {
+          image: {
+            src: 'platform-demo.jpg',
+            alt: 'A demo family support page on the new Carson’s Village platform, shown on a laptop with a photo of the loved one, visitation and funeral service details, and a Donate Now button',
+            caption: 'A sample family support page on the new platform, built with test data.',
+          },
+        },
       ],
     },
     {
