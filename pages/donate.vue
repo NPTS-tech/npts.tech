@@ -14,7 +14,7 @@ usePageSeo({
     <div class="px-5 md:px-10 pt-14 md:pt-[76px] pb-12 md:pb-14 border-b border-term-line">
       <div class="text-[13px] md:text-base text-term-acc tracking-[0.1em] mb-6">[ DONATE ]</div>
       <h1 class="text-[34px] md:text-[52px] leading-[1.08] font-medium m-0 mb-6 -tracking-[0.02em] max-w-[26ch] text-pretty">Sponsor the software nonprofits depend on.</h1>
-      <p class="font-sans text-[17px] md:text-[19px] leading-[1.6] text-term-mid m-0 max-w-[64ch] text-pretty">Many nonprofits don’t have the staff or budget to handle the technical side, so their teams lose hours to manual work. Your donation helps NPTS give them the technology they need and keep it running.</p>
+      <p class="font-sans text-[17px] md:text-[19px] leading-[1.6] text-term-mid m-0 max-w-[64ch] text-pretty">Many nonprofits don’t have the staff or budget to handle the technical side. Your donation helps NPTS give them the technology they need and keep it running.</p>
     </div>
     <div class="border-b border-term-line">
       <div class="px-5 md:px-10 py-12 md:py-14">

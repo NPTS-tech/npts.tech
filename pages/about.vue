@@ -12,7 +12,7 @@ usePageSeo({
     <div class="px-5 md:px-10 pt-14 md:pt-[76px] pb-14 border-b border-term-line">
       <div class="text-[13px] md:text-base text-term-acc tracking-[0.1em] mb-6">[ ABOUT ]</div>
       <h1 class="text-[34px] md:text-[52px] leading-[1.08] font-medium m-0 mb-6 -tracking-[0.02em] max-w-[26ch] text-pretty">Investing in the next generation of engineers.</h1>
-      <p class="font-sans text-[17px] md:text-[19px] leading-[1.6] text-term-mid m-0 max-w-[64ch] text-pretty">NPTS keeps the software nonprofits depend on running, and gives students real experience along the way.</p>
+      <p class="font-sans text-[17px] md:text-[19px] leading-[1.6] text-term-mid m-0 max-w-[64ch] text-pretty">NPTS keeps the software nonprofits depend on running.</p>
     </div>
     <div class="px-5 md:px-10 py-14 md:py-[68px] border-b border-term-line grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16">
       <div>
