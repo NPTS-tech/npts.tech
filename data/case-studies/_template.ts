@@ -51,7 +51,7 @@ const article: CaseStudy = {
   // `url` (optional) makes the value a link; `highlight: true` shows it in green.
   facts: [
     { label: 'Partner', value: '...', url: 'https://...' },
-    { label: 'Built by', value: 'UTDesign EPICS students' },
+    { label: 'Built by', value: 'UTDesign EPICS students', url: 'https://epics.utdallas.edu' },
     { label: 'Hosted & maintained by', value: 'NPTS', highlight: true },
     { label: 'Status', value: '...', highlight: true },
   ],

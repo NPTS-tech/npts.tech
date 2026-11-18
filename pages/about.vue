@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { team } from '~/data/team'
+
 usePageSeo({
   title: 'About',
   description: 'NPTS was founded in 2024 to host and maintain the software student teams build for nonprofits, and to give students real experience along the way.',
@@ -21,6 +23,12 @@ usePageSeo({
         <div class="text-[13px] md:text-base text-term-acc tracking-[0.1em] mb-6">[ OUR STORY ]</div>
         <p class="font-sans text-base leading-[1.7] text-term-mid m-0 mb-4">NPTS was founded in 2024 by three friends who met through <a href="https://epics.utdallas.edu" class="text-term-acc border-b border-term-acc/40 tap-target">UTDesign EPICS</a>. While mentoring student teams building software for local nonprofits, they saw a gap: once a semester ended, no one was left to host and maintain what the students built. NPTS was created to fill that gap.</p>
         <p class="font-sans text-base leading-[1.7] text-term-mid m-0">Today, we support partner nonprofits across North Texas, and most of our volunteers came up through the same experiential learning programs.</p>
+      </div>
+    </div>
+    <div class="px-5 md:px-10 py-14 md:py-[68px] border-b border-term-line">
+      <div class="text-[13px] md:text-base text-term-acc tracking-[0.1em] mb-8">[ EXECUTIVE BOARD ]</div>
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
+        <TeamCard v-for="m in team" :key="m.name" :member="m" />
       </div>
     </div>
     <div class="px-5 md:px-10 py-14 md:py-[68px] border-b border-term-line">

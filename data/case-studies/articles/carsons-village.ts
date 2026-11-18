@@ -19,7 +19,7 @@ const article: CaseStudy = {
   shareImage: 'family-page.jpg',
   facts: [
     { label: 'Partner', value: 'Carson’s Village', url: 'https://carsonsvillage.org' },
-    { label: 'Built by', value: 'UTDesign EPICS students' },
+    { label: 'Built by', value: 'UTDesign EPICS students', url: 'https://epics.utdallas.edu' },
     { label: 'Led & maintained by', value: 'NPTS', highlight: true },
     { label: 'Status', value: 'in development', highlight: true },
   ],

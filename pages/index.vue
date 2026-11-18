@@ -10,7 +10,7 @@ usePageSeo({
     <div class="px-5 md:px-10 pt-16 md:pt-[104px] pb-14 md:pb-[88px] text-center">
       <div class="text-[13px] md:text-base text-term-acc tracking-[0.1em] mb-7">[ NON-PROFIT TECHNICAL SUPPORT ]</div>
       <h1 class="text-[40px] md:text-[68px] leading-[1.06] font-medium m-0 mb-7 -tracking-[0.025em] text-pretty">The technical backbone for your nonprofit.</h1>
-      <p class="font-sans text-[17px] md:text-[20px] leading-[1.6] text-term-mid m-0 mx-auto mb-10 max-w-[60ch] text-pretty">NPTS hosts and supports the software your nonprofit relies on, including tools built by student engineering teams, so it keeps working long after launch.</p>
+      <p class="font-sans text-[17px] md:text-[20px] leading-[1.6] text-term-mid m-0 mx-auto mb-10 max-w-[60ch] text-pretty">NPTS handles the technology behind your nonprofit, from building the tools you need to keeping them running, so your team can spend less time on manual work and more on your mission.</p>
       <div class="flex flex-wrap gap-[14px] justify-center">
         <NuxtLink to="/support" class="text-[15px] font-semibold text-term-bg bg-term-acc px-6 py-4 hover:bg-term-accHi">Get in touch →</NuxtLink>
         <NuxtLink to="/programs" class="text-[15px] text-term-fg border border-term-rule px-6 py-4 hover:border-term-acc">See our programs</NuxtLink>
