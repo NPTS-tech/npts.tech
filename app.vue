@@ -30,6 +30,8 @@ const organization = {
   foundingDate: '2024',
   address: { '@type': 'PostalAddress', addressLocality: 'Plano', addressRegion: 'TX', addressCountry: 'US' },
   areaServed: 'North Texas',
+  // NPTS's official profiles elsewhere, so search engines know they're the same organization.
+  sameAs: ['https://www.linkedin.com/company/npts-tech'],
 }
 
 useHead({

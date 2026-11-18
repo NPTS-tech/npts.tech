@@ -17,7 +17,7 @@ usePageSeo({
     <div class="px-5 md:px-10 py-14 md:py-[68px] border-b border-term-line grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16">
       <div>
         <div class="text-[13px] md:text-base text-term-acc tracking-[0.1em] mb-6">[ OUR MISSION ]</div>
-        <p class="font-sans text-base leading-[1.7] text-term-mid m-0">The mission of NPTS is to invest in the next generation of engineers through integration with experiential learning programs building bespoke solutions for other non-profits, to provide hosting and support of those projects, and to provide volunteer programs and internships to students of those programs.</p>
+        <p class="font-sans text-base leading-[1.7] text-term-mid m-0">Our mission is to make sure nonprofits have the technology they need. We build, host, and support the software they rely on, so their teams spend less time on manual work and more on the people they serve.</p>
       </div>
       <div>
         <div class="text-[13px] md:text-base text-term-acc tracking-[0.1em] mb-6">[ OUR STORY ]</div>
@@ -26,7 +26,7 @@ usePageSeo({
       </div>
     </div>
     <div class="px-5 md:px-10 py-14 md:py-[68px] border-b border-term-line">
-      <div class="text-[13px] md:text-base text-term-acc tracking-[0.1em] mb-8">[ EXECUTIVE BOARD ]</div>
+      <div class="text-[13px] md:text-base text-term-acc tracking-[0.1em] mb-8">[ BOARD OF DIRECTORS ]</div>
       <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
         <TeamCard v-for="m in team" :key="m.name" :member="m" />
       </div>

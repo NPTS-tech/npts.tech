@@ -13,9 +13,10 @@ const initials = computed(() => props.member.name.split(/\s+/).map(w => w[0]).jo
       :src="`/img/team/${member.photo}`"
       :alt="`${member.name}, ${member.title}`"
       loading="lazy"
-      class="w-full aspect-square object-cover border border-term-line mb-5"
+      style="aspect-ratio: 1 / 1"
+      class="w-full object-cover border border-term-line mb-5"
     >
-    <div v-else class="w-full aspect-square border border-term-line bg-term-card mb-5 flex items-center justify-center text-[40px] text-term-acc">{{ initials }}</div>
+    <div v-else style="aspect-ratio: 1 / 1" class="w-full border border-term-line bg-term-card mb-5 flex items-center justify-center text-[40px] text-term-acc">{{ initials }}</div>
     <h3 class="m-0 text-[17px] font-semibold">{{ member.name }}</h3>
     <div class="text-[13px] text-term-acc mt-1">{{ member.title }}</div>
     <p v-if="member.bio" class="font-sans m-0 mt-3 text-sm leading-[1.6] text-term-mid">{{ member.bio }}</p>
