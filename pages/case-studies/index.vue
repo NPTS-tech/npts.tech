@@ -47,48 +47,61 @@ usePageSeo({
 </script>
 
 <template>
-  <div class="bg-term-bg text-term-fg font-mono">
-    <div class="px-5 md:px-10 pt-14 md:pt-[76px] pb-14 border-b border-term-line">
-      <div class="text-[13px] md:text-base text-term-acc tracking-[0.1em] mb-6">[ CASE STUDIES ]</div>
-      <h1 class="text-[34px] md:text-[52px] leading-[1.08] font-medium m-0 mb-6 -tracking-[0.02em] max-w-[24ch] text-pretty">Projects built for our partners.</h1>
-      <p class="font-sans text-[17px] md:text-[19px] leading-[1.6] text-term-mid m-0 max-w-[62ch] text-pretty">Bespoke solutions built for nonprofit partners through experiential learning programs, and the hosting and support that keeps them running.</p>
-    </div>
-    <div class="px-5 md:px-10 py-14 md:py-[68px] border-b border-term-line">
-      <div class="text-[13px] md:text-base text-term-acc tracking-[0.1em] mb-8">[ STORIES ]</div>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
-        <CaseStudyCard v-for="story in stories" :key="story.to" :story="story" />
+  <div class="hm">
+    <!-- Header -->
+    <section class="hm-hero" style="padding-bottom: 72px">
+      <div class="hm-wrap">
+        <div class="hm-label hm-in" style="--d: 0ms">[ Case studies ]</div>
+        <h1>
+          <span class="line"><span style="--d: 0">Projects built for</span></span>
+          <span class="line"><span style="--d: 1">our <em>partners.</em></span></span>
+        </h1>
+        <p class="sub hm-in" style="--d: 450ms">See how nonprofits save time, reach more people, and keep their software running with NPTS.</p>
       </div>
-    </div>
-    <div class="px-5 md:px-10 py-14 md:py-[68px] border-b border-term-line">
-      <div class="text-[13px] md:text-base text-term-acc tracking-[0.1em] mb-8">[ PROJECTS ]</div>
-      <div class="border border-term-line">
-        <div
-          v-for="(study, i) in caseStudies"
-          :key="study.slug"
-          class="grid grid-cols-1 md:grid-cols-[1fr_1.4fr] gap-6 md:gap-16 px-8 py-9"
-          :class="{ 'border-t border-term-line': i > 0 }"
-        >
-          <div>
-            <div class="flex items-baseline gap-4 mb-3">
-              <div class="text-xs text-term-dim">./{{ study.slug }}</div>
-              <div class="text-xs whitespace-nowrap" :class="study.status === 'maintenance' ? 'text-term-acc' : 'text-term-warn'">{{ study.status }}</div>
+    </section>
+
+    <!-- Stories -->
+    <section class="hm-section" style="padding-top: 0">
+      <div class="hm-wrap">
+        <div v-reveal class="hm-label">[ Stories ]</div>
+        <div class="hm-cases" style="margin-top: 28px">
+          <NuxtLink v-for="(s, i) in stories" :key="s.to" v-reveal="i * 140" :to="s.to" class="hm-case">
+            <div class="hm-case-img">
+              <img v-if="s.image" :src="s.image" :alt="s.imageAlt ?? ''" loading="lazy">
+              <CaseStudyPlaceholder v-else label="Picture to be added" :bordered="false" class="w-full h-full" />
             </div>
-            <h2 class="text-[26px] font-medium leading-[1.25] m-0 mb-2">{{ study.title }}</h2>
-            <a :href="study.partnerUrl" target="_blank" rel="noopener" class="text-sm font-semibold text-term-mid hover:text-term-acc tap-target">{{ study.partner }}</a>
-          </div>
-          <div>
-            <p class="font-sans text-base leading-[1.65] text-term-mid m-0">{{ study.summary }}</p>
-            <a
-              v-if="study.liveUrl"
-              :href="study.liveUrl"
-              target="_blank"
-              rel="noopener"
-              class="inline-block mt-5 text-[13px] text-term-acc border-b border-term-acc/40 tap-target"
-            >view live →</a>
+            <div class="hm-case-body">
+              <div class="hm-label">{{ s.partner }}</div>
+              <h2 class="hm-case-title">{{ s.title }}</h2>
+              <p>{{ s.excerpt }}</p>
+              <span class="hm-link">Read the story <span class="arr">→</span></span>
+            </div>
+          </NuxtLink>
+        </div>
+      </div>
+    </section>
+
+    <!-- Other projects -->
+    <section class="hm-section">
+      <div class="hm-wrap">
+        <div v-reveal class="hm-label">[ More projects ]</div>
+        <h2 v-reveal="80" class="hm-h2" style="margin-top: 18px">Other software we <em>support.</em></h2>
+        <div class="hm-projects">
+          <div v-for="(study, i) in caseStudies" :key="study.slug" v-reveal="i * 100" class="hm-project">
+            <div>
+              <span class="hm-tag" :class="{ amber: study.status === 'in progress' }">{{ study.status === 'maintenance' ? 'Maintained' : 'In progress' }}</span>
+              <h3>{{ study.title }}</h3>
+              <a :href="study.partnerUrl" target="_blank" rel="noopener" class="hm-project-partner">{{ study.partner }} ↗</a>
+            </div>
+            <div>
+              <p>{{ study.summary }}</p>
+              <a v-if="study.liveUrl" :href="study.liveUrl" target="_blank" rel="noopener" class="hm-link">View live <span class="arr">→</span></a>
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    </section>
+
     <SponsorBanner />
   </div>
 </template>

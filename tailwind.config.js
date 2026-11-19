@@ -25,8 +25,8 @@ export default {
           dim:  'oklch(0.55 0.010 150)',
           mid:  'oklch(0.72 0.010 150)',
           fg:   'oklch(0.93 0.006 150)',
-          acc:  'oklch(0.82 0.170 150)',
-          accHi:'oklch(0.90 0.170 150)',
+          acc:  '#34a86b', // Emerald
+          accHi:'#45bd7e',
           warn: 'oklch(0.72 0.090 90)',
         },
       },

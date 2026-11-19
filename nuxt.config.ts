@@ -10,12 +10,14 @@ export default defineNuxtConfig({
   colorMode: {
     preference: 'dark'
   },
-  css: ['~/assets/main.css'],
+  css: ['~/assets/main.css', '~/assets/motion.css', '~/assets/home.css'],
   modules: ["@nuxt/ui"],
   runtimeConfig: {
     public: {
       stripeDonationLink: process.env.STRIPE_DONATION_LINK || 'https://donate.stripe.com/aFacN50j55vF9lt1Zk04800',
       // Google Analytics ID (looks like G-XXXXXXXXXX). Set GA_MEASUREMENT_ID in the GitHub repo's variables. Empty = no tracking.
+      // Optional monthly-giving Stripe link. When set, the homepage donate box shows a Monthly option.
+      stripeMonthlyLink: process.env.STRIPE_MONTHLY_LINK || '',
       gaMeasurementId: process.env.GA_MEASUREMENT_ID || ''
     }
   },
@@ -33,6 +35,8 @@ export default defineNuxtConfig({
     head: {
       // The site's fonts. Without these, each device falls back to its own monospace font
       // (Courier on iPhone), which is wider and changes the whole layout.
+      // Marks that JavaScript is running before the page paints, so scroll animations start hidden instead of flashing.
+      script: [{ innerHTML: "document.documentElement.classList.add('js-motion')" }],
       link: [
         // Browser tab and home-screen icon.
         { rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' },
