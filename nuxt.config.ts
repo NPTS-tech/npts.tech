@@ -14,7 +14,9 @@ export default defineNuxtConfig({
   modules: ["@nuxt/ui"],
   runtimeConfig: {
     public: {
-      stripeDonationLink: process.env.STRIPE_DONATION_LINK || 'https://donate.stripe.com/aFacN50j55vF9lt1Zk04800'
+      stripeDonationLink: process.env.STRIPE_DONATION_LINK || 'https://donate.stripe.com/aFacN50j55vF9lt1Zk04800',
+      // Google Analytics ID (looks like G-XXXXXXXXXX). Set GA_MEASUREMENT_ID in the GitHub repo's variables. Empty = no tracking.
+      gaMeasurementId: process.env.GA_MEASUREMENT_ID || ''
     }
   },
   postcss: {

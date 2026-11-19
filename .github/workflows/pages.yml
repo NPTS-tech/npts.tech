@@ -44,6 +44,7 @@ jobs:
         run: pnpm run generate
         env:
           STRIPE_DONATION_LINK: ${{ vars.STRIPE_DONATION_LINK }}
+          GA_MEASUREMENT_ID: ${{ vars.GA_MEASUREMENT_ID }}
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
